@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="32923" started-at="2015-06-18T16:05:39Z" finished-at="2015-06-18T16:06:12Z">
+    <groups>
+      <group name="swipe">
+        <method signature="zhiHu.swipe()[pri:0, instance:com.dbyl.core.zhiHu@f0f559e]" name="swipe" class="com.dbyl.core.zhiHu"/>
+      </group> <!-- swipe -->
+    </groups>
+    <test name="Default test" duration-ms="32923" started-at="2015-06-18T16:05:39Z" finished-at="2015-06-18T16:06:12Z">
+      <class name="com.dbyl.core.zhiHu">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.dbyl.core.zhiHu@f0f559e]" name="setUp" is-config="true" duration-ms="14663" started-at="2015-06-19T00:05:39Z" finished-at="2015-06-19T00:05:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="swipe()[pri:0, instance:com.dbyl.core.zhiHu@f0f559e]" name="swipe" duration-ms="15834" started-at="2015-06-19T00:05:54Z" finished-at="2015-06-19T00:06:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- swipe -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.dbyl.core.zhiHu@f0f559e]" name="tearDown" is-config="true" duration-ms="2405" started-at="2015-06-19T00:06:10Z" finished-at="2015-06-19T00:06:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.dbyl.core.zhiHu -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
