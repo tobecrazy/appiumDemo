@@ -22,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 public class zhiHu {
 	private AndroidDriver driver;
+	private boolean isInstall = false;
 
 	/**
 	 * @author Young
@@ -37,16 +38,19 @@ public class zhiHu {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
-		File classpathRoot = new File(System.getProperty("user.dir"));
-		File appDir = new File(classpathRoot, "apps");
-		File app = new File(appDir, "zhihu.apk");
+
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "Android Emulator");
 		capabilities.setCapability("platformVersion", "4.4");
 		// if no need install don't add this
-		capabilities.setCapability("app", app.getAbsolutePath());
+		if (isInstall) {
+			File classpathRoot = new File(System.getProperty("user.dir"));
+			File appDir = new File(classpathRoot, "apps");
+			File app = new File(appDir, "zhihu.apk");
+			capabilities.setCapability("app", app.getAbsolutePath());
+		}
 		capabilities.setCapability("appPackage", "com.zhihu.android");
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
@@ -124,7 +128,8 @@ public class zhiHu {
 		driver.findElementById("com.zhihu.android:id/name").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		//wait for 60s if WebElemnt show up less than 60s , then return , until 60s
+		// wait for 60s if WebElemnt show up less than 60s , then return , until
+		// 60s
 		WebElement showClose = new AndroidDriverWait(driver, 60)
 				.until(new ExpectedCondition<WebElement>() {
 					public WebElement apply(AndroidDriver d) {
