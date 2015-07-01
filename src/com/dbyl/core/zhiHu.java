@@ -2,6 +2,7 @@ package com.dbyl.core;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -63,9 +64,8 @@ public class zhiHu {
 		startRecord();
 	}
 
-	@Test(groups = { "login" })
 	public void login() {
-		// find login button
+
 		WebElement loginButton;
 		if (isLoginPresent(driver, 60)) {
 			loginButton = driver.findElement(By
@@ -108,12 +108,102 @@ public class zhiHu {
 		return isPresent;
 	}
 
-	@Test(groups = { "profileSetting" }, dependsOnMethods = "login")
+	@Test(groups = "swipeTest", priority = 1)
+	public void swipe() {
+
+		// find login button
+		if (isInstall) {
+			login();
+		}
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		// find keyword 首页 and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
+		snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
+		swipeToUp(driver, 500);
+		snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		swipeToDown(driver, 1000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		List<WebElement> titles = driver
+				.findElementsById("com.zhihu.android:id/title");
+		titles.get(0).click();
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		
+		//swipe to right
+		swipeToRight(driver, 100);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		// find keyword 首页 and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
+	}
+
+	/**
+	 * This Method for swipe up
+	 * 
+	 * @author Young
+	 * @param driver
+	 * @param during
+	 */
+	public void swipeToUp(AndroidDriver driver, int during) {
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, during);
+		// wait for page loading
+	}
+
+	/**
+	 * This Method for swipe down
+	 * 
+	 * @author Young
+	 * @param driver
+	 * @param during
+	 */
+	public void swipeToDown(AndroidDriver driver, int during) {
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width / 2, height / 4, width / 2, height * 3 / 4, during);
+		// wait for page loading
+	}
+
+	/**
+	 * This Method for swipe Left
+	 * 
+	 * @author Young
+	 * @param driver
+	 * @param during
+	 */
+	public void swipeToLeft(AndroidDriver driver, int during) {
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width * 3 / 4, height / 2, width / 4, height / 2, during);
+		// wait for page loading
+	}
+
+	/**
+	 * This Method for swipe Right
+	 * 
+	 * @author Young
+	 * @param driver
+	 * @param during
+	 */
+	public void swipeToRight(AndroidDriver driver, int during) {
+		int width = driver.manage().window().getSize().width;
+		int height = driver.manage().window().getSize().height;
+		driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, during);
+		// wait for page loading
+	}
+
+	@Test(groups = { "profileSetting" }, priority = 2)
 	public void profileSetting() {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// find keyword 首页 and verify it is display
 		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
+
+		driver.swipe(100, 400, 100, 200, 500);
 		WebElement myButton = driver.findElement(By
 				.className("android.widget.ImageButton"));
 		myButton.click();
@@ -130,16 +220,13 @@ public class zhiHu {
 
 		// wait for 60s if WebElemnt show up less than 60s , then return , until
 		// 60s
-		WebElement showClose = new AndroidDriverWait(driver, 60)
-				.until(new ExpectedCondition<WebElement>() {
-					public WebElement apply(AndroidDriver d) {
-						return d.findElement(By
-								.id("com.zhihu.android:id/showcase_close"));
-					}
 
-				});
+		By by = new By.ById("com.zhihu.android:id/showcase_close");
+
 		snapshot((TakesScreenshot) driver, "zhihu_showClose.png");
-		showClose.click();
+		if (isElementPresent(by, 30)) {
+			driver.findElement(by).click();
+		}
 
 		Assert.assertTrue(driver
 				.findElementsByClassName("android.widget.TextView").get(0)
@@ -225,4 +312,25 @@ public class zhiHu {
 		}
 	}
 
+	/**
+	 * 
+	 * @param by
+	 * @param timeOut
+	 * @return
+	 */
+	public boolean isElementPresent(final By by, int timeOut) {
+		try {
+			new AndroidDriverWait(driver, timeOut)
+					.until(new ExpectedCondition<WebElement>() {
+						public WebElement apply(AndroidDriver d) {
+							return d.findElement(by);
+						}
+
+					});
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
+
+	}
 }
