@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class zhiHu {
 	private AndroidDriver driver;
-	private boolean isInstall = false;
+	private boolean isInstall = true;
 
 	/**
 	 * @author Young
@@ -69,7 +69,7 @@ public class zhiHu {
 		WebElement loginButton;
 		if (isLoginPresent(driver, 60)) {
 			loginButton = driver.findElement(By
-					.id("com.zhihu.android:id/login"));
+					.id("com.zhihu.android:id/login_and_register"));
 			loginButton.click();
 		}
 
@@ -81,14 +81,24 @@ public class zhiHu {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-		List<WebElement> textFieldsList = driver
-				.findElementsByClassName("android.widget.EditText");
-		textFieldsList.get(0).sendKeys("seleniumcookies@126.com");
-		textFieldsList.get(1).sendKeys("cookies123");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    WebElement userNameInputbox =driver.findElementById("com.zhihu.android:id/email_or_phone");
+	    userNameInputbox.sendKeys("seleniumcookies@126.com");
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    
+	    WebElement passwordInputBox=driver.findElementById("com.zhihu.android:id/password");
+	    passwordInputBox.sendKeys("cookies123");
+	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    WebElement confirmButton=driver.findElementById("com.zhihu.android:id/btn_confirm");
+		if(confirmButton.isEnabled())
+		{
+			confirmButton.click();
+		}
+		else
+		{
+			Assert.assertTrue(false,"Login failed");
+		}
 
 		// find ok button byName
-		driver.findElementById("android:id/button1").click();
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 		// find keyword Ê×Ò³ and verify it is display
@@ -101,7 +111,7 @@ public class zhiHu {
 				new ExpectedCondition<WebElement>() {
 					public WebElement apply(AndroidDriver d) {
 						return d.findElement(By
-								.id("com.zhihu.android:id/login"));
+								.id("com.zhihu.android:id/login_and_register"));
 					}
 
 				}).isDisplayed();
