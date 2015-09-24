@@ -7,5 +7,6 @@
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/java-client-3.1.0.jar" sourcepath="C:/Users/Young/workspace/appiumDemo/java-client-3.1.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/selenium-server-standalone-2.47.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/sourceCode.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/java-client-3.2.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
