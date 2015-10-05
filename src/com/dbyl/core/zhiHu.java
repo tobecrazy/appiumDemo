@@ -238,9 +238,6 @@ public class zhiHu {
 			driver.findElement(by).click();
 		}
 
-		Assert.assertTrue(driver
-				.findElementsByClassName("android.widget.TextView").get(0)
-				.getText().contains("selenium"));
 
 		driver.findElementById("com.zhihu.android:id/menu_people_edit").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -252,7 +249,7 @@ public class zhiHu {
 				.findElementById("com.zhihu.android:id/content");
 		String text = content.getAttribute("text");
 		content.click();
-		clearText(text);
+	
 		content.sendKeys("Appium Test. Create By Young");
 
 		driver.findElementById("com.zhihu.android:id/menu_question_done")
@@ -265,7 +262,7 @@ public class zhiHu {
 		content = driver.findElementById("com.zhihu.android:id/content");
 		text = content.getAttribute("text");
 		content.click();
-		clearText(text);
+	
 		content.sendKeys("Appium Test. Create By Young. This is an appium type hahahahah");
 
 		driver.findElementById("com.zhihu.android:id/menu_question_done")
@@ -280,12 +277,7 @@ public class zhiHu {
 	 * @author Young
 	 * @param text
 	 */
-	public void clearText(String text) {
-		driver.sendKeyEvent(123);
-		for (int i = 0; i < text.length(); i++) {
-			driver.sendKeyEvent(67);
-		}
-	}
+
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
