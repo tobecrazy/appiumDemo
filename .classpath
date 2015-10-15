@@ -4,7 +4,7 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/Demo/lib/guice-3.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/Demo/lib/reportng-1.1.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/java-client-3.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/java-client-3.2.0.jar" sourcepath="C:/Users/Young/workspace/appiumDemo/java-client-3.2.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/selenium-server-standalone-2.48.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
