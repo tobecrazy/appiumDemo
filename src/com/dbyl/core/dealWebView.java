@@ -42,6 +42,7 @@ public class dealWebView {
 	public void setUp() throws Exception {
 		// set up appium
 
+		System.out.println(Math.sqrt(-4));
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
@@ -65,6 +66,7 @@ public class dealWebView {
 		driver = new AndroidDriver<WebElement>(new URL(
 				"http://127.0.0.1:4723/wd/hub"), capabilities);
 		startRecord();
+		System.out.println(driver);
 	}
 
 	@Test

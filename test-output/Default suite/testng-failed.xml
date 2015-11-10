@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.dbyl.core.zhiHu">
+      <class name="com.dbyl.core.iOSTest">
         <methods>
+          <include name="setUp"/>
           <include name="tearDown"/>
           <include name="login"/>
-          <include name="setUp"/>
-          <include name="swipe"/>
         </methods>
-      </class> <!-- com.dbyl.core.zhiHu -->
+      </class> <!-- com.dbyl.core.iOSTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
