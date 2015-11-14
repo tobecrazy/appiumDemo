@@ -34,7 +34,7 @@ public class iOSTest {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "IOS");
 		capabilities.setCapability("deviceName", "iPhone Simulator");
-		capabilities.setCapability("platformVersion", "7");
+		capabilities.setCapability("platformVersion", "8.4");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));

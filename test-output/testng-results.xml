@@ -2,25 +2,25 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15211" started-at="2015-11-10T16:13:05Z" finished-at="2015-11-10T16:13:20Z">
+  <suite name="Default suite" duration-ms="55649" started-at="2015-11-12T15:04:54Z" finished-at="2015-11-12T15:05:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15211" started-at="2015-11-10T16:13:05Z" finished-at="2015-11-10T16:13:20Z">
+    <test name="Default test" duration-ms="55649" started-at="2015-11-12T15:04:54Z" finished-at="2015-11-12T15:05:50Z">
       <class name="com.dbyl.core.iOSTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.dbyl.core.iOSTest@68e4a47]" name="setUp" is-config="true" duration-ms="0" started-at="2015-11-10T08:13:05Z" finished-at="2015-11-10T08:13:05Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:com.dbyl.core.iOSTest@4475a0c6]" name="setUp" is-config="true" duration-ms="0" started-at="2015-11-12T07:04:54Z" finished-at="2015-11-12T07:04:54Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
-              <![CDATA[A new session could not be created. (Original error: Command failed: /bin/sh -c xcrun --sdk iphonesimulator --show-sdk-version
-) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 12.97 seconds
+              <![CDATA[A new session could not be created. (Original error: Failed getting devices. Err: Error: Command failed: /bin/sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/instruments' -s devices
+. Stdout: . Stderr: .) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 53.68 seconds
 Build info: version: '2.48.0', revision: 'b7b081a', time: '2015-10-07 15:48:56'
 System info: host: 'Youngs-Mac.mshome.net', ip: '192.168.137.135', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.2', java.version: '1.7.0_79'
 Driver info: io.appium.java_client.ios.IOSDriver]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Command failed: /bin/sh -c xcrun --sdk iphonesimulator --show-sdk-version
-) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 12.97 seconds
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: Failed getting devices. Err: Error: Command failed: /bin/sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/instruments' -s devices
+. Stdout: . Stderr: .) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 53.68 seconds
 Build info: version: '2.48.0', revision: 'b7b081a', time: '2015-10-07 15:48:56'
 System info: host: 'Youngs-Mac.mshome.net', ip: '192.168.137.135', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.10.2', java.version: '1.7.0_79'
 Driver info: io.appium.java_client.ios.IOSDriver
@@ -72,11 +72,11 @@ Driver info: io.appium.java_client.ios.IOSDriver
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="login()[pri:0, instance:com.dbyl.core.iOSTest@68e4a47]" name="login" duration-ms="1" started-at="2015-11-10T08:13:20Z" finished-at="2015-11-10T08:13:20Z">
+        <test-method status="SKIP" signature="login()[pri:0, instance:com.dbyl.core.iOSTest@4475a0c6]" name="login" duration-ms="2" started-at="2015-11-12T07:05:50Z" finished-at="2015-11-12T07:05:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.dbyl.core.iOSTest@68e4a47]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-11-10T08:13:20Z" finished-at="2015-11-10T08:13:20Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.dbyl.core.iOSTest@4475a0c6]" name="tearDown" is-config="true" duration-ms="0" started-at="2015-11-12T07:05:50Z" finished-at="2015-11-12T07:05:50Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
