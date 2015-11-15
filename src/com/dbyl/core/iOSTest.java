@@ -31,24 +31,23 @@ public class iOSTest {
 		// set up appium
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-		capabilities.setCapability("platformName", "IOS");
-		capabilities.setCapability("deviceName", "iPhone Simulator");
+		capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
+		capabilities.setCapability("platformName", "Mac");
+		capabilities.setCapability("deviceName", "iPhone 6");
 		capabilities.setCapability("platformVersion", "8.4");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));
 			File appDir = new File(classpathRoot, "apps");
-			File app = new File(appDir, "zhihu.ipa");
+			File app = new File(appDir, "TestApp.app");
+			System.out.println("---->"+app.getAbsolutePath());
 			capabilities.setCapability("app", app.getAbsolutePath());
 		}
-		capabilities.setCapability("appPackage", "com.zhihu.android");
+
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
-		// no need sign
-		capabilities.setCapability("noSign", "True");
-		capabilities.setCapability("appActivity", ".ui.activity.GuideActivity");
+	
 		driver = new IOSDriver (new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
 		 
@@ -62,28 +61,12 @@ public class iOSTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-	    WebElement userNameInputbox =driver.findElementById("com.zhihu.android:id/email_or_phone");
-	    userNameInputbox.sendKeys("seleniumcookies@126.com");
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    WebElement userNameInputbox1 =driver.findElementByName("TextField1");
+	    userNameInputbox1.sendKeys("123456");
 	    
-	    WebElement passwordInputBox=driver.findElementById("com.zhihu.android:id/password");
-	    passwordInputBox.sendKeys("cookies123");
-	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    WebElement confirmButton=driver.findElementById("com.zhihu.android:id/btn_confirm");
-		if(confirmButton.isEnabled())
-		{
-			confirmButton.click();
-		}
-		else
-		{
-			Assert.assertTrue(false,"Login failed");
-		}
-
-		// find ok button byName
-		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
-
-		// find keyword ��ҳ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("��ҳ")).isDisplayed());
+	    WebElement userNameInputbox2 =driver.findElementByName("TextField2");
+	    userNameInputbox2.sendKeys("652456");
+	    
 
 	}
  
