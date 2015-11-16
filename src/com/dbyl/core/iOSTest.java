@@ -1,14 +1,10 @@
 package com.dbyl.core;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -16,9 +12,9 @@ import org.testng.annotations.Test;
 import io.appium.java_client.ios.IOSDriver;
 
 import java.io.File;
-import java.io.IOException;
+
 import java.net.URL;
-import java.util.List;
+
 import java.util.concurrent.TimeUnit;
 
 public class iOSTest {
@@ -61,11 +57,11 @@ public class iOSTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-	    WebElement userNameInputbox1 =driver.findElementByName("TextField1");
-	    userNameInputbox1.sendKeys("123456");
+	    WebElement inputbox1 =driver.findElementByName("TextField1");
+	    inputbox1.sendKeys("123456");
 	    
-	    WebElement userNameInputbox2 =driver.findElementByName("TextField2");
-	    userNameInputbox2.sendKeys("652456");
+	    WebElement inputbox2 =driver.findElementByName("TextField2");
+	    inputbox2.sendKeys("652456");
 	    
 
 	}
