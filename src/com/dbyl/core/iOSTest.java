@@ -4,7 +4,7 @@ package com.dbyl.core;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -58,12 +58,16 @@ public class iOSTest {
 
 		// find login userName and password editText
 	    WebElement inputbox1 =driver.findElementByName("TextField1");
-	    inputbox1.sendKeys("123456");
+	    inputbox1.sendKeys("12");
 	    
 	    WebElement inputbox2 =driver.findElementByName("TextField2");
-	    inputbox2.sendKeys("652456");
+	    inputbox2.sendKeys("65");
 	    
-
+	    WebElement calcButton=driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
+	    
+	    calcButton.click();
+	    WebElement result=driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIAStaticText[1]");
+	    Assert.assertEquals(result.getAttribute("value"), "77");
 	}
  
 
