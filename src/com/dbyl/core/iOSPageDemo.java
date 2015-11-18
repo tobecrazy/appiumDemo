@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
 
 public class iOSPageDemo {
@@ -23,7 +24,7 @@ public class iOSPageDemo {
 	private WebElement result;
 
 	iOSPageDemo(IOSDriver<?> driver) {
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
 	public void typeInputBox(WebElement e, String msg) {
