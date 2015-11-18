@@ -1,7 +1,5 @@
 package com.dbyl.core;
 
-
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -18,10 +16,9 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class iOSTest {
-	private IOSDriver driver;
+	private IOSDriver<?> driver;
 	private boolean isInstall = true;
 
-	 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
@@ -36,44 +33,36 @@ public class iOSTest {
 			File classpathRoot = new File(System.getProperty("user.dir"));
 			File appDir = new File(classpathRoot, "apps");
 			File app = new File(appDir, "TestApp.app");
-			System.out.println("---->"+app.getAbsolutePath());
+			System.out.println("---->" + app.getAbsolutePath());
 			capabilities.setCapability("app", app.getAbsolutePath());
 		}
 
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
-	
-		driver = new IOSDriver (new URL("http://127.0.0.1:4723/wd/hub"),
-				capabilities);
-		 
+
+		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+
 	}
 
 	@Test
-	public void login() {
+	public void calc() {
 
-	 
 		// wait for 20s
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-	    WebElement inputbox1 =driver.findElementByName("TextField1");
-	    inputbox1.sendKeys("12");
-	    
-	    WebElement inputbox2 =driver.findElementByName("TextField2");
-	    inputbox2.sendKeys("65");
-	    
-	    WebElement calcButton=driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIAButton[1]");
-	    
-	    calcButton.click();
-	    WebElement result=driver.findElementByXPath("//UIAApplication[1]/UIAWindow[2]/UIAStaticText[1]");
-	    Assert.assertEquals(result.getAttribute("value"), "77");
+		iOSPageDemo iOPage = new iOSPageDemo(driver);
+		iOPage.typeTextField1("12");
+		iOPage.typeTextField2("65");
+		iOPage.clickCalcButton();
+
+		Assert.assertEquals(iOPage.getResult(), "77");
 	}
- 
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
 	}
- 
+
 }

@@ -7,7 +7,7 @@
         <methods>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="login"/>
+          <include name="calc"/>
         </methods>
       </class> <!-- com.dbyl.core.iOSTest -->
     </classes>
