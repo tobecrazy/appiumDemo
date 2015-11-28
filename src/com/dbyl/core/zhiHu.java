@@ -23,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 
 public class zhiHu {
 	private AndroidDriver driver;
-	private boolean isInstall = true;
+	private boolean isInstall = false;
 
 	/**
 	 * @author Young
@@ -59,7 +59,7 @@ public class zhiHu {
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability("appActivity", ".ui.activity.GuideActivity");
-		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
+		driver = new AndroidDriver(new URL("http://192.168.1.101:4723/wd/hub"),
 				capabilities);
 		startRecord();
 	}
@@ -101,8 +101,8 @@ public class zhiHu {
 		// find ok button byName
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 
 	}
 
@@ -127,8 +127,8 @@ public class zhiHu {
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 		snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
 		swipeToUp(driver, 500);
 		snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");
@@ -146,8 +146,8 @@ public class zhiHu {
 		swipeToRight(driver, 100);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 	}
 
 	/**
@@ -210,8 +210,8 @@ public class zhiHu {
 	public void profileSetting() {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 
 		driver.swipe(100, 400, 100, 200, 500);
 		WebElement myButton = driver.findElement(By
