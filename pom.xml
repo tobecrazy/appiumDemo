@@ -11,6 +11,11 @@
             <version>LATEST</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+	<groupId>io.appium</groupId>
+	<artifactId>java-client</artifactId>
+	<version>3.3.0</version>
+</dependency>
         <dependencies>
         	<dependency>
         		<groupId>testng</groupId>
