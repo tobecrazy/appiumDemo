@@ -6,5 +6,6 @@
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selendroid-standalone-0.17.0-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selenium-server-standalone-2.48.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selendroid-client-0.17.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/Demo/lib/reportng-1.1.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
