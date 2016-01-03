@@ -2,62 +2,74 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>Demo</groupId>
+	<groupId>main.java.com.dbyl.appiumCore</groupId>
 	<artifactId>Demo</artifactId>
-	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>core</name>
+	<url>http://www.cnblogs.com/tobecrazy</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>test</scope>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.10</version>
 		</dependency>
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>LATEST</version>
-			<scope>test</scope>
+			<artifactId>selenium-server-standalone</artifactId>
+			<version>2.48.2</version>
+		</dependency>
+		<dependency>
+			<groupId>io.selendroid</groupId>
+			<artifactId>selendroid</artifactId>
+			<version>0.17.0</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>io.selendroid</groupId>
+			<artifactId>selendroid-client</artifactId>
+			<version>0.17.0</version>
 		</dependency>
 		<dependency>
 			<groupId>io.appium</groupId>
 			<artifactId>java-client</artifactId>
 			<version>3.3.0</version>
 		</dependency>
-
-		<dependency>
-			<groupId>testng</groupId>
-			<artifactId>testng</artifactId>
-			<version>6.8</version>
-		</dependency>
 	</dependencies>
+
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.4.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<executable>java</executable>
+					<arguments>
+						<argument>-classpath</argument>
+						<classpath>
+						</classpath>
+						<argument>AppTest</argument>
+					</arguments>
 				</configuration>
 			</plugin>
-
 		</plugins>
 	</build>
-	<repositories>
-		<repository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</pluginRepository>
-	</pluginRepositories>
+	<description>This is web test framework base on appium</description>
 </project>
