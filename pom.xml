@@ -61,12 +61,9 @@
 				</executions>
 				<configuration>
 					<executable>java</executable>
-					<arguments>
-						<argument>-classpath</argument>
-						<classpath>
-						</classpath>
-						<argument>AppTest</argument>
-					</arguments>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>utf8</encoding>
 				</configuration>
 			</plugin>
 		</plugins>

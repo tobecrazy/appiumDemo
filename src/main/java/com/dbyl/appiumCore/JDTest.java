@@ -50,7 +50,7 @@ public class JDTest {
  
     @Test(groups={"JDTest"})
     public void addContact(){
-        WebElement el = driver.findElement(By.name("ÎÒµÄ"));
+        WebElement el = driver.findElement(By.name("æˆ‘çš„"));
         el.click();
         List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
         textFieldsList.get(0).sendKeys("Some Name");
