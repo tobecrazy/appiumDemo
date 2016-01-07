@@ -75,9 +75,9 @@ public class JDTest {
         WebElement loginButton=driver.findElementById("com.jingdong.app.mall:id/dit");
         loginButton.click();
         List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
-        textFieldsList.get(0).sendKeys("Some Name");
+        textFieldsList.get(0).sendKeys("中文测试");
  
-        textFieldsList.get(1).sendKeys("Some@example.com");
+        textFieldsList.get(1).sendKeys("啊啊");
     
     }
     
