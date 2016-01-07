@@ -65,15 +65,19 @@ public class JDTest {
  
     @Test(groups={"JDTest"})
     public void addContact(){
-        WebElement el = driver.findElementByXPath("//android.widget.FrameLayout//android.widget.RadioButton[4]");
-        el.click();
+        List<WebElement> bottomElements = driver.findElementsByXPath("//android.widget.FrameLayout//android.widget.RadioButton");
+        for(WebElement e:bottomElements)
+        {
+        	   e.click();
+        }
+        bottomElements .get(4).click();
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
         WebElement loginButton=driver.findElementById("com.jingdong.app.mall:id/dit");
         loginButton.click();
         List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
         textFieldsList.get(0).sendKeys("Some Name");
-        textFieldsList.get(1).sendKeys("10086");
-        textFieldsList.get(2).sendKeys("Some@example.com");
+ 
+        textFieldsList.get(1).sendKeys("Some@example.com");
         driver.swipe(100, 500, 100, 100, 2);
         driver.findElementByName("Save").click();
     }
