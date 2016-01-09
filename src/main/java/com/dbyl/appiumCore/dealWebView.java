@@ -2,14 +2,11 @@ package main.java.com.dbyl.appiumCore;
 
 
 import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -19,7 +16,6 @@ import io.appium.java_client.android.AndroidDriver;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -92,14 +88,9 @@ public class dealWebView {
 				userName);
 		driver.findElementsByClassName("android.widget.EditText").get(1).sendKeys(
 				password);
-		driver.findElementByXPath("//android.view.View[contains(@content-desc,'µÇÂ¼')]").click();
-
+		driver.findElementByXPath("//android.view.View[contains(@content-desc,'test')]").click();
 	}
 
-	@AfterClass(alwaysRun = true)
-	public void tearDown() throws Exception {
-		driver.quit();
-	}
 
 	/**
 	 * This Method create for take screenshot
@@ -129,6 +120,9 @@ public class dealWebView {
 			System.out.println("screen shot finished, it's in " + currentPath
 					+ " folder");
 		}
+	}	
+	@AfterClass(alwaysRun = true)
+	public void tearDown() throws Exception {
+		driver.quit();
 	}
-
 }

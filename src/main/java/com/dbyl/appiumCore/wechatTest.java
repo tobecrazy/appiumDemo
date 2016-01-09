@@ -101,8 +101,8 @@ public class wechatTest {
 		// find ok button byName
 		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 
 	}
 
@@ -127,8 +127,8 @@ public class wechatTest {
 		}
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 		snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
 		swipeToUp(driver, 500);
 		snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");
@@ -146,8 +146,8 @@ public class wechatTest {
 		swipeToRight(driver, 100);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 	}
 
 	/**
@@ -210,8 +210,8 @@ public class wechatTest {
 	public void profileSetting() {
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		// find keyword Ê×Ò³ and verify it is display
-		Assert.assertTrue(driver.findElement(By.name("Ê×Ò³")).isDisplayed());
+		// find keyword ï¿½ï¿½Ò³ and verify it is display
+		Assert.assertTrue(driver.findElement(By.name("ï¿½ï¿½Ò³")).isDisplayed());
 
 		driver.swipe(100, 400, 100, 200, 500);
 		WebElement myButton = driver.findElement(By

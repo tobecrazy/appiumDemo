@@ -46,14 +46,14 @@ public class slideToUnlock {
 	// e.printStackTrace();
 	// }
 	// }
-	// }).start(); // Æô¶¯µ¥¶ÀµÄÏß³ÌÀ´Çå¿Õp.getInputStream()µÄ»º³åÇø
+	// }).start(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½p.getInputStream()ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½
 	// InputStream is2 = p.getErrorStream();
 	// BufferedReader br2 = new BufferedReader(new InputStreamReader(is2));
-	// StringBuilder buf = new StringBuilder(); // ±£´æÊä³ö½á¹ûÁ÷
+	// StringBuilder buf = new StringBuilder(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	// String line = null;
 	// while ((line = br2.readLine()) != null)
 	// buf.append(line); //
-	// System.out.println("Êä³ö½á¹ûÎª£º" + buf);
+	// System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" + buf);
 	// // Runtime rt = Runtime.getRuntime();
 	// // // this code for record the screen of your device
 	// //
