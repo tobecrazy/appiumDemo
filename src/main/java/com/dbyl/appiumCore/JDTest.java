@@ -3,7 +3,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -28,12 +27,14 @@ public class JDTest
         AppiumServerUtils.startServer();
 
     }
- 
-    @BeforeMethod(alwaysRun=true)
-    public void setUp() throws Exception {
+
+    @BeforeMethod(alwaysRun = true)
+    public void setUp() throws Exception
+    {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-    	capabilities.setCapability("deviceName", "Android Emulator");
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("platformVersion", "5.1");
         // if no need install don't add this
         // capabilities.setCapability("app", app.getAbsolutePath());
@@ -42,7 +43,6 @@ public class JDTest
         capabilities.setCapability("unicodeKeyboard", "True");
         capabilities.setCapability("resetKeyboard", "True");
         // no need sign
-        //no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability("appActivity", ".MainActivity");
         driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
@@ -67,9 +67,10 @@ public class JDTest
         textFieldsList.get(1).sendKeys("啊啊");
 
     }
-  
-    @AfterMethod(alwaysRun=true)
-    public void tearDown() throws Exception {
+
+    @AfterMethod(alwaysRun = true)
+    public void tearDown() throws Exception
+    {
         driver.quit();
     }
 }
