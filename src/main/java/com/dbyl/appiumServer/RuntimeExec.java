@@ -1,4 +1,4 @@
-package main.java.com.dbyl.appiumCore;
+package main.java.com.dbyl.appiumServer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
