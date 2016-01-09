@@ -1,4 +1,5 @@
 package main.java.com.dbyl.appiumCore;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -15,7 +16,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class iOSTest {
-	private IOSDriver<?> driver;
+	private IOSDriver<WebElement> driver;
 	private boolean isInstall = true;
 
 	@BeforeClass(alwaysRun = true)
@@ -40,7 +41,7 @@ public class iOSTest {
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
 
-		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
 	}
 

@@ -1,6 +1,7 @@
 package main.java.com.dbyl.appiumCore;
 
 
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
@@ -16,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 
 public class AppDemo
 {
-    private AndroidDriver driver;
+    private AndroidDriver<WebElement> driver;
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception
@@ -41,7 +42,7 @@ public class AppDemo
         // no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability("appActivity", ".MainActivity");
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
 
     @AfterMethod(alwaysRun = true)
