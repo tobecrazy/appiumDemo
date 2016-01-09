@@ -1,0 +1,1 @@
+java -jar libs/selendroid-standalone-0.17.0-with-dependencies.jar  -app apps/JD.apk

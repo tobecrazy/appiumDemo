@@ -1,0 +1,631 @@
+Added file C:\Users\I321533\workspace\appiumDemo\build.xml
+Buildfile: C:\Users\I321533\workspace\appiumDemo\build.xml
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 24.4.1
+ [checkenv] Installed at C:\Users\I321533\AppData\Local\Android\sdk
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 23.0.2
+     [echo] Resolving Build Target for Demo...
+[getuitarget] Project Target:   Android 5.1.1
+[getuitarget] API level:        22
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: C:\Users\I321533\workspace\appiumDemo\bin\classes
+
+-pre-compile:
+
+compile:
+    [javac] Compiling 19 source files to C:\Users\I321533\workspace\appiumDemo\bin\classes
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:95: warning: unmappable character for encoding UTF-8
+    [javac] 		driver.findElementByXPath("//android.view.View[contains(@content-desc,'??�')]").click();
+    [javac] 		                                                                       ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:95: warning: unmappable character for encoding UTF-8
+    [javac] 		driver.findElementByXPath("//android.view.View[contains(@content-desc,'??�')]").click();
+    [javac] 		                                                                        ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                   ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                    ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                       ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                        ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                          ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                            ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                   ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                        ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                          ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:49: warning: unmappable character for encoding UTF-8
+    [javac] 	// }).start(); // ??????????????????p.getInputStream()???????
+    [javac] 	                                                            ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                   ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                    ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                       ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                        ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:52: warning: unmappable character for encoding UTF-8
+    [javac] 	// StringBuilder buf = new StringBuilder(); // ????????????
+    [javac] 	                                                          ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                       ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                        ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                          ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                            ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\slideToUnlock.java:56: warning: unmappable character for encoding UTF-8
+    [javac] 	// System.out.println("?????????" + buf);
+    [javac] 	                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:104: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:104: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:105: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:105: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:130: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:130: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:131: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:131: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:149: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:149: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:150: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:150: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:213: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:213: warning: unmappable character for encoding UTF-8
+    [javac] 		// find keyword ??? and verify it is display
+    [javac] 		                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:214: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\wechatTest.java:214: warning: unmappable character for encoding UTF-8
+    [javac] 		Assert.assertTrue(driver.findElement(By.name("???")).isDisplayed());
+    [javac] 		                                               ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:19: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.NotFoundException;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:20: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.TimeoutException;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:21: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebDriver;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:22: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebDriverException;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:23: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.RemoteWebDriver;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:24: error: package org.openqa.selenium.support.ui does not exist
+    [javac] import org.openqa.selenium.support.ui.Clock;
+    [javac]                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:25: error: package org.openqa.selenium.support.ui does not exist
+    [javac] import org.openqa.selenium.support.ui.FluentWait;
+    [javac]                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:26: error: package org.openqa.selenium.support.ui does not exist
+    [javac] import org.openqa.selenium.support.ui.Sleeper;
+    [javac]                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:27: error: package org.openqa.selenium.support.ui does not exist
+    [javac] import org.openqa.selenium.support.ui.SystemClock;
+    [javac]                                      ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:29: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:36: error: cannot find symbol
+    [javac] public class AndroidDriverWait extends FluentWait<AndroidDriver> {
+    [javac]                                        ^
+    [javac]   symbol: class FluentWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:36: error: cannot find symbol
+    [javac] public class AndroidDriverWait extends FluentWait<AndroidDriver> {
+    [javac]                                                   ^
+    [javac]   symbol: class AndroidDriver
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:38: error: cannot find symbol
+    [javac]   private final WebDriver driver;
+    [javac]                 ^
+    [javac]   symbol:   class WebDriver
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:49: error: cannot find symbol
+    [javac]   public AndroidDriverWait(AndroidDriver driver, long timeOutInSeconds) {
+    [javac]                            ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:63: error: cannot find symbol
+    [javac]   public AndroidDriverWait(AndroidDriver driver, long timeOutInSeconds, long sleepInMillis) {
+    [javac]                            ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:74: error: cannot find symbol
+    [javac]   public AndroidDriverWait(AndroidDriver driver, Clock clock, Sleeper sleeper, long timeOutInSeconds,
+    [javac]                            ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:74: error: cannot find symbol
+    [javac]   public AndroidDriverWait(AndroidDriver driver, Clock clock, Sleeper sleeper, long timeOutInSeconds,
+    [javac]                                                  ^
+    [javac]   symbol:   class Clock
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AndroidDriverWait.java:74: error: cannot find symbol
+    [javac]   public AndroidDriverWait(AndroidDriver driver, Clock clock, Sleeper sleeper, long timeOutInSeconds,
+    [javac]                                                               ^
+    [javac]   symbol:   class Sleeper
+    [javac]   location: class AndroidDriverWait
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:4: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.CapabilityType;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:5: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.DesiredCapabilities;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:6: error: package org.testng does not exist
+    [javac] import org.testng.Assert;
+    [javac]                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:7: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.AfterMethod;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:8: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeMethod;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:9: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.Test;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:11: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\AppDemo.java:18: error: cannot find symbol
+    [javac] 	private AndroidDriver driver;
+    [javac] 	        ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class AppDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\ExpectedCondition.java:5: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\ExpectedCondition.java:7: error: package com.google.common.base does not exist
+    [javac] import com.google.common.base.Function;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\ExpectedCondition.java:21: error: cannot find symbol
+    [javac] public interface ExpectedCondition<T> extends Function<AndroidDriver, T> {}
+    [javac]                                               ^
+    [javac]   symbol: class Function
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\ExpectedCondition.java:21: error: cannot find symbol
+    [javac] public interface ExpectedCondition<T> extends Function<AndroidDriver, T> {}
+    [javac]                                                        ^
+    [javac]   symbol: class AndroidDriver
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:3: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.By;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:4: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebElement;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:5: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.CapabilityType;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:6: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.DesiredCapabilities;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:8: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.AfterMethod;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:9: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:10: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeMethod;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:11: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.Test;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:13: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:25: error: cannot find symbol
+    [javac]     private AndroidDriver<WebElement> driver;
+    [javac]             ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class JDTest
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\JDTest.java:25: error: cannot find symbol
+    [javac]     private AndroidDriver<WebElement> driver;
+    [javac]                           ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class JDTest
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:5: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.By;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:6: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebDriver;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:7: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebElement;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:8: error: package org.testng does not exist
+    [javac] import org.testng.Assert;
+    [javac]                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:10: error: package io.selendroid.client does not exist
+    [javac] import io.selendroid.client.SelendroidDriver;
+    [javac]                            ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:11: error: package io.selendroid.common does not exist
+    [javac] import io.selendroid.common.SelendroidCapabilities;
+    [javac]                            ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\Test.java:12: error: package io.selendroid.common.device does not exist
+    [javac] import io.selendroid.common.device.DeviceTargetPlatform;
+    [javac]                                   ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:4: error: package org.apache.commons.io does not exist
+    [javac] import org.apache.commons.io.FileUtils;
+    [javac]                             ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:5: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.By;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:6: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.OutputType;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:7: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.TakesScreenshot;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:8: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebElement;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:9: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.CapabilityType;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:10: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.DesiredCapabilities;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:11: error: package org.testng does not exist
+    [javac] import org.testng.Assert;
+    [javac]                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:12: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.AfterClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:13: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:14: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.Test;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:16: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:24: error: cannot find symbol
+    [javac] 	AndroidDriver<WebElement> driver;
+    [javac] 	^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class baidu
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:24: error: cannot find symbol
+    [javac] 	AndroidDriver<WebElement> driver;
+    [javac] 	              ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class baidu
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\baidu.java:76: error: cannot find symbol
+    [javac] 	public static void snapshot(TakesScreenshot drivername, String filename) {
+    [javac] 	                            ^
+    [javac]   symbol:   class TakesScreenshot
+    [javac]   location: class baidu
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:4: error: package org.apache.commons.io does not exist
+    [javac] import org.apache.commons.io.FileUtils;
+    [javac]                             ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:5: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.By;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:6: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.NoSuchElementException;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:7: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.OutputType;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:8: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.TakesScreenshot;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:9: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebElement;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:10: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.CapabilityType;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:11: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.DesiredCapabilities;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:12: error: package org.testng does not exist
+    [javac] import org.testng.Assert;
+    [javac]                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:13: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.AfterClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:14: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:15: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.Test;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:17: error: package io.appium.java_client.android does not exist
+    [javac] import io.appium.java_client.android.AndroidDriver;
+    [javac]                                     ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:27: error: cannot find symbol
+    [javac] 	private AndroidDriver<?> driver;
+    [javac] 	        ^
+    [javac]   symbol:   class AndroidDriver
+    [javac]   location: class dealWebView
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\dealWebView.java:111: error: cannot find symbol
+    [javac] 	public static void snapshot(TakesScreenshot drivername, String filename) {
+    [javac] 	                            ^
+    [javac]   symbol:   class TakesScreenshot
+    [javac]   location: class dealWebView
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:7: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.WebElement;
+    [javac]                           ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:8: error: package org.openqa.selenium.support does not exist
+    [javac] import org.openqa.selenium.support.PageFactory;
+    [javac]                                   ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:10: error: package io.appium.java_client.ios does not exist
+    [javac] import io.appium.java_client.ios.IOSDriver;
+    [javac]                                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:11: error: package io.appium.java_client.pagefactory does not exist
+    [javac] import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+    [javac]                                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:12: error: package io.appium.java_client.pagefactory does not exist
+    [javac] import io.appium.java_client.pagefactory.iOSFindBy;
+    [javac]                                         ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:15: error: cannot find symbol
+    [javac] 	IOSDriver<?> driver;
+    [javac] 	^
+    [javac]   symbol:   class IOSDriver
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:18: error: cannot find symbol
+    [javac] 	private WebElement inputbox1;
+    [javac] 	        ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:20: error: cannot find symbol
+    [javac] 	private WebElement inputbox2;
+    [javac] 	        ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:23: error: cannot find symbol
+    [javac] 	private WebElement calcButton;
+    [javac] 	        ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:25: error: cannot find symbol
+    [javac] 	private WebElement result;
+    [javac] 	        ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:27: error: cannot find symbol
+    [javac] 	iOSPageDemo(IOSDriver<?> driver) {
+    [javac] 	            ^
+    [javac]   symbol:   class IOSDriver
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSPageDemo.java:31: error: cannot find symbol
+    [javac] 	public void typeInputBox(WebElement e, String msg) {
+    [javac] 	                         ^
+    [javac]   symbol:   class WebElement
+    [javac]   location: class iOSPageDemo
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:2: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.CapabilityType;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:3: error: package org.openqa.selenium.remote does not exist
+    [javac] import org.openqa.selenium.remote.DesiredCapabilities;
+    [javac]                                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:4: error: package org.testng does not exist
+    [javac] import org.testng.Assert;
+    [javac]                  ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:5: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.AfterClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:6: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.BeforeClass;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:7: error: package org.testng.annotations does not exist
+    [javac] import org.testng.annotations.Test;
+    [javac]                              ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:9: error: package io.appium.java_client.ios does not exist
+    [javac] import io.appium.java_client.ios.IOSDriver;
+    [javac]                                 ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSTest.java:18: error: cannot find symbol
+    [javac] 	private IOSDriver<?> driver;
+    [javac] 	        ^
+    [javac]   symbol:   class IOSDriver
+    [javac]   location: class iOSTest
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSWebBrowser.java:3: error: package org.apache.commons.io does not exist
+    [javac] import org.apache.commons.io.FileUtils;
+    [javac]                             ^
+    [javac] C:\Users\I321533\workspace\appiumDemo\src\main\java\com\dbyl\appiumCore\iOSWebBrowser.java:4: error: package org.openqa.selenium does not exist
+    [javac] import org.openqa.selenium.By;
+    [javac]                           ^
+    [javac] 100 errors
+    [javac] 61 warnings
+
+BUILD FAILED
+C:\Users\I321533\AppData\Local\Android\sdk\tools\ant\uibuild.xml:183: Compile failed; see the compiler error output for details.
+
+Total time: 1 second
+cannot stat 'C:\Users\I321533\workspace\appiumDemo\bin\Demo.jar': No such file or directory
+Error: /data/local/tmp/Demo.jar does not exist
+
+Usage: uiautomator <subcommand> [options]
+
+
+
+Available subcommands:
+
+
+
+help: displays help message
+
+
+
+runtest: executes UI automation tests
+
+    runtest <class spec> [options]
+
+    <class spec>: <JARS> < -c <CLASSES> | -e class <CLASSES> >
+
+      <JARS>: a list of jar files containing test classes and dependencies. If
+
+        the path is relative, it's assumed to be under /data/local/tmp. Use
+
+        absolute path if the file is elsewhere. Multiple files can be
+
+        specified, separated by space.
+
+      <CLASSES>: a list of test class names to run, separated by comma. To
+
+        a single method, use TestClass#testMethod format. The -e or -c option
+
+        may be repeated. This option is not required and if not provided then
+
+        all the tests in provided jars will be run automatically.
+
+    options:
+
+      --nohup: trap SIG_HUP, so test won't terminate even if parent process
+
+               is terminated, e.g. USB is disconnected.
+
+      -e debug [true|false]: wait for debugger to connect before starting.
+
+      -e runner [CLASS]: use specified test runner class instead. If
+
+        unspecified, framework default runner will be used.
+
+      -e <NAME> <VALUE>: other name-value pairs to be passed to test classes.
+
+        May be repeated.
+
+      -e outputFormat simple | -s: enabled less verbose JUnit style output.
+
+
+
+dump: creates an XML dump of current UI hierarchy
+
+    dump [--verbose][file]
+
+      [--compressed]: dumps compressed layout information.
+
+      [file]: the location where the dumped XML should be stored, default is
+
+      /storage/emulated/legacy/window_dump.xml
+
+
+
+events: prints out accessibility events until terminated
+
+
+
