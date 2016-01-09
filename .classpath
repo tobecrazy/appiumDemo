@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+<<<<<<< HEAD
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
 	<classpathentry kind="lib" path="C:/Users/I321533/workspace/appiumDemo/libs/selenium-server-standalone-2.48.2.jar"/>
@@ -10,5 +11,17 @@
 	<classpathentry kind="lib" path="C:/Users/I321533/workspace/appiumDemo/libs/testng-6.9.6.jar"/>
 	<classpathentry kind="lib" path="C:/Users/I321533/workspace/appiumDemo/libs/uiautomator.jar"/>
 	<classpathentry kind="lib" path="C:/Users/I321533/workspace/appiumDemo/libs/selendroid-client-0.17.0.jar"/>
+=======
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/android.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/java-client-3.3.0.jar" sourcepath="C:/Users/Young/workspace/appiumDemo/libs/java-client-3.3.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selendroid-standalone-0.17.0-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selenium-server-standalone-2.48.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/selendroid-client-0.17.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/Demo/lib/reportng-1.1.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/uiautomator.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Young/workspace/appiumDemo/libs/java-client-3.3.0-sources.jar"/>
+>>>>>>> 98091ccf0dd34d76a190c469feb44daa9254f580
 	<classpathentry kind="output" path="bin"/>
 </classpath>
