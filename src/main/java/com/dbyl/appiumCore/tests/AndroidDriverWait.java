@@ -1,4 +1,4 @@
-package main.java.com.dbyl.appiumCore;
+package main.java.com.dbyl.appiumCore.tests;
 
 /*
 Copyright 2007-2009 Selenium committers

@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.apache.commons.exec.ExecuteException;
+
 public class RuntimeExec
 {
     public StreamWrapper getStreamWrapper(InputStream is, String type)
@@ -78,10 +80,16 @@ public class RuntimeExec
         }
     }
 
-    public void stopAppiumServer(String appiumServicePort)
+    /**
+     * @author Young
+     * @param appiumServicePort
+     * @throws ExecuteException
+     * @throws IOException
+     */
+    public void stopAppiumServer(String appiumServicePort) throws ExecuteException, IOException
     {
-        excuteCMD("cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in" + " (`netstat -nao ^| findstr /R /C:\""
-                + appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
+        ExectorUtils.runWithWatchDog("cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in"
+                + " (`netstat -nao ^| findstr /R /C:\"" + appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
                 + " (`TASKLIST /FI \"PID eq %a\" ^| findstr /I node.exe`) do taskkill /F /PID %a)");
     }
 }

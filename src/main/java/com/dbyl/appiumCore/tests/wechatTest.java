@@ -1,4 +1,5 @@
-package main.java.com.dbyl.appiumCore;
+package main.java.com.dbyl.appiumCore.tests;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -20,9 +21,9 @@ import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class zhiHu {
+public class wechatTest {
 	private AndroidDriver driver;
-	private boolean isInstall = false;
+	private boolean isInstall = true;
 
 	/**
 	 * @author Young
@@ -58,7 +59,7 @@ public class zhiHu {
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability("appActivity", ".ui.activity.GuideActivity");
-		driver = new AndroidDriver(new URL("http://192.168.1.101:4723/wd/hub"),
+		driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"),
 				capabilities);
 		startRecord();
 	}

@@ -1,4 +1,4 @@
-package main.java.com.dbyl.appiumCore;
+package main.java.com.dbyl.appiumCore.tests;
 
 
 import org.openqa.selenium.WebElement;

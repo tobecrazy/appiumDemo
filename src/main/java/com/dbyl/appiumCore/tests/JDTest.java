@@ -1,4 +1,4 @@
-package main.java.com.dbyl.appiumCore;
+package main.java.com.dbyl.appiumCore.tests;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
