@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.commons.exec.CommandLine;
 import org.apache.commons.exec.DefaultExecuteResultHandler;
 import org.apache.commons.exec.DefaultExecutor;
+import org.apache.commons.exec.ExecuteException;
 import org.apache.commons.exec.ExecuteWatchdog;
 import org.apache.commons.exec.Executor;
 
@@ -17,8 +18,8 @@ public class AppiumServerUtils
 
     public static void startServer() throws IOException, InterruptedException
     {
-        RuntimeExec stop = new RuntimeExec();
-        stop.stopAppiumServer("4723");
+        stopAppiumServer("4723");
+        startServer("4723");
         // RuntimeExec appiumObj = new RuntimeExec();
         // appiumObj.excuteCMD(APPIUMSERVERSTART);
         DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
@@ -40,6 +41,7 @@ public class AppiumServerUtils
      */
     public static void startServer(String port) throws IOException, InterruptedException
     {
+        stopAppiumServer("4723");
         RuntimeExec stop = new RuntimeExec();
         stop.stopAppiumServer(port);
         // RuntimeExec appiumObj = new RuntimeExec();
@@ -53,5 +55,19 @@ public class AppiumServerUtils
         executor.execute(commandLine, resultHandler);
         resultHandler.waitFor(5000);
         System.out.println("Appium server start");
+    }
+
+    /**
+     * @author Young
+     * @param appiumServicePort
+     * @throws ExecuteException
+     * @throws IOException
+     */
+    public static void stopAppiumServer(String appiumServicePort) throws ExecuteException, IOException
+    {
+        RuntimeExec exec = new RuntimeExec();
+        exec.excuteCMD("cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in" + " (`netstat -nao ^| findstr /R /C:\""
+                + appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
+                + " (`TASKLIST /FI \"PID eq %a\" ^| findstr /I node.exe`) do taskkill /F /PID %a)");
     }
 }
