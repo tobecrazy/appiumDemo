@@ -45,7 +45,7 @@ public class JDTest
         {
             File classpathRoot = new File(System.getProperty("user.dir"));
             File appDir = new File(classpathRoot, "apps");
-            File app = new File(appDir, "TestApp.app");
+            File app = new File(appDir, "Jd.apk");
             System.out.println("---->" + app.getAbsolutePath());
             capabilities.setCapability("app", app.getAbsolutePath());
         }
