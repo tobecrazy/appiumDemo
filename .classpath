@@ -3,15 +3,15 @@
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="libs/java-client-3.3.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-2.48.2.jar"/>
+	<classpathentry kind="lib" path="libs/java-client-3.3.0.jar" sourcepath="C:/Users/I321533/workspace/appiumDemo/libs/java-client-3.3.0-sources.jar"/>
 	<classpathentry kind="lib" path="libs/android.jar"/>
 	<classpathentry kind="lib" path="libs/commons-exec-1.3.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.4.jar"/>
 	<classpathentry kind="lib" path="libs/robotium-solo-5.5.2.jar"/>
-	<classpathentry kind="lib" path="libs/selendroid-client-0.17.0.jar"/>
-	<classpathentry kind="lib" path="libs/selendroid-standalone-0.17.0-with-dependencies.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-2.48.2.jar"/>
 	<classpathentry kind="lib" path="libs/testng-6.9.6.jar"/>
 	<classpathentry kind="lib" path="libs/uiautomator.jar"/>
+	<classpathentry kind="lib" path="libs/selendroid-client-0.17.0.jar"/>
+	<classpathentry kind="lib" path="libs/selendroid-standalone-0.17.0-with-dependencies.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
