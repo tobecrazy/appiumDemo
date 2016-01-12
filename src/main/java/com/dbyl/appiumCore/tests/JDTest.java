@@ -66,8 +66,12 @@ public class JDTest
     public void addContact()
     {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement text=driver.findElementByXPath("//android.widget.TextView[contains(@text,'优惠券')]");
-        text.click();
+        MobileElement promotionCard=driver.findElementByAndroidUIAutomator("new UiSelector().className(\"android.widget.TextView\").index(1)");
+        promotionCard.click();
+        
+        MobileElement returnToMainPageButton=driver.findElementById("com.jingdong.app.mall:id/cv");
+        
+        returnToMainPageButton.click();
         List<MobileElement> bottomElements = driver
                 .findElementsByXPath("//android.widget.FrameLayout//android.widget.RadioButton");
         for (MobileElement e : bottomElements)
@@ -75,7 +79,7 @@ public class JDTest
             e.click();
         }
         bottomElements.get(4).click();
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         MobileElement loginButton = driver.findElementById("com.jingdong.app.mall:id/dit");
         loginButton.click();
         List<MobileElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
