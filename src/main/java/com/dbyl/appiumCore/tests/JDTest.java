@@ -2,7 +2,6 @@ package main.java.com.dbyl.appiumCore.tests;
 
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterMethod;
@@ -10,7 +9,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AutomationName;
+import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -21,24 +23,24 @@ import java.util.concurrent.TimeUnit;
 
 public class JDTest
 {
-    private AndroidDriver<WebElement> driver;
-    boolean                           isInstall = false;
+    private AndroidDriver<MobileElement> driver;
+    boolean                              isInstall = false;
 
     @BeforeClass(alwaysRun = true)
     public void startAppiumServer() throws IOException, InterruptedException
     {
         AppiumServerUtils.startServer();
-
     }
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception
     {
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("platformVersion", "5.1");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
 
         // if no need install don't add this
         if (isInstall)
@@ -47,33 +49,36 @@ public class JDTest
             File appDir = new File(classpathRoot, "apps");
             File app = new File(appDir, "Jd.apk");
             System.out.println("---->" + app.getAbsolutePath());
-            capabilities.setCapability("app", app.getAbsolutePath());
+            capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         }
 
-        capabilities.setCapability("appPackage", "com.jingdong.app.mall");
+        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.jingdong.app.mall");
         // support Chinese
-        capabilities.setCapability("unicodeKeyboard", "True");
+        capabilities.setCapability(MobileCapabilityType.UNICODE_KEYBOARD, "True");
         capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability("appActivity", ".MainActivity");
-        driver = new AndroidDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
 
     @Test(groups = { "JDTest" })
     public void addContact()
     {
-        List<WebElement> bottomElements = driver
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        MobileElement text=driver.findElementByXPath("//android.widget.TextView[contains(@text,'优惠券')]");
+        text.click();
+        List<MobileElement> bottomElements = driver
                 .findElementsByXPath("//android.widget.FrameLayout//android.widget.RadioButton");
-        for (WebElement e : bottomElements)
+        for (MobileElement e : bottomElements)
         {
             e.click();
         }
         bottomElements.get(4).click();
         driver.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
-        WebElement loginButton = driver.findElementById("com.jingdong.app.mall:id/dit");
+        MobileElement loginButton = driver.findElementById("com.jingdong.app.mall:id/dit");
         loginButton.click();
-        List<WebElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
+        List<MobileElement> textFieldsList = driver.findElementsByClassName("android.widget.EditText");
         textFieldsList.get(0).sendKeys("中文测试");
         textFieldsList.get(1).sendKeys("啊啊");
         Assert.assertTrue(StringUtils.equals(textFieldsList.get(0).getAttribute("text"), "中文测试"));
