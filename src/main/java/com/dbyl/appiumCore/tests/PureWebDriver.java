@@ -15,6 +15,7 @@ import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class PureWebDriver
@@ -43,10 +44,21 @@ public class PureWebDriver
     @Test(groups = { "taobao" })
     public void webDriver()
     {
-        driver.get("http://m.baidu.com/");
+        driver.get("http://m.taobao.com/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        WebElement tmall = driver.findElementByLinkText("天猫");
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        WebElement tmall = driver.findElementByXPath("//div[@class=' vertical-view' and  @data-href]//div[.='天猫']/../..");
+        System.out.println(tmall.getAttribute("data-href"));
         tmall.click();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        List<WebElement> elements = driver.findElementsByXPath("//ul/li/a[@class='card-item card-style-chn']");
+        for (WebElement e : elements)
+        {
+            System.out.println(e.getAttribute("href"));
+        }
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        System.out.println(driver.getPageSource());
 
     }
 
