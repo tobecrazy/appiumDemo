@@ -16,6 +16,12 @@ public class AppiumServerUtils
 {
     public static String APPIUMSERVERSTART = "C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd";
 
+    /**
+     * use Appium services
+     * @deprecated
+     * @throws IOException
+     * @throws InterruptedException
+     */
     public static void startServer() throws IOException, InterruptedException
     {
         stopAppiumServer("4723");
@@ -34,6 +40,7 @@ public class AppiumServerUtils
     }
 
     /**
+     * @deprecated
      * @author Young
      * @param port
      * @throws IOException

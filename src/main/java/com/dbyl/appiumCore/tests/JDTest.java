@@ -66,7 +66,7 @@ public class JDTest
     public void addContact()
     {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement promotionCard=driver.findElementByAndroidUIAutomator("new UiSelector().className(\"android.widget.TextView\").index(1)");
+        MobileElement promotionCard=driver.findElementByAndroidUIAutomator("new UiSelector().text(\"优惠券\")");
         promotionCard.click();
         
         MobileElement returnToMainPageButton=driver.findElementById("com.jingdong.app.mall:id/cv");
