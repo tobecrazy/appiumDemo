@@ -9,15 +9,55 @@ import org.apache.commons.exec.ExecuteException;
 import org.apache.commons.exec.ExecuteWatchdog;
 import org.apache.commons.exec.Executor;
 
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
+
 /**
  * @author Young
  */
 public class AppiumServerUtils
 {
-    public static String APPIUMSERVERSTART = "C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd";
+    public static String            APPIUMSERVERSTART = "C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd";
+    private static String           definedNode       = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
+    static AppiumDriverLocalService service;
+
+    /**
+     * @param ip
+     * @param port
+     * @return
+     * @throws InterruptedException
+     */
+    public static String startServer(String ip, int port) throws InterruptedException
+    {
+        String serverURL = null;
+        System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
+        service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)
+                .withArgument(GeneralServerFlag.LOG_LEVEL, "debug")
+                .withArgument(GeneralServerFlag.COMMAND_TIMEOUT, "60"));
+        service.start();
+        if (service != null)
+        {
+            serverURL = service.getUrl().toString();
+
+        }
+        return serverURL;
+    }
+
+    /**
+     * @author Young
+     */
+    public static void stopServer()
+    {
+        if (service != null)
+        {
+            service.stop();
+        }
+    }
 
     /**
      * use Appium services
+     * 
      * @deprecated
      * @throws IOException
      * @throws InterruptedException

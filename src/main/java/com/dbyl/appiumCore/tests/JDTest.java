@@ -25,11 +25,12 @@ public class JDTest
 {
     private AndroidDriver<MobileElement> driver;
     boolean                              isInstall = false;
+    private String                       url;
 
     @BeforeClass(alwaysRun = true)
     public void startAppiumServer() throws IOException, InterruptedException
     {
-        AppiumServerUtils.startServer();
+        url = AppiumServerUtils.startServer("127.0.0.1", 4723);
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -59,18 +60,18 @@ public class JDTest
         // no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability("appActivity", ".MainActivity");
-        driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
     }
 
     @Test(groups = { "JDTest" })
     public void addContact()
     {
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        MobileElement promotionCard=driver.findElementByAndroidUIAutomator("new UiSelector().text(\"优惠券\")");
+        MobileElement promotionCard = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"优惠券\")");
         promotionCard.click();
-        
-        MobileElement returnToMainPageButton=driver.findElementById("com.jingdong.app.mall:id/cv");
-        
+
+        MobileElement returnToMainPageButton = driver.findElementById("com.jingdong.app.mall:id/afq");
+
         returnToMainPageButton.click();
         List<MobileElement> bottomElements = driver
                 .findElementsByXPath("//android.widget.FrameLayout//android.widget.RadioButton");
@@ -93,5 +94,6 @@ public class JDTest
     public void tearDown() throws Exception
     {
         driver.quit();
+        AppiumServerUtils.stopServer();
     }
 }
