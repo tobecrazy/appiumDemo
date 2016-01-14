@@ -30,7 +30,7 @@ public class AppDemo
     @BeforeClass
     public void startAppiumServer() throws IOException, InterruptedException
     {
-        AppiumServerUtils.startServer();
+        AppiumServerUtils.startServer("127.0.0.1", 4723);
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -51,9 +51,9 @@ public class AppDemo
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
         capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "cn.dbyl.appiumdemo");
-//        // support Chinese
-//        capabilities.setCapability("unicodeKeyboard", "True");
-//        capabilities.setCapability("resetKeyboard", "True");
+        // // support Chinese
+        // capabilities.setCapability("unicodeKeyboard", "True");
+        // capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".MainActivity");
