@@ -9,10 +9,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
+import main.java.com.dbyl.appiumServer.AppiumLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -23,6 +25,7 @@ import java.util.concurrent.TimeUnit;
 
 public class JDTest
 {
+    AppiumLogger                               logger    = new AppiumLogger(JDTest.class);
     private AndroidDriver<MobileElement> driver;
     boolean                              isInstall = true;
     private String                       url;
@@ -31,6 +34,7 @@ public class JDTest
     public void startAppiumServer() throws IOException, InterruptedException
     {
         url = AppiumServerUtils.startServer("127.0.0.1", 4723);
+        logger.info("get url" + url);
     }
 
     @BeforeMethod(alwaysRun = true)

@@ -14,5 +14,7 @@
 	<classpathentry kind="lib" path="libs/selendroid-client-0.17.0.jar"/>
 	<classpathentry kind="lib" path="libs/selendroid-standalone-0.17.0-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="libs/commons-validator-1.5.0.jar"/>
+	<classpathentry kind="lib" path="libs/logger/log4j-api-2.5.jar"/>
+	<classpathentry kind="lib" path="libs/logger/log4j-core-2.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
