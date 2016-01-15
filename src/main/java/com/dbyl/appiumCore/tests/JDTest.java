@@ -24,7 +24,7 @@ import java.util.concurrent.TimeUnit;
 public class JDTest
 {
     private AndroidDriver<MobileElement> driver;
-    boolean                              isInstall = false;
+    boolean                              isInstall = true;
     private String                       url;
 
     @BeforeClass(alwaysRun = true)
@@ -64,9 +64,9 @@ public class JDTest
     }
 
     @Test(groups = { "JDTest" })
-    public void addContact()
+    public void JDAPPTest() throws InterruptedException
     {
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         MobileElement promotionCard = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"优惠券\")");
         promotionCard.click();
 

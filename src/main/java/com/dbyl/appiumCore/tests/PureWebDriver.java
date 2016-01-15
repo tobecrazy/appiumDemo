@@ -52,6 +52,7 @@ public class PureWebDriver
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         WebElement tmall = driver.findElementByXPath("//div[@id='a6636-1']");
+        tmall.click();
         JavascriptExecutor js = (JavascriptExecutor) driver;
         HashMap<String, Double> flickObject = new HashMap<String, Double>();
         flickObject.put("startX", 200.0);
