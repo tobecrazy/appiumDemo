@@ -10,7 +10,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import org.openqa.selenium.remote.RemoteWebElement;
+
+import io.appium.java_client.MobileDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.TouchableElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -51,8 +54,10 @@ public class PureWebDriver
         driver.get("http://m.taobao.com/");
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        WebElement tmall = driver.findElementByXPath("//div[@id='a6636-1']");
-        tmall.click();
+        TouchableElement tmall = (TouchableElement) driver.findElementByXPath("//div[@id='a6636-1']");
+        tmall.tap(1, 1000);
+        new TouchAction((MobileDriver)driver).tap(tmall).perform();
+//        driver.tap(1, tmall.getLocation().getX(), tmall.getLocation().getY(), 1000);
         JavascriptExecutor js = (JavascriptExecutor) driver;
         HashMap<String, Double> flickObject = new HashMap<String, Double>();
         flickObject.put("startX", 200.0);
