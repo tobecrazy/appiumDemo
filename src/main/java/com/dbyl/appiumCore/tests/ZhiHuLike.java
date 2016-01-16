@@ -2,6 +2,7 @@ package main.java.com.dbyl.appiumCore.tests;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
@@ -21,6 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -118,7 +120,7 @@ public class ZhiHuLike
 
     }
 
-    // @Test(groups = "swipeTest", priority = 1)
+    @Test(groups = "swipeTest", priority = 1)
     public void swipe()
     {
 
@@ -128,6 +130,11 @@ public class ZhiHuLike
         {
             login();
         }
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, String> scrollObject = new HashMap<String, String>();
+        scrollObject.put("direction", "down");
+
+        js.executeScript("mobile: scroll", scrollObject);
         snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
         swipeToUp(driver, 500);
         snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");

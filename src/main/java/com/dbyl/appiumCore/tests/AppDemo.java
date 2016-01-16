@@ -70,7 +70,8 @@ public class AppDemo
         MobileElement button = driver
                 .findElementByAndroidUIAutomator("new UiSelector().className(\"android.widget.Button\")");
         Assert.assertEquals(driver.findElementByClassName("android.widget.Button").getText(), "button");
-        button.click();
+        // button.click();
+        button.tap(1, 1000);
         textView = driver.findElementById("cn.dbyl.appiumdemo:id/text1");
         Assert.assertEquals(textView.getText(), "You just click the button");
 
