@@ -72,7 +72,8 @@ public class JDTest
     {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         MobileElement promotionCard = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"优惠券\")");
-        promotionCard.click();
+        driver.tap(1, promotionCard, 1000);
+//        promotionCard.click();
 
         MobileElement returnToMainPageButton = driver.findElementById("com.jingdong.app.mall:id/afq");
 

@@ -58,7 +58,8 @@ public class baidu {
 		snapshot((TakesScreenshot) driver, "before_search.png");
 		driver.findElementByXPath("//textarea[@id='index-kw']").sendKeys(
 				"appium");
-		driver.findElement(By.xpath("//button[@id='index-bn']")).click();
+		driver.tap(1,driver.findElement(By.xpath("//button[@id='index-bn']")), 100);
+//		driver.findElement(By.xpath("//button[@id='index-bn']")).click();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		System.out.println(driver.getTitle());
 		snapshot((TakesScreenshot) driver, "after_search.png");

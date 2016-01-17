@@ -13,6 +13,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.TouchableElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -56,6 +57,7 @@ public class PureWebDriver
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         MobileElement tmall = (MobileElement) driver.findElementByXPath("//div[@id='a6636-1']");
+        tmall.swipe(SwipeElementDirection.DOWN, 1000);
         tmall.tap(1, 1000);
         HashMap<String, Integer> tapObject = new HashMap<String, Integer>();
         tapObject.put("x", 120);

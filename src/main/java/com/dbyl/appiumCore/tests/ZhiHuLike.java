@@ -131,10 +131,14 @@ public class ZhiHuLike
             login();
         }
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        HashMap<String, String> scrollObject = new HashMap<String, String>();
-        scrollObject.put("direction", "down");
+        HashMap<String, String> swipeObject = new HashMap<String, String>();
+        swipeObject.put("startX", "100");
+        swipeObject.put("startY", "400");
+        swipeObject.put("endX", "100");
+        swipeObject.put("endY", "200");
+        swipeObject.put("duration", "400");
 
-        js.executeScript("mobile: scroll", scrollObject);
+        js.executeScript("mobile: swipe", swipeObject);
         snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
         swipeToUp(driver, 500);
         snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");
@@ -146,6 +150,7 @@ public class ZhiHuLike
         List<MobileElement> titles = driver.findElementsById("com.zhihu.android:id/title");
         logger.info(titles.get(0).getText());
         titles.get(0).click();
+        
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
@@ -250,7 +255,7 @@ public class ZhiHuLike
         // wait for page loading
     }
 
-    @Test(groups = { "like" }, priority = 1)
+    @Test(groups = { "like" }, priority = 2)
     public void clickLike()
     {
 
