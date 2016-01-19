@@ -15,6 +15,8 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AutomationName;
+import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
@@ -57,19 +59,21 @@ public class ZhiHuLike
         // set up appium
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-        capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("platformVersion", "4.4");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+        capabilities.setCapability(MobileCapabilityType.UDID,"015d4bdf31202013");
         // if no need install don't add this
         if (isInstall)
         {
             File classpathRoot = new File(System.getProperty("user.dir"));
             File appDir = new File(classpathRoot, "apps");
             File app = new File(appDir, "zhihu.apk");
-            capabilities.setCapability("app", app.getAbsolutePath());
+            capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         }
-        capabilities.setCapability("appPackage", "com.zhihu.android");
+        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.zhihu.android");
         // support Chinese
         capabilities.setCapability("unicodeKeyboard", "True");
         capabilities.setCapability("resetKeyboard", "True");
@@ -120,7 +124,7 @@ public class ZhiHuLike
 
     }
 
-    @Test(groups = "swipeTest", priority = 1)
+    // @Test(groups = "swipeTest", priority = 1)
     public void swipe()
     {
 
@@ -130,15 +134,21 @@ public class ZhiHuLike
         {
             login();
         }
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        HashMap<String, String> swipeObject = new HashMap<String, String>();
-        swipeObject.put("startX", "100");
-        swipeObject.put("startY", "400");
-        swipeObject.put("endX", "100");
-        swipeObject.put("endY", "200");
-        swipeObject.put("duration", "400");
+        // JavascriptExecutor js = (JavascriptExecutor) driver;
+        // HashMap<String, String> swipeObject = new HashMap<String, String>();
+        // swipeObject.put("startX", "100");
+        // swipeObject.put("startY", "400");
+        // swipeObject.put("endX", "100");
+        // swipeObject.put("endY", "200");
+        // swipeObject.put("duration", "400");
+        //
+        // js.executeScript("mobile: swipe", swipeObject);
 
-        js.executeScript("mobile: swipe", swipeObject);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, String> scrollObject = new HashMap<String, String>();
+        scrollObject.put("direction", "down");
+        js.executeScript("mobile: scroll", scrollObject);
+
         snapshot((TakesScreenshot) driver, "zhihu_before_swipe.png");
         swipeToUp(driver, 500);
         snapshot((TakesScreenshot) driver, "zhihu_after_swipe.png");
@@ -150,7 +160,6 @@ public class ZhiHuLike
         List<MobileElement> titles = driver.findElementsById("com.zhihu.android:id/title");
         logger.info(titles.get(0).getText());
         titles.get(0).click();
-        
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
@@ -177,7 +186,7 @@ public class ZhiHuLike
     {
         int width = driver.manage().window().getSize().width;
         int height = driver.manage().window().getSize().height;
-        driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, during);
+        driver.swipe(width / 2, height * 5 / 8, width / 2, height / 8, during);
     }
 
     /**
@@ -300,12 +309,21 @@ public class ZhiHuLike
         List<MobileElement> allTheAnwsers = swipeToElement(new By.ByName("是否我一直追一个女孩儿过两年她就跟我了呢？"), 100);
         // driver.scrollTo("是否我一直追一个女孩儿过两年她就跟我了呢？");
 
-        allTheAnwsers.addAll(allTheAnwsers);
+        List<MobileElement> listView = driver.findElementsByClassName("android.widget.ListView");
+        int duration = 1000;
+        logger.debug("====>>>>>>" + listView.size());
+        // listView.swipe(SwipeElementDirection.DOWN, duration);
+        // MobileElement cl = driver.findElementByAndroidUIAutomator(
+        // "new UiScrollable(new
+        // UiSelector().scrollable(true)).scrollIntoView(new
+        // UiSelector().textContains(\"上课是否我一直追一个女孩儿过两年她就跟我了呢？\"))");
+        // cl.click();
         System.out.println(allTheAnwsers.size());
         for (MobileElement e : allTheAnwsers)
         {
-            e.click();
+            // e.click();
             // click like
+            logger.info("text is " + e.getText());
         }
 
     }

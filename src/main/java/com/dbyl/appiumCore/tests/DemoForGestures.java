@@ -16,7 +16,6 @@ import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -44,6 +43,7 @@ public class DemoForGestures
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+        capabilities.setCapability(MobileCapabilityType.UDID,"015d4bdf31202013");
         // if no need install don't add this
 
         File classpathRoot = new File(System.getProperty("user.dir"));
@@ -59,7 +59,7 @@ public class DemoForGestures
 
     }
 
-    @Test(groups = { "GustureLockerTest" })
+    @Test 
     public void GustureLockerTest() throws InterruptedException
     {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
