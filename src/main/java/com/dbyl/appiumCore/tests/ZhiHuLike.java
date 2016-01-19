@@ -64,7 +64,7 @@ public class ZhiHuLike
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
-        capabilities.setCapability(MobileCapabilityType.UDID,"015d4bdf31202013");
+        // capabilities.setCapability(MobileCapabilityType.UDID,"015d4bdf31202013");
         // if no need install don't add this
         if (isInstall)
         {
@@ -75,7 +75,7 @@ public class ZhiHuLike
         }
         capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.zhihu.android");
         // support Chinese
-        capabilities.setCapability("unicodeKeyboard", "True");
+        capabilities.setCapability(MobileCapabilityType.UNICODE_KEYBOARD, "True");
         capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");
@@ -274,7 +274,6 @@ public class ZhiHuLike
             login();
         }
 
-        driver.swipe(100, 400, 100, 200, 500);
         WebElement myButton = driver.findElement(By.className("android.widget.ImageButton"));
         myButton.click();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
