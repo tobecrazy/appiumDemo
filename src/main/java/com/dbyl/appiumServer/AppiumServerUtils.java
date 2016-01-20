@@ -40,6 +40,9 @@ public class AppiumServerUtils
         {
             serverURL = service.getUrl().toString();
 
+        } else
+        {
+            throw new InterruptedException();
         }
         return serverURL;
     }
