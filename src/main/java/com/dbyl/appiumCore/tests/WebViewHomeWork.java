@@ -69,17 +69,21 @@ public class WebViewHomeWork
         Set<String> windows = driver.getContextHandles();
         for (String window : windows)
         {
+            // 输出context
             System.out.println(window);
         }
         driver.context("WEBVIEW_com.testerhome.webview");
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.findElementByXPath("//textarea[@id='index-kw']").sendKeys(keyword);
-        driver.tap(1, driver.findElement(By.xpath("//button[@id='index-bn']")), 100);
-        // driver.findElement(By.xpath("//button[@id='index-bn']")).click();
+        // driver.tap(1,
+        // driver.findElement(By.xpath("//button[@id='index-bn']")), 100);
+        driver.findElement(By.xpath("//button[@id='index-bn']")).click();
 
+        // 返回native app context
         driver.context("NATIVE_APP");
         WebElement title = driver.findElementById("android:id/action_bar_title");
-        Assert.assertEquals(title.getText(), keyword);
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        Assert.assertTrue(title.getText().contains(keyword));
 
     }
 
