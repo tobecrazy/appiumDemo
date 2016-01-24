@@ -46,9 +46,11 @@ public class RuntimeExec
     // this is where the action is
     public void excuteCMD(String comand)
     {
+        System.out.println(comand);
         Runtime rt = Runtime.getRuntime();
         RuntimeExec rte = new RuntimeExec();
         StreamWrapper error, output;
+        
 
         try
         {

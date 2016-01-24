@@ -27,9 +27,12 @@ public class AppiumServerUtils
      * @param port
      * @return
      * @throws InterruptedException
+     * @throws IOException 
+     * @throws ExecuteException 
      */
-    public static String startServer(String ip, int port) throws InterruptedException
+    public static String startServer(String ip, int port) throws InterruptedException, ExecuteException, IOException
     {
+        stopAppiumServer("4723");
         String serverURL = null;
         System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)

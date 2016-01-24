@@ -7,7 +7,6 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -32,6 +31,7 @@ public class WebViewHomeWork
     public void startAppiumServer() throws IOException, InterruptedException
     {
         AppiumServerUtils.startServer("127.0.0.1", 4723);
+        Thread.sleep(1000);
     }
 
     @BeforeMethod(alwaysRun = true)
