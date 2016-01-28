@@ -27,11 +27,11 @@ public class AppDemo
 {
     private AndroidDriver<MobileElement> driver;
 
-    @BeforeClass
-    public void startAppiumServer() throws IOException, InterruptedException
-    {
-        AppiumServerUtils.startServer("127.0.0.1", 4723);
-    }
+//    @BeforeClass
+//    public void startAppiumServer() throws IOException, InterruptedException
+//    {
+//        AppiumServerUtils.startServer("127.0.0.1", 4723);
+//    }
 
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception
