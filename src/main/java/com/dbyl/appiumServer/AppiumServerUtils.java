@@ -33,11 +33,12 @@ public class AppiumServerUtils
     public static String startServer(String ip, int port) throws InterruptedException, ExecuteException, IOException
     {
         stopAppiumServer("4723");
+        
         String serverURL = null;
         System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)
-                .withArgument(GeneralServerFlag.LOG_LEVEL, "debug")
-                .withArgument(GeneralServerFlag.COMMAND_TIMEOUT, "60"));
+                .withArgument(GeneralServerFlag.LOG_LEVEL, "debug").withArgument(GeneralServerFlag.LOG_TIMESTAMP)
+                .withArgument(GeneralServerFlag.COMMAND_TIMEOUT, "60000"));
         service.start();
         if (service != null)
         {
