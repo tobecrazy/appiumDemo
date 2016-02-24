@@ -2,16 +2,18 @@ package main.java.com.dbyl.appiumCore.tests;
 
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
+import main.java.com.dbyl.appiumCore.page.AppDemoPage;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -23,17 +25,18 @@ import java.util.concurrent.TimeUnit;
  * @since 2015-6
  * @author Young
  */
+@Test
 public class AppDemo
 {
     private AndroidDriver<MobileElement> driver;
 
-//    @BeforeClass
-//    public void startAppiumServer() throws IOException, InterruptedException
-//    {
-//        AppiumServerUtils.startServer("127.0.0.1", 4723);
-//    }
+    @BeforeClass(alwaysRun = true)
+    public void startAppiumServer() throws IOException, InterruptedException
+    {
+        AppiumServerUtils.startServer("127.0.0.1", 4723);
+    }
 
-    @BeforeMethod(alwaysRun = true)
+    @BeforeClass(alwaysRun = true,dependsOnMethods={"startAppiumServer"})
     public void setUp() throws Exception
     {
         // set up appium
@@ -61,19 +64,15 @@ public class AppDemo
 
     }
 
-    @Test(groups = { "appiumDemo" })
     public void swipeTest()
     {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        MobileElement textView = driver.findElementByAccessibilityId("for appium test");
-        Assert.assertEquals(textView.getText(), "appiumDemo");
-        MobileElement button = driver
-                .findElementByAndroidUIAutomator("new UiSelector().className(\"android.widget.Button\")");
-        Assert.assertEquals(driver.findElementByClassName("android.widget.Button").getText(), "button");
-        // button.click();
-        button.tap(1, 1000);
-        textView = driver.findElementById("cn.dbyl.appiumdemo:id/text1");
-        Assert.assertEquals(textView.getText(), "You just click the button");
+        
+        AppDemoPage appdemo=new  AppDemoPage(driver);
+        PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), appdemo);
+        Assert.assertEquals(appdemo.getText(), "appiumDemo");
+        appdemo.clickButton();
+        Assert.assertEquals(appdemo.getText(), "You just click the button");
 
     }
 
