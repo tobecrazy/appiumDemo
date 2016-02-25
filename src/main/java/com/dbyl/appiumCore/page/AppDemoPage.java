@@ -19,6 +19,8 @@ public class AppDemoPage {
 	@AndroidFindBy(id="cn.dbyl.appiumdemo:id/text1")
 	MobileElement text;
 	
+	
+	
 	public void clickButton()
 	{
 		button.click();
