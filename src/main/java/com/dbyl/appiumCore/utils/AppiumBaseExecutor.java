@@ -9,16 +9,29 @@ import io.appium.java_client.MobileElement;
  * @see IOSDriver and Android Driver
  * @author Young
  */
-public class AppiumBaseExecutor {
+public class AppiumBaseExecutor implements AppiumAPI {
 	private AppiumDriver<?> driver;
 
 	public AppiumBaseExecutor(AppiumDriver<?> driver) {
 		this.driver = driver;
 	}
 
+	/**
+	 * This Method is for type
+	 * 
+	 * @author Young
+	 * @param locator
+	 * @param message
+	 */
 	public void type(Locator locator, String message) {
 		MobileElement e = (MobileElement) findElement(locator);
 		e.sendKeys(message);
+
+	}
+
+	public void click(Locator locator) {
+		MobileElement e = (MobileElement) findElement(locator);
+		e.click();
 
 	}
 
@@ -78,6 +91,21 @@ public class AppiumBaseExecutor {
 		}
 		return e;
 
+	}
+	@Override
+	public void click(MobileElement e) {
+		e.click();		
+	}
+
+	@Override
+	public void type(MobileElement e, String message) {
+		e.sendKeys(message);
+		
+	}
+
+	@Override
+	public String getText(MobileElement e) {
+		return e.getText();
 	}
 
 }
