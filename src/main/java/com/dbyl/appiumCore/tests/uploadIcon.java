@@ -20,6 +20,7 @@ import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class uploadIcon {
@@ -128,7 +129,7 @@ public class uploadIcon {
 
 
 	@Test(groups = { "profileSetting" }, priority = 1)
-	public void profileSetting() {
+	public void profileSetting() throws InterruptedException {
 		if (isInstall) {
 			login();
 		}
@@ -138,13 +139,21 @@ public class uploadIcon {
 		MobileElement profileButton=driver.findElementByClassName("android.widget.ImageButton");
 		profileButton.click();
 		
-		MobileElement avatar=driver.findElementByAndroidUIAutomator("new UiSelector().resoureid(\"com.zhihu.android:id/avatar\").index(0)");
+		MobileElement avatar=driver.findElementByXPath("//android.support.v4.widget.DrawerLayout/android.support.v7.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout//android.widget.ImageView");
 		driver.tap(1, avatar, 1000);
+		Thread.sleep(2000);
 		MobileElement edit=driver.findElementById("com.zhihu.android:id/action_edit");
 		edit.click();
 		
 		MobileElement changeAvatar=driver.findElementByName("修改头像");//com.zhihu.android:id/btn_revise_header
 		changeAvatar.click();
+		
+		MobileElement choosePic= driver.findElementById("com.zhihu.android:id/taken_photo_gallery");
+		choosePic.click();
+		
+		
+		List<MobileElement> pics=driver.findElementsById("com.android.documentsui:id/icon_thumb");
+		pics.get(1).click();
 	}
 
 	/**
