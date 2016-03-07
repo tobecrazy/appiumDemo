@@ -30,9 +30,14 @@ public class baidu
      */
     public void startRecord() throws IOException
     {
-        Runtime rt = Runtime.getRuntime();
+    	String cmd="cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4";
+    	if(System.getProperty("os.name").contains("Mac"))
+    	{
+    		cmd="adb shell screenrecord /sdcard/runCase.mp4";
+    	}
+        Runtime rt = Runtime.getRuntime(); 
         // this code for record the screen of your device
-        rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
+        rt.exec(cmd);
 
     }
 

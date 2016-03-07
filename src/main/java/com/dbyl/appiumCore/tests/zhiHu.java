@@ -38,9 +38,9 @@ public class zhiHu {
 	@BeforeClass(alwaysRun = true)
 	public void startRecord() throws IOException, InterruptedException {
 
-		Runtime rt = Runtime.getRuntime();
+//		Runtime rt = Runtime.getRuntime();
 		// this code for record the screen of your device
-		rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
+//		rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
 
 	}
 

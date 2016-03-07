@@ -21,6 +21,7 @@ public class AppiumServerUtils
     public static String            APPIUMSERVERSTART = "C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd";
     private static String           definedNode       = "C:/Program Files (x86)/Appium/node_modules/appium/bin/appium.js";
     static AppiumDriverLocalService service;
+    private static String OSType=System.getProperty("os.name");
 
     /**
      * @param ip
@@ -33,7 +34,10 @@ public class AppiumServerUtils
     public static String startServer(String ip, int port) throws InterruptedException, ExecuteException, IOException
     {
         stopAppiumServer("4723");
-        
+        if(OSType.contains("Mac"))
+        {
+        	definedNode ="/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
+        }
         String serverURL = null;
         System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
         service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)
@@ -119,9 +123,17 @@ public class AppiumServerUtils
      */
     public static void stopAppiumServer(String appiumServicePort) throws ExecuteException, IOException
     {
-        RuntimeExec exec = new RuntimeExec();
-        exec.excuteCMD("cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in" + " (`netstat -nao ^| findstr /R /C:\""
-                + appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
-                + " (`TASKLIST /FI \"PID eq %a\" ^| findstr /I node.exe`) do taskkill /F /PID %a)");
+    	if(OSType.contains("win"))
+    	{
+    		RuntimeExec exec = new RuntimeExec();
+            exec.excuteCMD("cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in" + " (`netstat -nao ^| findstr /R /C:\""
+                    + appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
+                    + " (`TASKLIST /FI \"PID eq %a\" ^| findstr /I node.exe`) do taskkill /F /PID %a)");
+    	}
+    	else
+    	{
+    		System.out.println("not windows");
+    	}
+        
     }
 }
