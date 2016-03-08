@@ -2,12 +2,12 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="116" started-at="2016-03-08T11:14:40Z" finished-at="2016-03-08T11:14:41Z">
+  <suite name="Default suite" duration-ms="116" started-at="2016-03-08T11:18:22Z" finished-at="2016-03-08T11:18:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="116" started-at="2016-03-08T11:14:40Z" finished-at="2016-03-08T11:14:41Z">
+    <test name="Default test" duration-ms="116" started-at="2016-03-08T11:18:22Z" finished-at="2016-03-08T11:18:22Z">
       <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
-        <test-method status="FAIL" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6735a4c2]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-08T19:14:40Z" finished-at="2016-03-08T19:14:40Z">
+        <test-method status="FAIL" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@72d3f17d]" name="setUp" is-config="true" duration-ms="0" started-at="2016-03-08T19:18:22Z" finished-at="2016-03-08T19:18:22Z">
           <exception class="java.lang.ExceptionInInitializerError">
             <full-stacktrace>
               <![CDATA[java.lang.ExceptionInInitializerError
@@ -55,11 +55,11 @@ Caused by: java.lang.RuntimeException: Stub!
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6735a4c2]" name="calc" duration-ms="1" started-at="2016-03-08T19:14:41Z" finished-at="2016-03-08T19:14:41Z">
+        <test-method status="SKIP" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@72d3f17d]" name="calc" duration-ms="2" started-at="2016-03-08T19:18:22Z" finished-at="2016-03-08T19:18:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calc -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6735a4c2]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-03-08T19:14:41Z" finished-at="2016-03-08T19:14:41Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@72d3f17d]" name="tearDown" is-config="true" duration-ms="0" started-at="2016-03-08T19:18:22Z" finished-at="2016-03-08T19:18:22Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
