@@ -1,13 +1,15 @@
 package main.java.com.dbyl.appiumCore.tests;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 
@@ -16,18 +18,26 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class iOSTest {
-	private IOSDriver<WebElement> driver;
+	private IOSDriver<?> driver;
 	private boolean isInstall = true;
+	private static AppiumDriverLocalService service;
+	private static String URL;
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeClass
+	public static void beforeClass() throws Exception {
+		// service = AppiumDriverLocalService.buildDefaultService();
+		// service.start();
+		URL = AppiumServerUtils.startServer("127.0.0.1", 4723);
+	}
+
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
-		capabilities.setCapability("platformName", "Mac");
-		capabilities.setCapability("deviceName", "iPhone 6");
+		capabilities.setCapability("platformName", "iOS");
 		capabilities.setCapability("platformVersion", "9.2");
+		capabilities.setCapability("deviceName", "iPhone 6");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));
@@ -41,15 +51,15 @@ public class iOSTest {
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
 
-		driver = new IOSDriver<WebElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new IOSDriver(new URL(URL), capabilities);
 
 	}
 
 	@Test
 	public void calc() {
 
-		// wait for 20s
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		// wait for 60s
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
 		// find login userName and password editText
 		iOSPageDemo iOPage = new iOSPageDemo(driver);

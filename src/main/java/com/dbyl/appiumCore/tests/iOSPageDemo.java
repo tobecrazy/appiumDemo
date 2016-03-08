@@ -1,12 +1,14 @@
 package main.java.com.dbyl.appiumCore.tests;
 
+import java.util.HashMap;
 
 /**
  * @author Young
  */
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
@@ -14,22 +16,32 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class iOSPageDemo {
 	IOSDriver<?> driver;
 
-	@iOSFindBy(name = "TextField1")
-	private WebElement inputbox1;
-	@iOSFindBy(name = "TextField2")
-	private WebElement inputbox2;
+	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIATextField[1]")
+	private MobileElement inputbox1;
+	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIATextField[2]")
+	private MobileElement inputbox2;
+
+	public IOSDriver<?> getDriver() {
+		return driver;
+	}
+
+	public void setDriver(IOSDriver<?> driver) {
+		this.driver = driver;
+	}
 
 	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIAButton[1]")
-	private WebElement calcButton;
+	private MobileElement calcButton;
 	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIAStaticText[1]")
-	private WebElement result;
+	private MobileElement result;
 
-	iOSPageDemo(IOSDriver<?> driver) {
+	iOSPageDemo(AppiumDriver<?> driver) {
+		setDriver((IOSDriver<?>) driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	public void typeInputBox(WebElement e, String msg) {
+	public void typeInputBox(MobileElement e, String msg) {
 		e.sendKeys(msg);
+
 	}
 
 	public void typeTextField1(String msg) {

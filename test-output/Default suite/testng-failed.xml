@@ -10,6 +10,7 @@
     <classes>
       <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
         <methods>
+          <include name="beforeClass"/>
           <include name="tearDown"/>
           <include name="calc"/>
           <include name="setUp"/>
