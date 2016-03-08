@@ -32,15 +32,17 @@ public class AppiumServerUtils {
 	 */
 	public static String startServer(String ip, int port) throws InterruptedException, ExecuteException, IOException {
 		stopAppiumServer("4723");
+		String serverURL = null;
 		if (OSType.contains("Mac")) {
 			definedNode = "/Applications/Appium.app/Contents/Resources/node_modules/appium/bin/appium.js";
-			// service = AppiumDriverLocalService.buildDefaultService();
-			// service.start();
+			 service = AppiumDriverLocalService.buildDefaultService();
 		}
-		String serverURL = null;
-		System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
-		service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)
-				.withArgument(GeneralServerFlag.LOG_LEVEL, "debug").withArgument(GeneralServerFlag.LOG_TIMESTAMP));
+		else
+		{
+			System.setProperty(AppiumServiceBuilder.APPIUM_PATH, definedNode);
+			service = AppiumDriverLocalService.buildService(new AppiumServiceBuilder().withIPAddress(ip).usingPort(port)
+					.withArgument(GeneralServerFlag.LOG_LEVEL, "debug").withArgument(GeneralServerFlag.LOG_TIMESTAMP));
+		}
 		service.start();
 		if (service != null) {
 			serverURL = service.getUrl().toString();
