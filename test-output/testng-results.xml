@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88156" started-at="2016-03-08T16:09:54Z" finished-at="2016-03-08T16:11:22Z">
+  <suite name="Default suite" duration-ms="60454" started-at="2016-03-09T11:56:10Z" finished-at="2016-03-09T11:57:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88156" started-at="2016-03-08T16:09:54Z" finished-at="2016-03-08T16:11:22Z">
+    <test name="Default test" duration-ms="60454" started-at="2016-03-09T11:56:10Z" finished-at="2016-03-09T11:57:11Z">
       <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@7927bd04]" name="beforeClass" is-config="true" duration-ms="2376" started-at="2016-03-09T00:09:54Z" finished-at="2016-03-09T00:09:56Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="beforeClass" is-config="true" duration-ms="2755" started-at="2016-03-09T19:56:10Z" finished-at="2016-03-09T19:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@7927bd04]" name="setUp" is-config="true" duration-ms="56338" started-at="2016-03-09T00:09:56Z" finished-at="2016-03-09T00:10:52Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="setUp" is-config="true" duration-ms="28361" started-at="2016-03-09T19:56:13Z" finished-at="2016-03-09T19:56:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@7927bd04]" name="calc" duration-ms="17277" started-at="2016-03-09T00:10:52Z" finished-at="2016-03-09T00:11:10Z">
+        <test-method status="PASS" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="calc" duration-ms="16839" started-at="2016-03-09T19:56:41Z" finished-at="2016-03-09T19:56:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- calc -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@7927bd04]" name="tearDown" is-config="true" duration-ms="12154" started-at="2016-03-09T00:11:10Z" finished-at="2016-03-09T00:11:22Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="tearDown" is-config="true" duration-ms="12487" started-at="2016-03-09T19:56:58Z" finished-at="2016-03-09T19:57:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
