@@ -33,7 +33,7 @@ public class AppDemo
     @BeforeClass(alwaysRun = true)
     public void startAppiumServer() throws IOException, InterruptedException
     {
-        AppiumServerUtils.startServer("127.0.0.1", 4723);
+        AppiumServerUtils.startServer("192.168.1.110", 4723);
     }
 
     @BeforeClass(alwaysRun = true,dependsOnMethods={"startAppiumServer"})
@@ -60,7 +60,7 @@ public class AppDemo
         // no need sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-        driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver = new AndroidDriver<MobileElement>(new URL("http://192.168.1.110:4723/wd/hub"), capabilities);
 
     }
 

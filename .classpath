@@ -3,7 +3,7 @@
 	<classpathentry exported="true" kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="libs/selenium-server-standalone-2.52.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-2.53.0.jar"/>
 	<classpathentry kind="lib" path="libs/android.jar"/>
 	<classpathentry kind="lib" path="libs/commons-exec-1.3.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.4.jar"/>

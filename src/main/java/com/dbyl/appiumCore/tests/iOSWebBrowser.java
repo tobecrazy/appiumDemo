@@ -31,7 +31,7 @@ public class iOSWebBrowser {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
 		capabilities.setCapability("platformName", "Mac");
 		capabilities.setCapability("deviceName", "iPhone 6");
-		capabilities.setCapability("platformVersion", "8.4");
+		capabilities.setCapability("platformVersion", "9.2");
 	 
 
 		// support Chinese

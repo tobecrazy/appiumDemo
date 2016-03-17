@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="60454" started-at="2016-03-09T11:56:10Z" finished-at="2016-03-09T11:57:11Z">
+  <suite name="Default suite" duration-ms="13700" started-at="2016-03-17T14:26:42Z" finished-at="2016-03-17T14:26:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="60454" started-at="2016-03-09T11:56:10Z" finished-at="2016-03-09T11:57:11Z">
-      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="beforeClass" is-config="true" duration-ms="2755" started-at="2016-03-09T19:56:10Z" finished-at="2016-03-09T19:56:13Z">
+    <test name="Default test" duration-ms="13700" started-at="2016-03-17T14:26:42Z" finished-at="2016-03-17T14:26:56Z">
+      <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7a2897ac]" test-instance-name="" name="startAppiumServer" is-config="true" duration-ms="12" started-at="2016-03-17T22:26:42Z" finished-at="2016-03-17T22:26:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="setUp" is-config="true" duration-ms="28361" started-at="2016-03-09T19:56:13Z" finished-at="2016-03-09T19:56:41Z">
+        </test-method> <!-- startAppiumServer -->
+        <test-method name="setUp" test-instance-name="" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7a2897ac]" is-config="true" status="PASS" duration-ms="9177" finished-at="2016-03-17T22:26:52Z" started-at="2016-03-17T22:26:42Z" depends-on-methods="main.java.com.dbyl.appiumCore.tests.AppDemo.startAppiumServer">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="calc" duration-ms="16839" started-at="2016-03-09T19:56:41Z" finished-at="2016-03-09T19:56:58Z">
+        <test-method status="PASS" signature="swipeTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7a2897ac]" test-instance-name="" name="swipeTest" duration-ms="2633" started-at="2016-03-17T22:26:52Z" finished-at="2016-03-17T22:26:54Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- calc -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@6f5fc793]" name="tearDown" is-config="true" duration-ms="12487" started-at="2016-03-09T19:56:58Z" finished-at="2016-03-09T19:57:11Z">
+        </test-method> <!-- swipeTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7a2897ac]" test-instance-name="" name="tearDown" is-config="true" duration-ms="1865" started-at="2016-03-17T22:26:54Z" finished-at="2016-03-17T22:26:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppDemo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
