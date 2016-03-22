@@ -6,4 +6,16 @@
       <class name="main.java.com.dbyl.appiumCore.tests.AppDemo"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="startAppiumServer"/>
+          <include name="setUp"/>
+          <include name="swipeTest"/>
+        </methods>
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppDemo -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
