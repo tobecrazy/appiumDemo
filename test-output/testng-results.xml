@@ -2,29 +2,29 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="25684" started-at="2016-03-21T11:20:04Z" finished-at="2016-03-21T11:20:30Z">
+  <suite name="Default suite" duration-ms="25575" started-at="2016-03-24T15:37:42Z" finished-at="2016-03-24T15:38:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="25684" started-at="2016-03-21T11:20:04Z" finished-at="2016-03-21T11:20:30Z">
+    <test name="Default test" duration-ms="25575" started-at="2016-03-24T15:37:42Z" finished-at="2016-03-24T15:38:07Z">
       <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
-        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@609fc98]" test-instance-name="" name="startAppiumServer" is-config="true" duration-ms="10" started-at="2016-03-21T19:20:04Z" finished-at="2016-03-21T19:20:04Z">
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7efddbdb]" test-instance-name="" name="startAppiumServer" is-config="true" duration-ms="13" started-at="2016-03-24T23:37:42Z" finished-at="2016-03-24T23:37:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startAppiumServer -->
-        <test-method name="setUp" test-instance-name="" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@609fc98]" is-config="true" status="FAIL" duration-ms="0" finished-at="2016-03-21T19:20:04Z" started-at="2016-03-21T19:20:04Z" depends-on-methods="main.java.com.dbyl.appiumCore.tests.AppDemo.startAppiumServer">
+        <test-method name="setUp" test-instance-name="" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7efddbdb]" is-config="true" status="FAIL" duration-ms="0" finished-at="2016-03-24T23:37:42Z" started-at="2016-03-24T23:37:42Z" depends-on-methods="main.java.com.dbyl.appiumCore.tests.AppDemo.startAppiumServer">
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
               <![CDATA[An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 24.92 seconds
+Command duration or timeout: 24.62 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.56.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.3', java.version: '1.7.0_79'
+System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.1.114', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.7.0_79'
 Driver info: io.appium.java_client.android.AndroidDriver]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 24.92 seconds
+Command duration or timeout: 24.62 seconds
 Build info: version: '2.53.0', revision: '35ae25b', time: '2016-03-15 17:00:58'
-System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.56.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.3', java.version: '1.7.0_79'
+System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.1.114', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.11.4', java.version: '1.7.0_79'
 Driver info: io.appium.java_client.android.AndroidDriver
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
@@ -43,7 +43,7 @@ Driver info: io.appium.java_client.android.AndroidDriver
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:162)
 	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:171)
 	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:72)
-	at main.java.com.dbyl.appiumCore.tests.AppDemo.setUp(AppDemo.java:63)
+	at main.java.com.dbyl.appiumCore.tests.AppDemo.setUp(AppDemo.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -74,15 +74,15 @@ Driver info: io.appium.java_client.android.AndroidDriver
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="swipeTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@609fc98]" test-instance-name="" name="swipeTest" duration-ms="1" started-at="2016-03-21T19:20:30Z" finished-at="2016-03-21T19:20:30Z">
+        <test-method status="SKIP" signature="swipeTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7efddbdb]" test-instance-name="" name="swipeTest" duration-ms="1" started-at="2016-03-24T23:38:07Z" finished-at="2016-03-24T23:38:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- swipeTest -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@609fc98]" test-instance-name="" name="tearDown" is-config="true" duration-ms="0" started-at="2016-03-21T19:20:30Z" finished-at="2016-03-21T19:20:30Z">
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppDemo@7efddbdb]" test-instance-name="" name="tearDown" is-config="true" duration-ms="0" started-at="2016-03-24T23:38:07Z" finished-at="2016-03-24T23:38:07Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at main.java.com.dbyl.appiumCore.tests.AppDemo.tearDown(AppDemo.java:82)
+	at main.java.com.dbyl.appiumCore.tests.AppDemo.tearDown(AppDemo.java:77)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

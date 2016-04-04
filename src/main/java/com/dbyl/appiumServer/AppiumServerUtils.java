@@ -120,10 +120,9 @@ public class AppiumServerUtils {
 		String cmdline = "cmd /c echo off & FOR /F \"usebackq tokens=5\" %a in" + " (`netstat -nao ^| findstr /R /C:\""
 				+ appiumServicePort + "\"`) do (FOR /F \"usebackq\" %b in"
 				+ " (`TASKLIST /FI \"PID eq %a\" ^| findstr /I node.exe`) do taskkill /F /PID %a)";
-		RuntimeExec exec = new RuntimeExec();
 		if (OSType.contains("Mac")) {
 			cmdline = "lsof -i:" + appiumServicePort + "|grep -v 'PID' |awk  {'print \\$2'}|xargs kill -9";
 		}
-		exec.excuteCMD(cmdline);
+		ExectorUtils.runWithWatchDog(cmdline);
 	}
 }
