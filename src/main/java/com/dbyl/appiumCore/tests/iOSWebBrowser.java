@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +22,6 @@ import java.util.concurrent.TimeUnit;
 
 public class iOSWebBrowser {
 	private IOSDriver<?> driver;
- 
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
@@ -30,9 +30,9 @@ public class iOSWebBrowser {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
 		capabilities.setCapability("platformName", "Mac");
-		capabilities.setCapability("deviceName", "iPhone 6");
-		capabilities.setCapability("platformVersion", "9.2");
-	 
+		capabilities.setCapability("deviceName", "iPhone SE");
+		capabilities.setCapability("platformVersion", "9.3");
+		capabilities.setCapability(MobileCapabilityType.UDID, "b90269dd9954f6a9edd5c8499cf9d364572ccc72");
 
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
@@ -48,8 +48,7 @@ public class iOSWebBrowser {
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		System.out.println(driver.getTitle());
 		snapshot((TakesScreenshot) driver, "before_search.png");
-		driver.findElementByXPath("//textarea[@id='index-kw']").sendKeys(
-				"appium");
+		driver.findElementByXPath("//textarea[@id='index-kw']").sendKeys("appium");
 		driver.findElement(By.xpath("//button[@id='index-bn']")).click();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		System.out.println(driver.getTitle());
@@ -75,16 +74,13 @@ public class iOSWebBrowser {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/"
-					+ filename);
-			FileUtils
-					.copyFile(scrFile, new File(currentPath + "\\" + filename));
+			System.out.println("save snapshot path is:" + currentPath + "/" + filename);
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
 			System.out.println("Can't save screenshot");
 			e.printStackTrace();
 		} finally {
-			System.out.println("screen shot finished, it's in " + currentPath
-					+ " folder");
+			System.out.println("screen shot finished, it's in " + currentPath + " folder");
 		}
 	}
 

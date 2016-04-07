@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test verbose="2" name="Default test">
-    <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.AppDemo"/>
-    </classes>
-  </test> <!-- Default test -->
   <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSWebBrowser">
         <methods>
+          <include name="runWebBrowser"/>
           <include name="tearDown"/>
-          <include name="startAppiumServer"/>
           <include name="setUp"/>
-          <include name="swipeTest"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppDemo -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSWebBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
