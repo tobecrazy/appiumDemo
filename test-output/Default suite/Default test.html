@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Apr 05 21:00:03 CST 2016</td>
+<td>Started on:</td><td>Sat Apr 09 19:53:06 CST 2016</td>
 </tr>
-<tr><td>Total time:</td><td>1 seconds (1127 ms)</td>
+<tr><td>Total time:</td><td>5 seconds (5084 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,9 +75,9 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.setUp()'><b>setUp</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSWebBrowser</td>
-<td><div><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: ENOENT, stat &apos;/Applications/Appium.app/Contents/Resources/node_modules/appium/build/SafariLauncher/SafariLauncher.zip&apos;) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 231 milliseconds
+<td title='main.java.com.dbyl.appiumCore.tests.iOSTest.setUp()'><b>setUp</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSTest</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a device to launch. You requested &apos;iPhone 6 (9.3) [&apos;, but the available devices were: [&quot;iPad 2 (9.3) [F8547F97-8884-4E4E-822C-CB9EF616B0F8] (Simulator)&quot;,&quot;iPad Air 2 (9.3) [462B5685-E04E-48FA-852A-12ED106E7BA8] (Simulator)&quot;,&quot;iPad Pro (9.3) [F0C86AE1-6199-449C-AE51-FD7080177245] (Simulator)&quot;,&quot;iPad Retina (9.3) [B739863C-6213-442F-8B7A-2072CC00C758] (Simulator)&quot;,&quot;iPhone 5s (9.3) [05002BEB-0675-4F64-96F8-191449726FE8] (Simulator)&quot;,&quot;iPhone 6 Plus (9.3) [37A4FBB6-C3C1-482D-95BB-D3F1BE72C098] (Simulator)&quot;,&quot;iPhone 6s (9.3) [C4719D24-FABF-450E-B702-31CCDF8C4BB1] (Simulator)&quot;,&quot;iPhone 6s (9.3) + Apple Watch - 38mm (2.2) [1CC520F4-E4C1-4227-A7EC-EABE73518810] (Simulator)&quot;,&quot;iPhone 6s Plus (9.3) [396203D4-1C7D-45A5-B34C-E4926A321FF8] (Simulator)&quot;,&quot;iPhone 6s Plus (9.3) + Apple Watch - 42mm (2.2) [C2C81009-303F-46E3-BDE4-A64EC4A8AA4B] (Simulator)&quot;] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.43 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;10.207.218.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.7.0_79&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
@@ -98,7 +98,7 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:162)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:171)
 	at io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:56)
-	at main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.setUp(iOSWebBrowser.java:41)
+	at main.java.com.dbyl.appiumCore.tests.iOSTest.setUp(iOSTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -106,9 +106,11 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:778)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
@@ -124,9 +126,9 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:75)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:46)
-</pre></div><a href='#' onClick='toggleBox("stack-trace640401340", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace640401340'><pre>org.openqa.selenium.SessionNotCreatedException: A new session could not be created. (Original error: ENOENT, stat &apos;/Applications/Appium.app/Contents/Resources/node_modules/appium/build/SafariLauncher/SafariLauncher.zip&apos;) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 231 milliseconds
+</pre></div><a href='#' onClick='toggleBox("stack-trace458034389", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace458034389'><pre>org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not find a device to launch. You requested &apos;iPhone 6 (9.3) [&apos;, but the available devices were: [&quot;iPad 2 (9.3) [F8547F97-8884-4E4E-822C-CB9EF616B0F8] (Simulator)&quot;,&quot;iPad Air 2 (9.3) [462B5685-E04E-48FA-852A-12ED106E7BA8] (Simulator)&quot;,&quot;iPad Pro (9.3) [F0C86AE1-6199-449C-AE51-FD7080177245] (Simulator)&quot;,&quot;iPad Retina (9.3) [B739863C-6213-442F-8B7A-2072CC00C758] (Simulator)&quot;,&quot;iPhone 5s (9.3) [05002BEB-0675-4F64-96F8-191449726FE8] (Simulator)&quot;,&quot;iPhone 6 Plus (9.3) [37A4FBB6-C3C1-482D-95BB-D3F1BE72C098] (Simulator)&quot;,&quot;iPhone 6s (9.3) [C4719D24-FABF-450E-B702-31CCDF8C4BB1] (Simulator)&quot;,&quot;iPhone 6s (9.3) + Apple Watch - 38mm (2.2) [1CC520F4-E4C1-4227-A7EC-EABE73518810] (Simulator)&quot;,&quot;iPhone 6s Plus (9.3) [396203D4-1C7D-45A5-B34C-E4926A321FF8] (Simulator)&quot;,&quot;iPhone 6s Plus (9.3) + Apple Watch - 42mm (2.2) [C2C81009-303F-46E3-BDE4-A64EC4A8AA4B] (Simulator)&quot;] (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.43 seconds
 Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;10.207.218.184&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.4&apos;, java.version: &apos;1.7.0_79&apos;
 Driver info: io.appium.java_client.ios.IOSDriver
@@ -147,7 +149,7 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:162)
 	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:171)
 	at io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:56)
-	at main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.setUp(iOSWebBrowser.java:41)
+	at main.java.com.dbyl.appiumCore.tests.iOSTest.setUp(iOSTest.java:54)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,9 +157,11 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
 	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
 	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)
-	at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:178)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:590)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:823)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1131)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:778)
 	at org.testng.TestRunner.run(TestRunner.java:632)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
@@ -175,11 +179,11 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:46)
 </pre></div></td>
 <td>0</td>
-<td>main.java.com.dbyl.appiumCore.tests.iOSWebBrowser@564425a7</td></tr>
+<td>main.java.com.dbyl.appiumCore.tests.iOSTest@1d04f5f0</td></tr>
 <tr>
-<td title='main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.tearDown()'><b>tearDown</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSWebBrowser</td>
+<td title='main.java.com.dbyl.appiumCore.tests.iOSTest.tearDown()'><b>tearDown</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSTest</td>
 <td><div><pre>java.lang.NullPointerException
-	at main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.tearDown(iOSWebBrowser.java:89)
+	at main.java.com.dbyl.appiumCore.tests.iOSTest.tearDown(iOSTest.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -205,9 +209,9 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:75)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:46)
-</pre></div><a href='#' onClick='toggleBox("stack-trace212532991", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace212532991'><pre>java.lang.NullPointerException
-	at main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.tearDown(iOSWebBrowser.java:89)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2019335758", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2019335758'><pre>java.lang.NullPointerException
+	at main.java.com.dbyl.appiumCore.tests.iOSTest.tearDown(iOSTest.java:75)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -235,7 +239,7 @@ Driver info: io.appium.java_client.ios.IOSDriver
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:46)
 </pre></div></td>
 <td>0</td>
-<td>main.java.com.dbyl.appiumCore.tests.iOSWebBrowser@564425a7</td></tr>
+<td>main.java.com.dbyl.appiumCore.tests.iOSTest@1d04f5f0</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -245,10 +249,10 @@ Driver info: io.appium.java_client.ios.IOSDriver
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='main.java.com.dbyl.appiumCore.tests.iOSWebBrowser.runWebBrowser()'><b>runWebBrowser</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSWebBrowser</td>
+<td title='main.java.com.dbyl.appiumCore.tests.iOSTest.calc()'><b>calc</b><br>Test class: main.java.com.dbyl.appiumCore.tests.iOSTest</td>
 <td></td>
 <td>0</td>
-<td>main.java.com.dbyl.appiumCore.tests.iOSWebBrowser@564425a7</td></tr>
+<td>main.java.com.dbyl.appiumCore.tests.iOSTest@1d04f5f0</td></tr>
 </table><p>
 </body>
 </html>
