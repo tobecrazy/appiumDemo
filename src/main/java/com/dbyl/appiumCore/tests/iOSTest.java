@@ -37,7 +37,7 @@ public class iOSTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "iOS");
 		capabilities.setCapability("platformVersion", "9.3");
-		capabilities.setCapability("deviceName", "iPhone 6");
+		capabilities.setCapability("deviceName", "iPhone 6 Plus");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));
