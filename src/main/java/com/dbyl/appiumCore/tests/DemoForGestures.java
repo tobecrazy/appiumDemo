@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
@@ -51,10 +52,10 @@ public class DemoForGestures
         File app = new File(appDir, "map.apk");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.appiumGirls");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.appiumGirls");
         // set no sign
         capabilities.setCapability("noSign", "True");
-        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".Luohe");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".Luohe");
         driver = new AndroidDriver<MobileElement>(new URL(ServerUrl), capabilities);
 
     }

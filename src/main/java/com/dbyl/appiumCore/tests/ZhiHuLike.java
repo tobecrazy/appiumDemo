@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumLogger;
@@ -73,9 +74,9 @@ public class ZhiHuLike
             File app = new File(appDir, "zhihu.apk");
             capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         }
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.zhihu.android");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.zhihu.android");
         // support Chinese
-        capabilities.setCapability(MobileCapabilityType.UNICODE_KEYBOARD, "True");
+        capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, "True");
         capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");

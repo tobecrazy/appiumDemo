@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
@@ -51,13 +52,13 @@ public class WebViewHomeWork
         File app = new File(appDir, "webview.apk");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.testerhome.webview");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.testerhome.webview");
         // // support Chinese
         // capabilities.setCapability("unicodeKeyboard", "True");
         // capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");
-        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
     }

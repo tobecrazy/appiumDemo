@@ -12,6 +12,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
@@ -54,10 +55,10 @@ public class DemoForGestureLocker
         File app = new File(appDir, "Locker.apk");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.AppiumGirls.locker");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.AppiumGirls.locker");
         // set no sign
         capabilities.setCapability("noSign", "True");
-        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".MainActivity");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
         driver = new AndroidDriver<MobileElement>(new URL(ServerUrl), capabilities);
 
     }

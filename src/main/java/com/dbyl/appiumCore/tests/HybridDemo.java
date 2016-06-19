@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
@@ -48,13 +49,13 @@ public class HybridDemo
         File app = new File(appDir, "hujiang.apk");
         capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
-        capabilities.setCapability(MobileCapabilityType.APP_PACKAGE, "com.hujiang.normandy");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.hujiang.normandy");
         // // support Chinese
         // capabilities.setCapability("unicodeKeyboard", "True");
         // capabilities.setCapability("resetKeyboard", "True");
         // no need sign
         capabilities.setCapability("noSign", "True");
-        capabilities.setCapability(MobileCapabilityType.APP_ACTIVITY, ".SplashActivity");
+        capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".SplashActivity");
         driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 
     }
