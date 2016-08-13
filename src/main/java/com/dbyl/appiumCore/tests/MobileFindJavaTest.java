@@ -1,6 +1,7 @@
 package main.java.com.dbyl.appiumCore.tests;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
@@ -14,15 +15,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 public class MobileFindJavaTest
 {
 
-    private AppiumDriver<?> driver;
+    private AndroidDriver<MobileElement> driver;
     private static String   url;
 
-    @Test
-    public void apiDemo() throws Exception
-    {
-        driver.scrollTo("about phone");
-        driver.scrollTo("Sound");
-    }
 
     @Before
     public void setUp() throws Exception
@@ -32,9 +27,16 @@ public class MobileFindJavaTest
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("appPackage", "com.android.settings");
         capabilities.setCapability("appActivity", ".Settings");
-        driver = new AndroidDriver<>(new URL(url), capabilities);
+        driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
     }
 
+    @Test
+    public void apiDemo() throws Exception
+    {
+    	//scrollTo() and scrollToExact() became deprecated. They are going to be removed in the next release.
+//        driver.scrollTo("about phone");
+//        driver.scrollTo("Sound");
+    }
     @After
     public void tearDown() throws Exception
     {
