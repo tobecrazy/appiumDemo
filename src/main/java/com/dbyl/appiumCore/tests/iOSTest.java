@@ -27,7 +27,7 @@ public class iOSTest {
 	public static void beforeClass() throws Exception {
 		// service = AppiumDriverLocalService.buildDefaultService();
 		// service.start();
-		URL = AppiumServerUtils.startServer("127.0.0.1", 4723);
+		URL ="http://localhost:4444/wd/hub";// AppiumServerUtils.startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)

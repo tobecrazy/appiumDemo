@@ -1,0 +1,25 @@
+{
+  "capabilities":
+      [
+        {
+          "browserName": "Android simulator",
+          "version":"5.1",
+          "maxInstances": 1,
+          "platform":"MAC"
+        }
+      ],
+  "configuration":
+  {
+    "cleanUpCycle":2000,
+    "timeout":30000,
+    "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+    "url":"http://localhost:4724/wd/hub",
+    "host":"localhost",
+    "post":4724,
+    "maxSession": 1,
+    "register": true,
+    "registerCycle": 5000,
+    "hubPort": 4444,
+    "hubHost": "localhost"
+  }
+}

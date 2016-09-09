@@ -1,0 +1,26 @@
+{
+    "capabilities": [
+        {
+            "browserName": "iPhone 5s",
+            "version": "9.3",
+            "maxInstances": 1,
+            "platform": "MAC"
+        }
+    ],
+    "configuration": {
+        "cleanUpCycle": 2000,
+        "timeout":30000,
+        "hub": "http://localhost:4444/grid/register",
+        "host": "localhost",
+        "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
+        "maxSession": 1,
+        "port": 4723,
+        "hubPort": 4444,
+        "hubHost": "localhost",
+        "url": "http://localhost:4723/wd/hub",
+        "remoteHost": "http://localhost:4723",
+        "register": true,
+        "registerCycle": 5000,
+        "role": "node"
+    }
+}
