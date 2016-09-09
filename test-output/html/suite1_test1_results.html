@@ -12,7 +12,7 @@
 <body>
 <h1>TestDebug</h1>
 <p>
-  Test duration: 0.016s
+  Test duration: 0.012s
 </p>
 
   <table class="resultsTable configTable">
@@ -33,13 +33,14 @@
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: Could not initialize class org.apache.http.conn.ssl.SSLConnectionSocketFactory</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NoSuchFieldError: INSTANCE</b></a><br />
     <div class="stackTrace" id="exception-0">
+              org.apache.http.conn.ssl.SSLConnectionSocketFactory.&lt;clinit&gt;(SSLConnectionSocketFactory.java:144)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:57)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:60)<br />
-              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:251)<br />
-              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:228)<br />
+              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:252)<br />
+              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:229)<br />
               io.appium.java_client.remote.AppiumCommandExecutor.&lt;init&gt;(AppiumCommandExecutor.java:55)<br />
               io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:131)<br />
               io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)<br />
@@ -109,13 +110,13 @@
     
         
 
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.ExceptionInInitializerError</b></a><br />
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: Could not initialize class org.apache.http.conn.ssl.SSLConnectionSocketFactory</b></a><br />
     <div class="stackTrace" id="exception-2">
               org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:57)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:60)<br />
-              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:251)<br />
-              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:228)<br />
+              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:252)<br />
+              org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:229)<br />
               io.appium.java_client.remote.AppiumCommandExecutor.&lt;init&gt;(AppiumCommandExecutor.java:55)<br />
               io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:131)<br />
               io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:82)<br />
@@ -135,37 +136,7 @@
               java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
               java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
               java.lang.Thread.run(Thread.java:745)<br />
-                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse">java.lang.RuntimeException: Stub!</a><br />
-        <div class="stackTrace" id="exception-3">
-                      org.apache.http.conn.ssl.AbstractVerifier.&lt;init&gt;(AbstractVerifier.java:6)<br />
-                      org.apache.http.conn.ssl.AllowAllHostnameVerifier.&lt;init&gt;(AllowAllHostnameVerifier.java:6)<br />
-                      org.apache.http.conn.ssl.SSLConnectionSocketFactory.&lt;clinit&gt;(SSLConnectionSocketFactory.java:124)<br />
-                      org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)<br />
-                      org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:57)<br />
-                      org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:60)<br />
-                      org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:251)<br />
-                      org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:228)<br />
-                      io.appium.java_client.remote.AppiumCommandExecutor.&lt;init&gt;(AppiumCommandExecutor.java:55)<br />
-                      io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:131)<br />
-                      io.appium.java_client.ios.IOSDriver.&lt;init&gt;(IOSDriver.java:82)<br />
-                      main.java.com.dbyl.appiumCore.tests.iOSTest.setUp(iOSTest.java:54)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
-                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
-                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
-                      java.lang.reflect.Method.invoke(Method.java:498)<br />
-                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
-                      org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)<br />
-                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)<br />
-                      org.testng.internal.Invoker.invokeMethod(Invoker.java:585)<br />
-                      org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)<br />
-                      org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)<br />
-                      org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)<br />
-                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
-                      java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
-                      java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
-                      java.lang.Thread.run(Thread.java:745)<br />
-                  </div>
-          </div>
+                </div>
       </td>
 </tr>
 <tr>
@@ -180,8 +151,8 @@
     
         
 
-        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
-    <div class="stackTrace" id="exception-4">
+        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-3">
               main.java.com.dbyl.appiumCore.tests.iOSTest.tearDown(iOSTest.java:75)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
