@@ -58,7 +58,8 @@ public class AppDemo {
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-		driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		String url="http://localhost:4444/wd/hub";
+		driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
 
 	}
 
