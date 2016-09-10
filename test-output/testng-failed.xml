@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="classes">
-  <parameter name="driverName" value="chrome"/>
-  <test name="TestDebug(failed)" parallel="classes">
-    <parameter name="driverName" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
+      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
         <methods>
+          <include name="tearDown"/>
+          <include name="webViewTest"/>
           <include name="startAppiumServer"/>
-          <include name="swipeTest"/>
-          <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppDemo -->
-      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-          <include name="calc"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
     </classes>
-  </test> <!-- TestDebug(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

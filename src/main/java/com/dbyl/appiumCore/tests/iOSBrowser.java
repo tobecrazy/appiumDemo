@@ -1,12 +1,10 @@
 package main.java.com.dbyl.appiumCore.tests;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 
@@ -14,12 +12,12 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class TestSelenium {
+public class iOSBrowser {
 	public static void main(String[] args) throws MalformedURLException {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("platformName", "iOS");
-		capabilities.setCapability("platformVersion", "9.2");
-		capabilities.setCapability("deviceName", "iPhone 6");
+		capabilities.setCapability("platformVersion", "9.3");
+		capabilities.setCapability("deviceName", "iPhone 5s");
 		capabilities.setCapability("browserName", "safari");
 		IOSDriver<MobileElement> driver = new IOSDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
 		

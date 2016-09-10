@@ -50,9 +50,9 @@ public class baidu
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android Emulator");
-        capabilities.setCapability("platformVersion", "4.4.4");
+        capabilities.setCapability("platformVersion", "4.4");
         driver = new AndroidDriver<WebElement>(new URL("http://localhost:4444/wd/hub"), capabilities);
-        startRecord();
+//        startRecord();
 
     }
 

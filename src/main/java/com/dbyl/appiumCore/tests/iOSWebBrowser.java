@@ -29,9 +29,9 @@ public class iOSWebBrowser {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "safari");
-		capabilities.setCapability("platformName", "Mac");
-		capabilities.setCapability("deviceName", "iPhone 5s");
+		capabilities.setCapability("platformName", "iOS");
 		capabilities.setCapability("platformVersion", "9.3");
+		capabilities.setCapability("deviceName", "iPhone 6s");
 //		capabilities.setCapability(MobileCapabilityType.UDID, "b90269dd9954f6a9edd5c8499cf9d364572ccc72");
 
 		// support Chinese

@@ -77,7 +77,7 @@ public class AppDemo {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-		AppiumServerUtils.stopAppiumServer("4723");
+//		AppiumServerUtils.stopAppiumServer("4723");
 	}
 
 }

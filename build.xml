@@ -3,7 +3,7 @@
 	<property name="bin" value="bin"/>
 	<property name="src" value="src" />
 	<property name="classes" value="bin/classes" />
-	<echo  message="Start selenium Grid" />
+	<echo  message="Start Appium Grid" />
 	<echo  message="import libs" />
 	<path id="run.classpath">
 		<fileset dir="${basedir}">
