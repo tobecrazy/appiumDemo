@@ -3,7 +3,7 @@
       [
         {
           "browserName": "Android simulator",
-          "version":"5.1",
+          "version":"6.0",
           "maxInstances": 1,
           "platform":"MAC"
         }
@@ -13,9 +13,9 @@
     "cleanUpCycle":2000,
     "timeout":30000,
     "proxy": "org.openqa.grid.selenium.proxy.DefaultRemoteProxy",
-    "url":"http://localhost:4724/wd/hub",
+    "url":"http://localhost:4725/wd/hub",
     "host":"localhost",
-    "post":4724,
+    "post":4725,
     "maxSession": 1,
     "register": true,
     "registerCycle": 5000,

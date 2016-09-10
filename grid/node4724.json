@@ -2,8 +2,8 @@
   "capabilities":
       [
         {
-          "browserName": "Android 5 ",
-          "version":"9.2",
+          "browserName": "Android 5",
+          "version":"4.4",
           "maxInstances": 1,
           "platform":"MAC"
         }

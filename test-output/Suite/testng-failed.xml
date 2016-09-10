@@ -5,22 +5,21 @@
   <test name="TestDebug(failed)" parallel="classes">
     <parameter name="driverName" value="chrome"/>
     <classes>
+      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
+        <methods>
+          <include name="tearDown"/>
+          <include name="webViewTest"/>
+          <include name="startAppiumServer"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
       <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
         <methods>
           <include name="startAppiumServer"/>
-          <include name="swipeTest"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- main.java.com.dbyl.appiumCore.tests.AppDemo -->
-      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
-        <methods>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-          <include name="calc"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
     </classes>
   </test> <!-- TestDebug(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -5,9 +5,9 @@
 		<parameter name="driverName" value="chrome" />
 		<classes>
 			<class name="main.java.com.dbyl.appiumCore.tests.iOSBrowser" />
-			<class name="main.java.com.dbyl.appiumCore.tests.iOSTest" />
+			<class name="main.java.com.dbyl.appiumCore.tests.AppWebView" />
 			<class name="main.java.com.dbyl.appiumCore.tests.AppDemo" />
-			<class name="main.java.com.dbyl.appiumCore.tests.iOSTest" />
+		 
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

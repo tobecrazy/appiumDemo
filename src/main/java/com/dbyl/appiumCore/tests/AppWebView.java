@@ -66,7 +66,8 @@ public class AppWebView
     @Test(groups = { "webView" })
     public void webViewTest()
     {
-        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         Set<String> windows = driver.getContextHandles();
         for (String window : windows)
         {

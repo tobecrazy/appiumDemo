@@ -12,7 +12,7 @@
 <body>
 <h1>TestDebug</h1>
 <p>
-  Test duration: 0.012s
+  Test duration: 0.018s
 </p>
 
   <table class="resultsTable configTable">
@@ -57,7 +57,7 @@
               org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
               java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
               java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
-              java.lang.Thread.run(Thread.java:745)<br />
+              java.lang.Thread.run(Thread.java:812)<br />
                 </div>
       </td>
 </tr>
@@ -73,7 +73,7 @@
     
         
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.AppDemo.driver of an object loaded from local variable &apos;this&apos;</b></a><br />
     <div class="stackTrace" id="exception-1">
               main.java.com.dbyl.appiumCore.tests.AppDemo.tearDown(AppDemo.java:79)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
@@ -90,7 +90,7 @@
               org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
               java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
               java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
-              java.lang.Thread.run(Thread.java:745)<br />
+              java.lang.Thread.run(Thread.java:812)<br />
                 </div>
       </td>
 </tr>
@@ -110,7 +110,7 @@
     
         
 
-        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: Could not initialize class org.apache.http.conn.ssl.SSLConnectionSocketFactory</b></a><br />
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NoClassDefFoundError: org/apache/http/conn/ssl/SSLConnectionSocketFactory : cannot initialize class because prior initialization attempt failed</b></a><br />
     <div class="stackTrace" id="exception-2">
               org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)<br />
               org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:57)<br />
@@ -135,8 +135,34 @@
               org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
               java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
               java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
-              java.lang.Thread.run(Thread.java:745)<br />
-                </div>
+              java.lang.Thread.run(Thread.java:812)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse">java.lang.NoSuchFieldError: INSTANCE</a><br />
+        <div class="stackTrace" id="exception-3">
+                      org.apache.http.conn.ssl.SSLConnectionSocketFactory.&lt;clinit&gt;(SSLConnectionSocketFactory.java:144)<br />
+                      org.openqa.selenium.remote.internal.HttpClientFactory.getClientConnectionManager(HttpClientFactory.java:71)<br />
+                      org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:57)<br />
+                      org.openqa.selenium.remote.internal.HttpClientFactory.&lt;init&gt;(HttpClientFactory.java:60)<br />
+                      org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.getDefaultHttpClientFactory(ApacheHttpClient.java:252)<br />
+                      org.openqa.selenium.remote.internal.ApacheHttpClient$Factory.&lt;init&gt;(ApacheHttpClient.java:229)<br />
+                      io.appium.java_client.remote.AppiumCommandExecutor.&lt;init&gt;(AppiumCommandExecutor.java:55)<br />
+                      io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:131)<br />
+                      io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:92)<br />
+                      main.java.com.dbyl.appiumCore.tests.AppDemo.setUp(AppDemo.java:62)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)<br />
+                      org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)<br />
+                      org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)<br />
+                      org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:170)<br />
+                      org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:104)<br />
+                      java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
+                      java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
+                      java.lang.Thread.run(Thread.java:812)<br />
+                  </div>
+          </div>
       </td>
 </tr>
 <tr>
@@ -151,8 +177,8 @@
     
         
 
-        <a href="javascript:toggleElement('exception-3', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
-    <div class="stackTrace" id="exception-3">
+        <a href="javascript:toggleElement('exception-4', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.ios.IOSDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.iOSTest.driver of an object loaded from local variable &apos;this&apos;</b></a><br />
+    <div class="stackTrace" id="exception-4">
               main.java.com.dbyl.appiumCore.tests.iOSTest.tearDown(iOSTest.java:75)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
@@ -166,7 +192,7 @@
               org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)<br />
               java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)<br />
               java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)<br />
-              java.lang.Thread.run(Thread.java:745)<br />
+              java.lang.Thread.run(Thread.java:812)<br />
                 </div>
       </td>
 </tr>
