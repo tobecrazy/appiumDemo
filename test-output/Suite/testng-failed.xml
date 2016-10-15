@@ -13,6 +13,13 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
       <class name="main.java.com.dbyl.appiumCore.tests.AppDemo">
         <methods>
           <include name="startAppiumServer"/>

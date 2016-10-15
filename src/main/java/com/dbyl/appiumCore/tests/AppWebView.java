@@ -64,10 +64,10 @@ public class AppWebView
     }
 
     @Test(groups = { "webView" })
-    public void webViewTest()
+    public void webViewTest() throws InterruptedException
     {
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
+        Thread.sleep(6000);
         Set<String> windows = driver.getContextHandles();
         for (String window : windows)
         {

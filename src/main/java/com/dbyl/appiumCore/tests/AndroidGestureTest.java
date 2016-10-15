@@ -48,7 +48,7 @@ public class AndroidGestureTest {
 	public void beforeClass() throws Exception {
 		// service = AppiumDriverLocalService.buildDefaultService();
 		// service.start();
-		url = "http://localhost:4444/wd/hub";
+		url = "http://localhost:4723/wd/hub";
 
 	}
 
