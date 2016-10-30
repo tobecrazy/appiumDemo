@@ -63,7 +63,7 @@ public class iOSTest {
 
 		// wait for 60s
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-
+	   
 		// find login userName and password editText
 		iOSPageDemo iOPage = new iOSPageDemo(driver);
 		iOPage.typeTextField1("12");

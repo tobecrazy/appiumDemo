@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.io.File;
 import java.io.IOException;
@@ -32,12 +33,13 @@ public class iOSWebBrowser {
 		capabilities.setCapability("platformVersion", "10.0");
 		capabilities.setCapability("deviceName", "iPhone 6s");
 //		capabilities.setCapability(MobileCapabilityType.UDID, "b90269dd9954f6a9edd5c8499cf9d364572ccc72");
-
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITEST");
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
-
-		driver = new IOSDriver(new URL("http://127.0.0.1:4444/wd/hub"), capabilities);
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS"); //newly added
+		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
+		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
 	}
 
 	@Test
