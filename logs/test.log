@@ -1,1 +1,6 @@
-2016-09-01 20:58:00.858 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.JDTest: get urlhttp://0.0.0.0:4723/wd/hub
+2016-11-03 22:41:30.158 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.AppWebView: sleep 1 s
+2016-11-03 22:41:30.170 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebView: connet to Appium server :127.0.0.1:4723
+2016-11-03 22:41:37.512 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebView: NATIVE_APP
+2016-11-03 22:41:37.513 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebView: WEBVIEW_com.testerhome.webview
+2016-11-03 22:41:44.292 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebView: WEBVIEW_com.testerhome.webview
+2016-11-03 22:41:51.497 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebView: quit
