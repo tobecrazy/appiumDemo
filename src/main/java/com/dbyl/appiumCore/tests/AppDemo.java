@@ -6,6 +6,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
@@ -15,6 +16,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.page.AppDemoPage;
+import main.java.com.dbyl.appiumCore.utils.TakeScreenShotListener;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -26,13 +28,13 @@ import java.util.concurrent.TimeUnit;
  * @since 2015-6
  * @author Young
  */
-@Test
+@Listeners({ TakeScreenShotListener.class })
 public class AppDemo {
-	private AndroidDriver<MobileElement> driver;
+	public static AndroidDriver<MobileElement> driver;
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws IOException, InterruptedException {
-//		AppiumServerUtils.startServer("127.0.0.1", 4723);
+		// AppiumServerUtils.startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
@@ -43,7 +45,7 @@ public class AppDemo {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
 		// if no need install don't add this
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
@@ -58,26 +60,27 @@ public class AppDemo {
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-		String url="http://localhost:4444/wd/hub";
+		String url = "http://localhost:4723/wd/hub";
 		driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
 
 	}
 
-	public void swipeTest() {
+	@Test
+	public void DemoTest() {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		AppDemoPage appdemo = new AppDemoPage(driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), appdemo);
 		Assert.assertEquals(appdemo.getText(), "appiumDemo");
 		appdemo.clickButton();
-		Assert.assertEquals(appdemo.getText(), "You just click the button");
+		Assert.assertNotEquals(appdemo.getText(), "You just click the button");
 
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-//		AppiumServerUtils.stopAppiumServer("4723");
+		// AppiumServerUtils.stopAppiumServer("4723");
 	}
 
 }

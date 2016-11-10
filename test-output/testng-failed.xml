@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="webViewTest"/>
-          <include name="startAppiumServer"/>
+          <include name="beforeClass"/>
           <include name="setUp"/>
+          <include name="calc"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

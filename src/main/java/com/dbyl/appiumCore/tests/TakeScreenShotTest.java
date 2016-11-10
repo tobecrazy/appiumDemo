@@ -11,35 +11,37 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
+import main.java.com.dbyl.appiumCore.utils.TakeScreenShotListener;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class baidu
+public class TakeScreenShotTest
 {
-    AndroidDriver<WebElement> driver;
+    public static AndroidDriver<WebElement> driver;
 
     /**
      * @author Young
      * @throws IOException
      */
-    public void startRecord() throws IOException
-    {
-    	String cmd="cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4";
-    	if(System.getProperty("os.name").contains("Mac"))
-    	{
-    		cmd="adb shell screenrecord /sdcard/runCase.mp4";
-    	}
-        Runtime rt = Runtime.getRuntime(); 
-        // this code for record the screen of your device
-        rt.exec(cmd);
-
-    }
+//    public void startRecord() throws IOException
+//    {
+//    	String cmd="cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4";
+//    	if(System.getProperty("os.name").contains("Mac"))
+//    	{
+//    		cmd="adb shell screenrecord /sdcard/runCase.mp4";
+//    	}
+//        Runtime rt = Runtime.getRuntime(); 
+//        // this code for record the screen of your device
+//        rt.exec(cmd);
+//
+//    }
 
     @BeforeClass(alwaysRun = true)
     public void setUp() throws Exception
@@ -51,7 +53,7 @@ public class baidu
         capabilities.setCapability("platformName", "Android");
         capabilities.setCapability("deviceName", "Android Emulator");
         capabilities.setCapability("platformVersion", "4.4");
-        driver = new AndroidDriver<WebElement>(new URL("http://localhost:4444/wd/hub"), capabilities);
+        driver = new AndroidDriver<WebElement>(new URL("http://localhost:4723/wd/hub"), capabilities);
 //        startRecord();
 
     }

@@ -1,6 +1,5 @@
 package main.java.com.dbyl.appiumCore.tests;
 
-import java.util.HashMap;
 
 /**
  * @author Young

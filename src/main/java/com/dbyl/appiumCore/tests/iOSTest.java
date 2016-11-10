@@ -11,7 +11,6 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
-import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 
@@ -39,7 +38,7 @@ public class iOSTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 		capabilities.setCapability("platformName", "iOS");
-		capabilities.setCapability("platformVersion", "10.0");
+		capabilities.setCapability("platformVersion", "10.1");
 		capabilities.setCapability("deviceName", "iPhone 7 Plus");
 		// if no need install don't add this
 		if (isInstall) {

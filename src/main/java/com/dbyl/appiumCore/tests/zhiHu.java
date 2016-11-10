@@ -303,7 +303,6 @@ public class zhiHu {
 		// driver name, another is file name
 
 		String currentPath = System.getProperty("user.dir"); // get current work
-																// folder
 		File scrFile = drivername.getScreenshotAs(OutputType.FILE);
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere

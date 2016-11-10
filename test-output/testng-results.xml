@@ -1,71 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24009" started-at="2016-11-03T14:41:29Z" finished-at="2016-11-03T14:41:53Z">
+  <suite name="Default suite" duration-ms="122443" started-at="2016-11-10T14:42:02Z" finished-at="2016-11-10T14:44:04Z">
     <groups>
-      <group name="webView">
-        <method signature="AppWebView.webViewTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@407a7f2a]" name="webViewTest" class="main.java.com.dbyl.appiumCore.tests.AppWebView"/>
-      </group> <!-- webView -->
     </groups>
-    <test name="Default test" duration-ms="24009" started-at="2016-11-03T14:41:29Z" finished-at="2016-11-03T14:41:53Z">
-      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
-        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@407a7f2a]" name="startAppiumServer" is-config="true" duration-ms="1019" started-at="2016-11-03T22:41:29Z" finished-at="2016-11-03T22:41:30Z">
+    <test name="Default test" duration-ms="122443" started-at="2016-11-10T14:42:02Z" finished-at="2016-11-10T14:44:04Z">
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSBrowser">
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="setUpDriver" is-config="true" duration-ms="104404" started-at="2016-11-10T22:42:02Z" finished-at="2016-11-10T22:43:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startAppiumServer -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@407a7f2a]" name="setUp" is-config="true" duration-ms="7232" started-at="2016-11-03T22:41:30Z" finished-at="2016-11-03T22:41:37Z">
+        </test-method> <!-- setUpDriver -->
+        <test-method status="PASS" signature="iOSTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="iOSTest" duration-ms="5178" started-at="2016-11-10T22:43:46Z" finished-at="2016-11-10T22:43:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="webViewTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@407a7f2a]" name="webViewTest" duration-ms="14091" started-at="2016-11-03T22:41:37Z" finished-at="2016-11-03T22:41:51Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertTrue(Assert.java:42)
-	at org.testng.Assert.assertTrue(Assert.java:52)
-	at main.java.com.dbyl.appiumCore.tests.AppWebView.webViewTest(AppWebView.java:87)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:746)
-	at org.testng.TestRunner.run(TestRunner.java:600)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
-	at org.testng.TestNG.runSuites(TestNG.java:1104)
-	at org.testng.TestNG.run(TestNG.java:1076)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        </test-method> <!-- iOSTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="afterTest" is-config="true" duration-ms="12829" started-at="2016-11-10T22:43:51Z" finished-at="2016-11-10T22:44:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- webViewTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@407a7f2a]" name="tearDown" is-config="true" duration-ms="1647" started-at="2016-11-03T22:41:51Z" finished-at="2016-11-03T22:41:53Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSBrowser -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
