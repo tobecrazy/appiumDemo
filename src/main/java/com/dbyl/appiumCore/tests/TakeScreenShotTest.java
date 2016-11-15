@@ -11,11 +11,9 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
-import main.java.com.dbyl.appiumCore.utils.TakeScreenShotListener;
 
 import java.io.File;
 import java.io.IOException;

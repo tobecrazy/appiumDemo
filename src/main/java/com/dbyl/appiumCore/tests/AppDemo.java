@@ -6,7 +6,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
@@ -16,11 +15,9 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.page.AppDemoPage;
-import main.java.com.dbyl.appiumCore.utils.TakeScreenShotListener;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -28,13 +25,14 @@ import java.util.concurrent.TimeUnit;
  * @since 2015-6
  * @author Young
  */
-@Listeners({ TakeScreenShotListener.class })
 public class AppDemo {
 	public static AndroidDriver<MobileElement> driver;
+	public URL url;
 
 	@BeforeClass(alwaysRun = true)
-	public void startAppiumServer() throws IOException, InterruptedException {
-		// AppiumServerUtils.startServer("127.0.0.1", 4723);
+	public void startAppiumServer() {
+		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
@@ -60,19 +58,20 @@ public class AppDemo {
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-		String url = "http://localhost:4723/wd/hub";
-		driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
+
+		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
 	}
 
 	@Test
-	public void DemoTest() {
+	public void DemoTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		AppDemoPage appdemo = new AppDemoPage(driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), appdemo);
 		Assert.assertEquals(appdemo.getText(), "appiumDemo");
 		appdemo.clickButton();
+		Thread.sleep(3000);
 		Assert.assertNotEquals(appdemo.getText(), "You just click the button");
 
 	}
@@ -80,7 +79,7 @@ public class AppDemo {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-		// AppiumServerUtils.stopAppiumServer("4723");
+		AppiumServerUtils.getInstance().stopServer();
 	}
 
 }

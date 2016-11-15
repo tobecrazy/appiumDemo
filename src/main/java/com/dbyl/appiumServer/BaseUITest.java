@@ -18,12 +18,12 @@ public class BaseUITest extends AppiumBaseExecutor
 
     public void start() throws InterruptedException, ExecuteException, IOException
     {
-        AppiumServerUtils.startServer("127.0.0.1", 4723);
+        AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
     }
 
     public void stop() throws InterruptedException
     {
-        AppiumServerUtils.stopServer();
+        AppiumServerUtils.getInstance().stopServer();
     }
 
 }

@@ -27,7 +27,7 @@ public class uploadIcon {
 	AppiumLogger logger = new AppiumLogger(JDTest.class);
 	private AndroidDriver<MobileElement> driver;
 	boolean isInstall = false;
-	private String url;
+	private URL url;
 
 	/**
 	 * @author Young
@@ -46,7 +46,7 @@ public class uploadIcon {
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
-		url = AppiumServerUtils.startServer("127.0.0.1", 4723);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		logger.info("get url" + url);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -66,9 +66,8 @@ public class uploadIcon {
 		capabilities.setCapability("resetKeyboard", "True");
 		// no need sign
 		capabilities.setCapability("noSign", "True");
-		capabilities.setCapability("appActivity",
-				".app.ui.activity.MainActivity");
-		driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
+		capabilities.setCapability("appActivity", ".app.ui.activity.MainActivity");
+		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
 	}
 
@@ -76,8 +75,7 @@ public class uploadIcon {
 
 		WebElement loginButton;
 		if (isLoginPresent(driver, 60)) {
-			loginButton = driver.findElement(By
-					.id("com.zhihu.android:id/login_btn"));
+			loginButton = driver.findElement(By.id("com.zhihu.android:id/login_btn"));
 			loginButton.click();
 		}
 
@@ -89,17 +87,14 @@ public class uploadIcon {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-		WebElement userNameInputbox = driver
-				.findElementById("com.zhihu.android:id/username");
+		WebElement userNameInputbox = driver.findElementById("com.zhihu.android:id/username");
 		userNameInputbox.sendKeys("13282774643");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		WebElement passwordInputBox = driver
-				.findElementById("com.zhihu.android:id/password");
+		WebElement passwordInputBox = driver.findElementById("com.zhihu.android:id/password");
 		passwordInputBox.sendKeys("appium123");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		WebElement confirmButton = driver
-				.findElementById("com.zhihu.android:id/btn_progress");
+		WebElement confirmButton = driver.findElementById("com.zhihu.android:id/btn_progress");
 		if (confirmButton.isEnabled()) {
 			confirmButton.click();
 		} else {
@@ -115,18 +110,14 @@ public class uploadIcon {
 	}
 
 	public boolean isLoginPresent(AndroidDriver driver, int timeout) {
-		boolean isPresent = new AndroidDriverWait(driver, timeout).until(
-				new ExpectedCondition<WebElement>() {
-					public WebElement apply(AndroidDriver d) {
-						return d.findElement(By
-								.id("com.zhihu.android:id/login_btn"));
-					}
+		boolean isPresent = new AndroidDriverWait(driver, timeout).until(new ExpectedCondition<WebElement>() {
+			public WebElement apply(AndroidDriver d) {
+				return d.findElement(By.id("com.zhihu.android:id/login_btn"));
+			}
 
-				}).isDisplayed();
+		}).isDisplayed();
 		return isPresent;
 	}
-
-
 
 	@Test(groups = { "profileSetting" }, priority = 1)
 	public void profileSetting() throws InterruptedException {
@@ -136,23 +127,23 @@ public class uploadIcon {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// find keyword ��ҳ and verify it is display
 		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
-		MobileElement profileButton=driver.findElementByClassName("android.widget.ImageButton");
+		MobileElement profileButton = driver.findElementByClassName("android.widget.ImageButton");
 		profileButton.click();
-		
-		MobileElement avatar=driver.findElementByXPath("//android.support.v4.widget.DrawerLayout/android.support.v7.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout//android.widget.ImageView");
+
+		MobileElement avatar = driver.findElementByXPath(
+				"//android.support.v4.widget.DrawerLayout/android.support.v7.widget.RecyclerView/android.widget.FrameLayout/android.widget.RelativeLayout//android.widget.ImageView");
 		driver.tap(1, avatar, 1000);
 		Thread.sleep(2000);
-		MobileElement edit=driver.findElementById("com.zhihu.android:id/action_edit");
+		MobileElement edit = driver.findElementById("com.zhihu.android:id/action_edit");
 		edit.click();
-		
-		MobileElement changeAvatar=driver.findElementByName("修改头像");//com.zhihu.android:id/btn_revise_header
+
+		MobileElement changeAvatar = driver.findElementByName("修改头像");// com.zhihu.android:id/btn_revise_header
 		changeAvatar.click();
-		
-		MobileElement choosePic= driver.findElementById("com.zhihu.android:id/taken_photo_gallery");
+
+		MobileElement choosePic = driver.findElementById("com.zhihu.android:id/taken_photo_gallery");
 		choosePic.click();
-		
-		
-		List<MobileElement> pics=driver.findElementsById("com.android.documentsui:id/icon_thumb");
+
+		List<MobileElement> pics = driver.findElementsById("com.android.documentsui:id/icon_thumb");
 		pics.get(1).click();
 	}
 
@@ -185,16 +176,13 @@ public class uploadIcon {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/"
-					+ filename);
-			FileUtils
-					.copyFile(scrFile, new File(currentPath + "\\" + filename));
+			System.out.println("save snapshot path is:" + currentPath + "/" + filename);
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
 			System.out.println("Can't save screenshot");
 			e.printStackTrace();
 		} finally {
-			System.out.println("screen shot finished, it's in " + currentPath
-					+ " folder");
+			System.out.println("screen shot finished, it's in " + currentPath + " folder");
 		}
 	}
 
@@ -205,13 +193,12 @@ public class uploadIcon {
 	 */
 	public boolean isElementPresent(final By by, int timeOut) {
 		try {
-			new AndroidDriverWait(driver, timeOut)
-					.until(new ExpectedCondition<WebElement>() {
-						public WebElement apply(AndroidDriver d) {
-							return d.findElement(by);
-						}
+			new AndroidDriverWait(driver, timeOut).until(new ExpectedCondition<WebElement>() {
+				public WebElement apply(AndroidDriver d) {
+					return d.findElement(by);
+				}
 
-					});
+			});
 			return true;
 		} catch (Exception e) {
 			return false;

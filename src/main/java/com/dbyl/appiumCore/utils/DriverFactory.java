@@ -21,7 +21,7 @@ public class DriverFactory
 
     public static void main(String[] args) throws IOException, InterruptedException
     {
-        AppiumServerUtils.startServer();
+        AppiumServerUtils.getInstance().startAppiumServerByDefault();
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("platformName", "Android");

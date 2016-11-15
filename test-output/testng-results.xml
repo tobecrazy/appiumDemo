@@ -2,20 +2,24 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="122443" started-at="2016-11-10T14:42:02Z" finished-at="2016-11-10T14:44:04Z">
+  <suite name="Default suite" duration-ms="131906" started-at="2016-11-15T13:04:42Z" finished-at="2016-11-15T13:06:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="122443" started-at="2016-11-10T14:42:02Z" finished-at="2016-11-10T14:44:04Z">
+    <test name="Default test" duration-ms="131906" started-at="2016-11-15T13:04:42Z" finished-at="2016-11-15T13:06:54Z">
       <class name="main.java.com.dbyl.appiumCore.tests.iOSBrowser">
-        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="setUpDriver" is-config="true" duration-ms="104404" started-at="2016-11-10T22:42:02Z" finished-at="2016-11-10T22:43:46Z">
+        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@78b66d36]" name="startAppiumServer" is-config="true" duration-ms="3111" started-at="2016-11-15T21:04:42Z" finished-at="2016-11-15T21:04:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumServer -->
+        <test-method status="PASS" signature="setUpDriver()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@78b66d36]" name="setUpDriver" is-config="true" duration-ms="110371" started-at="2016-11-15T21:04:45Z" finished-at="2016-11-15T21:06:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpDriver -->
-        <test-method status="PASS" signature="iOSTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="iOSTest" duration-ms="5178" started-at="2016-11-10T22:43:46Z" finished-at="2016-11-10T22:43:51Z">
+        <test-method status="PASS" signature="iOSTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@78b66d36]" name="iOSTest" duration-ms="5715" started-at="2016-11-15T21:06:35Z" finished-at="2016-11-15T21:06:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- iOSTest -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@5223e5ee]" name="afterTest" is-config="true" duration-ms="12829" started-at="2016-11-10T22:43:51Z" finished-at="2016-11-10T22:44:04Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSBrowser@78b66d36]" name="afterTest" is-config="true" duration-ms="12658" started-at="2016-11-15T21:06:41Z" finished-at="2016-11-15T21:06:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->

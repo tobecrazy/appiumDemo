@@ -28,7 +28,7 @@ public class zhiHu {
 	AppiumLogger logger = new AppiumLogger(JDTest.class);
 	private AndroidDriver<MobileElement> driver;
 	boolean isInstall = true;
-	private String url;
+	private URL url;
 
 	/**
 	 * @author Young
@@ -38,16 +38,16 @@ public class zhiHu {
 	@BeforeClass(alwaysRun = true)
 	public void startRecord() throws IOException, InterruptedException {
 
-//		Runtime rt = Runtime.getRuntime();
+		// Runtime rt = Runtime.getRuntime();
 		// this code for record the screen of your device
-//		rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
+		// rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
 
 	}
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
-		url = AppiumServerUtils.startServer("127.0.0.1", 4723);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		logger.info("get url" + url);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
@@ -67,9 +67,8 @@ public class zhiHu {
 		capabilities.setCapability("resetKeyboard", "True");
 		// no need sign
 		capabilities.setCapability("noSign", "True");
-		capabilities.setCapability("appActivity",
-				".app.ui.activity.MainActivity");
-		driver = new AndroidDriver<MobileElement>(new URL(url), capabilities);
+		capabilities.setCapability("appActivity", ".app.ui.activity.MainActivity");
+		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
 	}
 
@@ -77,8 +76,7 @@ public class zhiHu {
 
 		WebElement loginButton;
 		if (isLoginPresent(driver, 60)) {
-			loginButton = driver.findElement(By
-					.id("com.zhihu.android:id/login_btn"));
+			loginButton = driver.findElement(By.id("com.zhihu.android:id/login_btn"));
 			loginButton.click();
 		}
 
@@ -90,17 +88,14 @@ public class zhiHu {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		// find login userName and password editText
-		WebElement userNameInputbox = driver
-				.findElementById("com.zhihu.android:id/username");
+		WebElement userNameInputbox = driver.findElementById("com.zhihu.android:id/username");
 		userNameInputbox.sendKeys("13282774643");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		WebElement passwordInputBox = driver
-				.findElementById("com.zhihu.android:id/password");
+		WebElement passwordInputBox = driver.findElementById("com.zhihu.android:id/password");
 		passwordInputBox.sendKeys("appium123");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		WebElement confirmButton = driver
-				.findElementById("com.zhihu.android:id/btn_progress");
+		WebElement confirmButton = driver.findElementById("com.zhihu.android:id/btn_progress");
 		if (confirmButton.isEnabled()) {
 			confirmButton.click();
 		} else {
@@ -116,14 +111,12 @@ public class zhiHu {
 	}
 
 	public boolean isLoginPresent(AndroidDriver driver, int timeout) {
-		boolean isPresent = new AndroidDriverWait(driver, timeout).until(
-				new ExpectedCondition<WebElement>() {
-					public WebElement apply(AndroidDriver d) {
-						return d.findElement(By
-								.id("com.zhihu.android:id/login_btn"));
-					}
+		boolean isPresent = new AndroidDriverWait(driver, timeout).until(new ExpectedCondition<WebElement>() {
+			public WebElement apply(AndroidDriver d) {
+				return d.findElement(By.id("com.zhihu.android:id/login_btn"));
+			}
 
-				}).isDisplayed();
+		}).isDisplayed();
 		return isPresent;
 	}
 
@@ -146,8 +139,7 @@ public class zhiHu {
 
 		swipeToDown(driver, 1000);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		List<MobileElement> titles = driver
-				.findElementsById("com.zhihu.android:id/title");
+		List<MobileElement> titles = driver.findElementsById("com.zhihu.android:id/title");
 		titles.get(0).click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
@@ -223,14 +215,12 @@ public class zhiHu {
 		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
 
 		driver.swipe(100, 400, 100, 200, 500);
-		WebElement myButton = driver.findElement(By
-				.className("android.widget.ImageButton"));
+		WebElement myButton = driver.findElement(By.className("android.widget.ImageButton"));
 		myButton.click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.swipe(700, 500, 100, 500, 10);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		List<MobileElement> textViews = driver
-				.findElementsByClassName("android.widget.TextView");
+		List<MobileElement> textViews = driver.findElementsByClassName("android.widget.TextView");
 		textViews.get(0).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -249,22 +239,18 @@ public class zhiHu {
 
 		driver.findElementById("com.zhihu.android:id/avatar").click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		WebElement intro = driver
-				.findElementById("com.zhihu.android:id/introduction");
+		WebElement intro = driver.findElementById("com.zhihu.android:id/introduction");
 		intro.click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		WebElement content = driver
-				.findElementById("com.zhihu.android:id/content");
+		WebElement content = driver.findElementById("com.zhihu.android:id/content");
 		String text = content.getAttribute("text");
 		content.click();
 
 		content.sendKeys("Appium Test. Create By Young");
 
-		driver.findElementById("com.zhihu.android:id/menu_question_done")
-				.click();
+		driver.findElementById("com.zhihu.android:id/menu_question_done").click();
 
-		WebElement explanation = driver
-				.findElementById("com.zhihu.android:id/explanation");
+		WebElement explanation = driver.findElementById("com.zhihu.android:id/explanation");
 		explanation.click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		content = driver.findElementById("com.zhihu.android:id/content");
@@ -273,8 +259,7 @@ public class zhiHu {
 
 		content.sendKeys("Appium Test. Create By Young. This is an appium type hahahahah");
 
-		driver.findElementById("com.zhihu.android:id/menu_question_done")
-				.click();
+		driver.findElementById("com.zhihu.android:id/menu_question_done").click();
 		snapshot((TakesScreenshot) driver, "zhihu.png");
 
 	}
@@ -307,16 +292,13 @@ public class zhiHu {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/"
-					+ filename);
-			FileUtils
-					.copyFile(scrFile, new File(currentPath + "\\" + filename));
+			System.out.println("save snapshot path is:" + currentPath + "/" + filename);
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
 			System.out.println("Can't save screenshot");
 			e.printStackTrace();
 		} finally {
-			System.out.println("screen shot finished, it's in " + currentPath
-					+ " folder");
+			System.out.println("screen shot finished, it's in " + currentPath + " folder");
 		}
 	}
 
@@ -327,13 +309,12 @@ public class zhiHu {
 	 */
 	public boolean isElementPresent(final By by, int timeOut) {
 		try {
-			new AndroidDriverWait(driver, timeOut)
-					.until(new ExpectedCondition<WebElement>() {
-						public WebElement apply(AndroidDriver d) {
-							return d.findElement(by);
-						}
+			new AndroidDriverWait(driver, timeOut).until(new ExpectedCondition<WebElement>() {
+				public WebElement apply(AndroidDriver d) {
+					return d.findElement(by);
+				}
 
-					});
+			});
 			return true;
 		} catch (Exception e) {
 			return false;

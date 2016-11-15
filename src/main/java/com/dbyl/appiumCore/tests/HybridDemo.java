@@ -29,7 +29,7 @@ public class HybridDemo
     @BeforeClass
     public static void startAppiumServer() throws IOException, InterruptedException
     {
-        AppiumServerUtils.startServer("127.0.0.1", 4723);
+        AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
     }
 
     @Before
@@ -95,7 +95,7 @@ public class HybridDemo
     public static void StopServer() throws Exception
     {
         driver.quit();
-        AppiumServerUtils.stopAppiumServer("4723");
+        AppiumServerUtils.getInstance().stopServer();
     }
 
 }

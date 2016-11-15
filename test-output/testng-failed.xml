@@ -3,14 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSBrowser">
         <methods>
-          <include name="beforeClass"/>
-          <include name="setUp"/>
-          <include name="calc"/>
-          <include name="tearDown"/>
+          <include name="iOSTest"/>
+          <include name="setUpDriver"/>
+          <include name="startAppiumServer"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -29,13 +29,13 @@ import java.util.concurrent.TimeUnit;
  */
 public class DemoForGestureLocker
 {
-    private String                       ServerUrl;
+    private URL                      ServerUrl;
     private AndroidDriver<MobileElement> driver;
 
     @BeforeClass
     public void startAppiumServer() throws IOException, InterruptedException
     {
-        ServerUrl = AppiumServerUtils.startServer("127.0.0.1", 4723);
+        ServerUrl = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
     }
 
     @BeforeMethod(alwaysRun = true)
@@ -59,7 +59,7 @@ public class DemoForGestureLocker
         // set no sign
         capabilities.setCapability("noSign", "True");
         capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".MainActivity");
-        driver = new AndroidDriver<MobileElement>(new URL(ServerUrl), capabilities);
+        driver = new AndroidDriver<MobileElement>(ServerUrl, capabilities);
 
     }
 
@@ -100,7 +100,7 @@ public class DemoForGestureLocker
     public void tearDown() throws Exception
     {
         driver.quit();
-        AppiumServerUtils.stopServer();
+        AppiumServerUtils.getInstance().stopServer();
     }
 
 }
