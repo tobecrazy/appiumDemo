@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
+      <class name="main.java.com.dbyl.appiumCore.tests.AndroidGestureTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="webViewTest"/>
-          <include name="startAppiumServer"/>
-          <include name="setUp"/>
+          <include name="dragNDropTest"/>
+          <include name="elementGestureTest"/>
+          <include name="beforeTestInit"/>
+          <include name="setup"/>
+          <include name="afterClass"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.AndroidGestureTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,31 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38154" started-at="2016-11-15T15:16:46Z" finished-at="2016-11-15T15:17:24Z">
+  <suite name="Default suite" duration-ms="123390" started-at="2016-11-23T13:07:36Z" finished-at="2016-11-23T13:09:39Z">
     <groups>
-      <group name="webView">
-        <method signature="AppWebView.webViewTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@4e928fbf]" name="webViewTest" class="main.java.com.dbyl.appiumCore.tests.AppWebView"/>
-      </group> <!-- webView -->
     </groups>
-    <test name="Default test" duration-ms="38154" started-at="2016-11-15T15:16:46Z" finished-at="2016-11-15T15:17:24Z">
-      <class name="main.java.com.dbyl.appiumCore.tests.AppWebView">
-        <test-method status="PASS" signature="startAppiumServer()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@4e928fbf]" name="startAppiumServer" is-config="true" duration-ms="4132" started-at="2016-11-15T23:16:46Z" finished-at="2016-11-15T23:16:50Z">
+    <test name="Default test" duration-ms="123390" started-at="2016-11-23T13:07:36Z" finished-at="2016-11-23T13:09:39Z">
+      <class name="main.java.com.dbyl.appiumCore.tests.iOSTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@1700915]" name="beforeClass" is-config="true" duration-ms="3673" started-at="2016-11-23T21:07:36Z" finished-at="2016-11-23T21:07:40Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startAppiumServer -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@4e928fbf]" name="setUp" is-config="true" duration-ms="7154" started-at="2016-11-15T23:16:50Z" finished-at="2016-11-15T23:16:57Z">
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@1700915]" name="setUp" is-config="true" duration-ms="98678" started-at="2016-11-23T21:07:40Z" finished-at="2016-11-23T21:09:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="webViewTest()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@4e928fbf]" name="webViewTest" duration-ms="25268" started-at="2016-11-15T23:16:57Z" finished-at="2016-11-15T23:17:22Z">
+        <test-method status="PASS" signature="calc()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@1700915]" name="calc" duration-ms="8517" started-at="2016-11-23T21:09:18Z" finished-at="2016-11-23T21:09:27Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- webViewTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.AppWebView@4e928fbf]" name="tearDown" is-config="true" duration-ms="1571" started-at="2016-11-15T23:17:22Z" finished-at="2016-11-15T23:17:24Z">
+        </test-method> <!-- calc -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:main.java.com.dbyl.appiumCore.tests.iOSTest@1700915]" name="tearDown" is-config="true" duration-ms="12496" started-at="2016-11-23T21:09:27Z" finished-at="2016-11-23T21:09:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.AppWebView -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.iOSTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

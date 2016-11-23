@@ -15,9 +15,9 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class iOSPageDemo {
 	IOSDriver<?> driver;
 
-	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIATextField[1]")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
 	private MobileElement inputbox1;
-	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIATextField[2]")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]")
 	private MobileElement inputbox2;
 
 	public IOSDriver<?> getDriver() {
@@ -28,9 +28,9 @@ public class iOSPageDemo {
 		this.driver = driver;
 	}
 
-	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIAButton[1]")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
 	private MobileElement calcButton;
-	@iOSFindBy(xpath = "//UIAApplication[1]/UIAWindow[2]/UIAStaticText[1]")
+	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]")
 	private MobileElement result;
 
 	iOSPageDemo(AppiumDriver<?> driver) {

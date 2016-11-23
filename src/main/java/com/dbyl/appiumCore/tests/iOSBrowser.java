@@ -24,6 +24,7 @@ public class iOSBrowser {
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() {
+		AppiumServerUtils.getInstance().stopServer();
 		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
 
 	}

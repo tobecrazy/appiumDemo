@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 
@@ -21,14 +21,11 @@ import java.util.concurrent.TimeUnit;
 public class iOSTest {
 	private IOSDriver<MobileElement> driver;
 	private boolean isInstall = true;
-	private static AppiumDriverLocalService service;
-	private static String URL;
+	private URL url;
 
 	@BeforeClass
-	public static void beforeClass() throws Exception {
-		// service = AppiumDriverLocalService.buildDefaultService();
-		// service.start();
-		URL ="http://localhost:4723/wd/hub";// AppiumServerUtils.startServer("127.0.0.1", 4723);
+	public void beforeClass() throws Exception {
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -53,7 +50,7 @@ public class iOSTest {
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
 
-		driver = new IOSDriver<MobileElement>(new URL(URL), capabilities);
+		driver = new IOSDriver<MobileElement>(url, capabilities);
 
 	}
 
@@ -62,7 +59,7 @@ public class iOSTest {
 
 		// wait for 60s
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-	   
+
 		// find login userName and password editText
 		iOSPageDemo iOPage = new iOSPageDemo(driver);
 		iOPage.typeTextField1("12");

@@ -20,13 +20,13 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.io.File;
@@ -41,21 +41,16 @@ import static org.junit.Assert.assertNotEquals;
  */
 public class AndroidGestureTest {
 	private AndroidDriver<MobileElement> driver;
-	// private static AppiumDriverLocalService service;
-	private String url;
+	private URL url;
 
 	@BeforeClass
-	public void beforeClass() throws Exception {
-		// service = AppiumDriverLocalService.buildDefaultService();
-		// service.start();
-		url = "http://localhost:4723/wd/hub";
+	public void beforeTestInit() throws Exception {
+		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
 
 	}
 
-	@BeforeMethod
+	@BeforeClass(dependsOnMethods={"beforeTestInit"})
 	public void setup() throws Exception {
-		// if (service == null || !service.isRunning())
-		// throw new RuntimeException("An appium server node is not started!");
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
 		File app = new File(appDir, "ApiDemos-debug.apk");
@@ -65,16 +60,11 @@ public class AndroidGestureTest {
 		capabilities.setCapability(MobileCapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-		// driver = new AndroidDriver<>(service.getUrl(), capabilities);
-		driver = new AndroidDriver<>(new URL(url), capabilities);
+		driver = new AndroidDriver<>(url, capabilities);
 	}
 
 	@Test
 	public void MultiGestureSingleActionTest() throws InterruptedException {
-		// the underlying java library for Appium doesn't like multi-gestures
-		// with only a single action.
-		// but java-client should handle it, silently falling back to just
-		// performing a single action.
 
 		MultiTouchAction multiTouch = new MultiTouchAction(driver);
 		TouchAction action0 = new TouchAction(driver).tap(100, 300);
@@ -83,7 +73,6 @@ public class AndroidGestureTest {
 
 	@Test
 	public void dragNDropTest() {
-
 		driver.findElementByAndroidUIAutomator(
 				"new UiScrollable(new UiSelector().scrollable(true).instance(0)).scrollIntoView(new UiSelector().description(\"Views\"))");
 		driver.findElementByAccessibilityId("Views").click();
@@ -155,8 +144,6 @@ public class AndroidGestureTest {
 
 	@AfterClass
 	public void afterClass() {
-		// if (service != null)
-		// service.stop();
 		driver.quit();
 	}
 }
