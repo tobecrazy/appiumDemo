@@ -41,6 +41,7 @@ public class BaiduPageObjectDemo {
 			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
+			capabilities.setCapability("clearSystemFiles", true);
 			driver = new AndroidDriver<MobileElement>(url, capabilities);
 		} else {
 			capabilities.setCapability("browserName", "safari");

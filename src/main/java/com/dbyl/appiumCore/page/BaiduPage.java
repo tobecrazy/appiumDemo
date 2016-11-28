@@ -11,7 +11,7 @@ import io.appium.java_client.ios.IOSDriver;
 
 public class BaiduPage {
 	AppiumDriver<?> driver;
-	@FindBy(id = "index-kw")
+	@FindBy(xpath = "//input[@id='index-kw']")
 	MobileElement inputBox;
 	@FindBy(id = "index-bn")
 	MobileElement searchButton;
@@ -24,7 +24,20 @@ public class BaiduPage {
 		} else if (driver instanceof IOSDriver) {
 			System.out.println("IOS driver");
 		}
-		driver.get("http://www.baidu.com");
+
+	}
+
+	/**
+	 * @author young
+	 * @param url
+	 */
+	public void open(String url) {
+		if (driver instanceof AndroidDriver) {
+			System.out.println("Android driver");
+		} else if (driver instanceof IOSDriver) {
+			System.out.println("IOS driver");
+		}
+		driver.get(url);
 	}
 
 	/**
@@ -48,6 +61,14 @@ public class BaiduPage {
 	 */
 	public void waitForPageLoad(int timeout) {
 		driver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
+	}
+
+	/**
+	 * @author young
+	 * @return
+	 */
+	public String getTitle() {
+		return driver.getTitle();
 	}
 
 }

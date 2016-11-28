@@ -3,13 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="main.java.com.dbyl.appiumCore.tests.BaiduPageObjectDemo">
+      <class name="main.java.com.dbyl.appiumCore.tests.PickerTest">
         <methods>
-          <include name="setUpDriver"/>
-          <include name="POTest"/>
+          <include name="webViewTest"/>
           <include name="startAppiumServer"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- main.java.com.dbyl.appiumCore.tests.BaiduPageObjectDemo -->
+      </class> <!-- main.java.com.dbyl.appiumCore.tests.PickerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
