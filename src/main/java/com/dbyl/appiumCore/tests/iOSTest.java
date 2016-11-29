@@ -25,7 +25,7 @@ public class iOSTest {
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4724);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -72,6 +72,7 @@ public class iOSTest {
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
+		AppiumServerUtils.getInstance().stopServer();
 	}
 
 }

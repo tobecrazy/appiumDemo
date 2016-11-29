@@ -37,7 +37,7 @@ public class AppWebViewTest {
 
 	@BeforeClass
 	public void startAppiumServer() throws IOException, InterruptedException {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4725);
 		logger.debug("start Appium Server");
 	}
 
@@ -138,5 +138,6 @@ public class AppWebViewTest {
 	public void tearDown() throws Exception {
 		logger.info("quit");
 		driver.quit();
+		AppiumServerUtils.getInstance().stopServer();
 	}
 }
