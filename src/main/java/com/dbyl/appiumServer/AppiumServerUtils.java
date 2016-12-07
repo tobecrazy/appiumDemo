@@ -3,6 +3,8 @@ package main.java.com.dbyl.appiumServer;
 import java.io.File;
 import java.net.URL;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.ServerArgument;
@@ -89,6 +91,29 @@ public class AppiumServerUtils {
 		builder.withLogFile(logFile);
 		for (ServerArgument argument : arguments) {
 			builder.withArgument(argument);
+		}
+		service = AppiumDriverLocalService.buildService(builder);
+		service.start();
+		if (service == null || !service.isRunning()) {
+			throw new RuntimeException("An appium server node is not started!");
+		}
+		return service.getUrl();
+
+	}
+
+	/**
+	 * @author young
+	 * @param ipAddress
+	 * @param port
+	 * @param capabilities
+	 * @return
+	 */
+	public URL startServer(String ipAddress, int port, DesiredCapabilities capabilities) {
+		AppiumServiceBuilder builder = new AppiumServiceBuilder();
+		builder.withIPAddress(ipAddress);
+		builder.usingPort(port);
+		if (capabilities != null) {
+			builder.withCapabilities(capabilities);
 		}
 		service = AppiumDriverLocalService.buildService(builder);
 		service.start();

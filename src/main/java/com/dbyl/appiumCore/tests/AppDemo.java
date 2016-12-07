@@ -65,6 +65,8 @@ public class AppDemo {
 
 	@Test
 	public void DemoTest() throws InterruptedException {
+		String version =(String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
+		System.out.println(version);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		AppDemoPage appdemo = new AppDemoPage(driver);

@@ -21,22 +21,31 @@ import java.util.concurrent.TimeUnit;
 public class iOSBrowser {
 	IOSDriver<MobileElement> driver;
 	public URL url;
+	DesiredCapabilities capabilities = new DesiredCapabilities();
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() {
+		capabilities.setCapability("platformName", "iOS");
+		//只需要在这里使用data provider控制一下版本，传入不同的版本号
+		capabilities.setCapability("platformVersion", "10.1");
 		AppiumServerUtils.getInstance().stopServer();
-		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723, capabilities);
 
 	}
 
 	@BeforeMethod
 	public void setUpDriver() throws MalformedURLException {
-		DesiredCapabilities capabilities = new DesiredCapabilities();
+
 		capabilities.setCapability("browserName", "safari");
-		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-		capabilities.setCapability("platformName", "iOS");
-		capabilities.setCapability("platformVersion", "10.1");
-		capabilities.setCapability("deviceName", "iPhone SE");
+		if (capabilities.getCapability("platformVersion").toString().contains("10")) {
+			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+			capabilities.setCapability("platformVersion", "10.1");
+			capabilities.setCapability("deviceName", "iPhone SE");
+		} else {
+			capabilities.setCapability("platformVersion", "8.4");
+			capabilities.setCapability("deviceName", "iPhone 5s");
+		}
+
 		driver = new IOSDriver<MobileElement>(url, capabilities);
 
 	}

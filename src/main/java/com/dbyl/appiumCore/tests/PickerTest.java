@@ -67,6 +67,7 @@ public class PickerTest {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		MobileElement clickNextPage = driver.findElementById("com.testerhome.webview:id/next_page");
 		clickNextPage.click();
+		driver.tap(1, 350, 900, 1000);
 		// 方法一
 		// driver.swipe(300, 1000, 300, 900, 1000);
 		// driver.swipe(450, 1000, 450, 900, 1000);
