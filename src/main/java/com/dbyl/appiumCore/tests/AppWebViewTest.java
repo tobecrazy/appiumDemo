@@ -37,7 +37,7 @@ public class AppWebViewTest {
 
 	@BeforeClass
 	public void startAppiumServer() throws IOException, InterruptedException {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4725);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		logger.debug("start Appium Server");
 	}
 

@@ -9,10 +9,12 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,8 +24,14 @@ import java.util.concurrent.TimeUnit;
 
 public class iOSWebBrowser {
 	private IOSDriver<?> driver;
+	private URL url;
 
-	@BeforeClass(alwaysRun = true)
+	@BeforeClass
+	public void beforeClasss() throws Exception {
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+	}
+
+	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
 
@@ -32,17 +40,19 @@ public class iOSWebBrowser {
 		capabilities.setCapability("platformName", "iOS");
 		capabilities.setCapability("platformVersion", "10.0");
 		capabilities.setCapability("deviceName", "iPhone 6s");
-//		capabilities.setCapability(MobileCapabilityType.UDID, "b90269dd9954f6a9edd5c8499cf9d364572ccc72");
+		// capabilities.setCapability(MobileCapabilityType.UDID,
+		// "b90269dd9954f6a9edd5c8499cf9d364572ccc72");
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITEST");
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS"); //newly added
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS"); // newly
+																				// added
 		capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 10000);
-		driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new IOSDriver(url, capabilities);
 	}
 
-	@Test
+	@Test(groups = { "webView" })
 	public void runWebBrowser() {
 		driver.get("http://www.baidu.com");
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -88,6 +98,7 @@ public class iOSWebBrowser {
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
+		AppiumServerUtils.getInstance().stopServer();
 	}
 
 }

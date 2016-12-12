@@ -32,20 +32,22 @@
 		<testng  classpathref="runpath"  outputDir="test-output" 
 			haltonfailure="true"
 			useDefaultListeners="false"   
-			listeners="org.uncommons.reportng.HTMLReporter,org.testng.reporters.FailedReporter" >
+		    listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
 			<xmlfileset dir="${basedir}" includes="testng.xml"/>
 			<jvmarg value="-Dfile.encoding=UTF-8" />
 			<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport" />
+			<sysproperty key="org.uncommons.reportng.coverage-report" value="Coverage" />
 		</testng>
 	</target>
 	<target name="runTestng" depends="compile">
 		<testng  classpathref="runpath"  outputDir="test-output" 
 			haltonfailure="true"
 			useDefaultListeners="false"   
-			listeners="org.uncommons.reportng.HTMLReporter,org.testng.reporters.FailedReporter" >
+			listeners="org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter">
 			<xmlfileset dir="${basedir}" includes="Parametertestng.xml"/>
 			<jvmarg value="-Dfile.encoding=UTF-8" />
 			<sysproperty key="org.uncommons.reportng.title" value="AutoMation TestReport" />
+			<sysproperty key="org.uncommons.reportng.coverage-report" value="Coverage" />
 		</testng>
 	</target>
 

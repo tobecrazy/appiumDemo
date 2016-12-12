@@ -63,7 +63,7 @@ public class AppDemo {
 
 	}
 
-	@Test
+	@Test(groups = { "webView" })
 	public void DemoTest() throws InterruptedException {
 		String version =(String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
 		System.out.println(version);

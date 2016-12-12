@@ -14,5 +14,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="ios-driver.jar"/>
 	<classpathentry kind="lib" path="libs/java-client-4.1.2.jar" sourcepath="libs/java-client-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="libs/java-client-4.1.2-sources.jar"/>
+	<classpathentry kind="lib" path="libs/reportng-1.1.5.jar"/>
+	<classpathentry kind="lib" path="libs/velocity-dep-1.4.jar"/>
+	<classpathentry kind="lib" path="libs/guice-4.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

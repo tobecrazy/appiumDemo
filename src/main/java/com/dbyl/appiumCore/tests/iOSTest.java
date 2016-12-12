@@ -25,7 +25,7 @@ public class iOSTest {
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4724);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1",4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -54,7 +54,7 @@ public class iOSTest {
 
 	}
 
-	@Test
+	@Test(groups = { "webView" })
 	public void calc() {
 
 		// wait for 60s
