@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -57,6 +58,8 @@ public class AppWebViewTest {
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.testerhome.webview");
+		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
+        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
@@ -70,6 +73,12 @@ public class AppWebViewTest {
 
 	@Test(groups = { "webView" })
 	public void webViewTest() throws InterruptedException {
+		final WebDriverWait wait = new WebDriverWait(driver, 10);
+		MobileElement backButton = driver.findElementById("com.testerhome.webview:id/action_back");
+		backButton.click();
+		Assert.assertNotNull(wait.until(
+				ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@text,'You click on back forward')]"))));
+
 		MobileElement clickToPresent = driver.findElementById("com.testerhome.webview:id/action_present");
 		clickToPresent.click();
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -93,7 +102,7 @@ public class AppWebViewTest {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		String status = (String) jse.executeScript("var status=document.readyState;return status");
 		Assert.assertTrue(status.contains("complete"));
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+	 
 
 		WebElement input = wait.until(new ExpectedCondition<WebElement>() {
 			@Override

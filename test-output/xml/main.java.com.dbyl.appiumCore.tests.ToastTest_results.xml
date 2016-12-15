@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.123">
+  <properties />
+  
+  
+            <testcase name="webViewTest" time="3.123" classname="main.java.com.dbyl.appiumCore.tests.ToastTest" />
+      
+</testsuite>

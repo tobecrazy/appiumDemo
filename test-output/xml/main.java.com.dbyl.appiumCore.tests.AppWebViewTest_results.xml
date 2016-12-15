@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="1"
+           errors="0"
+           skipped="0"
+           time="12.367">
+  <properties />
+            <testcase name="webViewTest" time="12.367" classname="main.java.com.dbyl.appiumCore.tests.AppWebViewTest">
+                <failure type="org.openqa.selenium.TimeoutException"
+                  message="Expected condition failed: waiting for presence of element located by: By.xpath: .//*[contains(@text,&apos;You click on back forward&apos;)] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:16 -0700&apos;
+System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.60.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.1&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True, platform=ANY}]
+Session ID: 79413b04-524f-4353-b1b0-e9765f5f0145"
+              >
+<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.xpath: .//*[contains(@text,'You click on back forward')] (tried for 10 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:16 -0700'
+System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.60.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.1', java.version: '1.8.0_92'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True, platform=ANY}]
+Session ID: 79413b04-524f-4353-b1b0-e9765f5f0145
+  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:265)
+  main.java.com.dbyl.appiumCore.tests.AppWebViewTest.webViewTest(AppWebViewTest.java:79)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:746)
+  org.testng.TestRunner.run(TestRunner.java:600)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+  org.testng.TestNG.runSuites(TestNG.java:1104)
+  org.testng.TestNG.run(TestNG.java:1076)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+Caused by: org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 296 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:16 -0700'
+System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.60.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.1', java.version: '1.8.0_92'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True, platform=ANY}]
+Session ID: 79413b04-524f-4353-b1b0-e9765f5f0145
+*** Element info: {Using=xpath, value=.//*[contains(@text,'You click on back forward')]}
+  sun.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+  sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+  java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+  org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+  org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+  io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+  io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+  io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:140)
+  io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+  org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+  org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+  io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+  io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+  io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+  org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+  org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+  org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+  org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+  main.java.com.dbyl.appiumCore.tests.AppWebViewTest.webViewTest(AppWebViewTest.java:79)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+  org.testng.TestRunner.privateRun(TestRunner.java:746)
+  org.testng.TestRunner.run(TestRunner.java:600)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+  org.testng.SuiteRunner.run(SuiteRunner.java:268)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+  org.testng.TestNG.runSuites(TestNG.java:1104)
+  org.testng.TestNG.run(TestNG.java:1076)
+  org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+  org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+  org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+]]>
+      </failure>
+
+          </testcase>
+  
+  
+  
+</testsuite>

@@ -181,7 +181,7 @@ public class slideToUnlock {
 	public void swipeToRight(MobileDriver driver, int during) {
 		int width = driver.manage().window().getSize().width;
 		int height = driver.manage().window().getSize().height;
-		driver.swipe(width / 4, height / 2, width * 5 / 6, height / 2, during);
+//		driver.swipe(width / 4, height / 2, width * 5 / 6, height / 2, during);
 		// wait for page loading
 	}
 
