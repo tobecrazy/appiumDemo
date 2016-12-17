@@ -1,3 +1,7 @@
-2016-12-15 22:02:27.923 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.ToastTest: start Appium Server
-2016-12-15 22:02:27.943 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.ToastTest: connet to Appium server  http://127.0.0.1:4723/wd/hub
-2016-12-15 22:02:42.395 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.ToastTest: quit
+2016-12-17 11:03:37.585 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: start Appium Server
+2016-12-17 11:03:37.599 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: connet to Appium server  http://127.0.0.1:4723/wd/hub
+2016-12-17 11:03:53.583 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: NATIVE_APP
+2016-12-17 11:03:53.587 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: WEBVIEW_com.testerhome.webview
+2016-12-17 11:03:53.587 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: swich_to_content WEBVIEW_com.testerhome.webview
+2016-12-17 11:03:54.168 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: WEBVIEW_com.testerhome.webview
+2016-12-17 11:04:01.146 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: quit

@@ -14,7 +14,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -31,6 +30,7 @@ import main.java.com.dbyl.appiumServer.AppLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 public class AppWebViewTest {
+	long start, end;
 	AndroidDriver<MobileElement> driver;
 	String keyword = "appium";
 	URL url;
@@ -38,6 +38,7 @@ public class AppWebViewTest {
 
 	@BeforeClass
 	public void startAppiumServer() throws IOException, InterruptedException {
+		start = System.currentTimeMillis();
 		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		logger.debug("start Appium Server");
 	}
@@ -59,7 +60,7 @@ public class AppWebViewTest {
 
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.testerhome.webview");
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
@@ -73,15 +74,10 @@ public class AppWebViewTest {
 
 	@Test(groups = { "webView" })
 	public void webViewTest() throws InterruptedException {
-		final WebDriverWait wait = new WebDriverWait(driver, 10);
-		MobileElement backButton = driver.findElementById("com.testerhome.webview:id/action_back");
-		backButton.click();
-		Assert.assertNotNull(wait.until(
-				ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@text,'You click on back forward')]"))));
-
+		WebDriverWait wait = new WebDriverWait(driver, 10);
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		MobileElement clickToPresent = driver.findElementById("com.testerhome.webview:id/action_present");
 		clickToPresent.click();
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		MobileElement imageButton = driver.findElementById("com.testerhome.webview:id/button");
 		Assert.assertTrue(imageButton.isDisplayed());
 		Set<String> contexts = driver.getContextHandles();
@@ -102,7 +98,6 @@ public class AppWebViewTest {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		String status = (String) jse.executeScript("var status=document.readyState;return status");
 		Assert.assertTrue(status.contains("complete"));
-	 
 
 		WebElement input = wait.until(new ExpectedCondition<WebElement>() {
 			@Override
@@ -120,8 +115,8 @@ public class AppWebViewTest {
 		driver.navigate().refresh();
 		// 返回native app context
 		driver.context("NATIVE_APP");
+		 
 		MobileElement title = driver.findElementById("android:id/action_bar_title");
-		Assert.assertTrue(title.getText().contains(keyword));
 		MobileElement back = driver.findElementById("com.testerhome.webview:id/action_back");
 		back.click();
 		Assert.assertTrue(title.getText().equals("百度一下"));
@@ -148,5 +143,7 @@ public class AppWebViewTest {
 		logger.info("quit");
 		driver.quit();
 		AppiumServerUtils.getInstance().stopServer();
+		end = System.currentTimeMillis();
+		System.out.print(end - start);
 	}
 }

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.123">
+           time="3.586">
   <properties />
   
   
-            <testcase name="webViewTest" time="3.123" classname="main.java.com.dbyl.appiumCore.tests.ToastTest" />
+            <testcase name="webViewTest" time="3.586" classname="main.java.com.dbyl.appiumCore.tests.ToastTest" />
       
 </testsuite>

@@ -70,7 +70,6 @@ public class ToastTest {
 	    driver.startActivity("com.testerhome.webview", ".ToastActivity");
 		MobileElement toastButton = driver.findElementById("com.testerhome.webview:id/toast");
 		toastButton.click();
-        
 		Assert.assertNotNull(wait.until(
 				ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@text,'Toast Test')]"))));
  
