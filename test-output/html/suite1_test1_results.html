@@ -12,17 +12,131 @@
 <body>
 <h1>Default test</h1>
 <p>
-  Test duration: 28.038s
+  Test duration: 4.915s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">main.java.com.dbyl.appiumCore.tests.ToastTest</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  setUp
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]<br/>
+Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:16 -0700&apos;<br/>
+System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;10.207.221.211&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.2&apos;, java.version: &apos;1.8.0_92&apos;<br/>
+Driver info: driver.version: AndroidDriver</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:91)<br />
+              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)<br />
+              io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:69)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)<br />
+              io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)<br />
+              io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:241)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:128)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:141)<br />
+              io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:83)<br />
+              io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:93)<br />
+              io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:72)<br />
+              main.java.com.dbyl.appiumCore.tests.ToastTest.setUp(ToastTest.java:63)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:590)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:746)<br />
+              org.testng.TestRunner.run(TestRunner.java:600)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1189)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1104)<br />
+              org.testng.TestNG.run(TestNG.java:1076)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  tearDown
+      </td>
+  <td class="duration">
+    0.000s
+  </td>
+  <td class="result">
+        
+    
+        
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.ToastTest.driver of an object loaded from local variable &apos;this&apos;</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              main.java.com.dbyl.appiumCore.tests.ToastTest.tearDown(ToastTest.java:82)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)<br />
+              org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)<br />
+              org.testng.internal.Invoker.invokeMethod(Invoker.java:712)<br />
+              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)<br />
+              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)<br />
+              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:746)<br />
+              org.testng.TestRunner.run(TestRunner.java:600)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:268)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1189)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1104)<br />
+              org.testng.TestNG.run(TestNG.java:1076)<br />
+              org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)<br />
+              org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)<br />
+              org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)<br />
+                </div>
+      </td>
+</tr>
+    
+      </table>
 
 
 
-
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+  <table class="resultsTable" width="100%">
+    <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">main.java.com.dbyl.appiumCore.tests.AppWebViewTest</td>
+        <td colspan="3" class="group">main.java.com.dbyl.appiumCore.tests.ToastTest</td>
       </tr>
             
 <tr>
@@ -30,16 +144,17 @@
                   webViewTest
       </td>
   <td class="duration">
-    14.196s
+    0.001s
   </td>
   <td class="result">
-        
+                               
     
         
 
       </td>
 </tr>
       </table>
+
   
 </body>
 </html>
