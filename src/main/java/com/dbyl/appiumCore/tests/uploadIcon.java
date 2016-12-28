@@ -39,7 +39,11 @@ public class uploadIcon {
 
 		Runtime rt = Runtime.getRuntime();
 		// this code for record the screen of your device
-		rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
+		try {
+			rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
+		} catch (Exception e) {
+			System.out.print(e.getMessage());
+		}
 
 	}
 

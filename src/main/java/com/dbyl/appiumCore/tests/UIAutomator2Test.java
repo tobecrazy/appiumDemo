@@ -1,6 +1,5 @@
 package main.java.com.dbyl.appiumCore.tests;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import io.appium.java_client.MobileBy;
@@ -11,15 +10,13 @@ import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.DeviceRotation;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -31,7 +28,8 @@ public class UIAutomator2Test {
     /**
      * initialization.
      */
-    @BeforeClass public static void beforeClass() throws Exception {
+    @BeforeClass 
+    public static void beforeClass() throws Exception {
         service = AppiumDriverLocalService.buildDefaultService();
         service.start();
 
@@ -87,7 +85,8 @@ public class UIAutomator2Test {
 //        assertEquals(driver.rotation(), landscapeRightRotation);
 //    }
 
-    @Test public void testToastMSGIsDisplayed() throws InterruptedException {
+    @Test(groups={"Toast Test"})
+    public void testToastMSGIsDisplayed() throws InterruptedException {
         final WebDriverWait wait = new WebDriverWait(driver, 10);
         driver.startActivity("io.appium.android.apis", ".view.PopupMenu1");
 
