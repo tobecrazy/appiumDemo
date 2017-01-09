@@ -12,13 +12,13 @@
 <body>
 <h1>Default test</h1>
 <p>
-  Test duration: 4.265s
+  Test duration: 1.743s
 </p>
 
   <table class="resultsTable configTable">
     <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
               <tr class="group">
-        <td colspan="3">main.java.com.dbyl.appiumCore.tests.AppWebViewTest</td>
+        <td colspan="3">main.java.com.dbyl.appiumCore.tests.AppDemo</td>
       </tr>
             
 <tr>
@@ -33,9 +33,9 @@
     
         
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]<br/>
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/apppiumDemo.apk, appPackage=cn.dbyl.appiumdemo, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=Appium, browserName=, platformName=Android, deviceName=Android Emulator}], required capabilities = Capabilities [{}]<br/>
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;<br/>
-System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.2&apos;, java.version: &apos;1.8.0_92&apos;<br/>
+System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.103&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.2&apos;, java.version: &apos;1.8.0_92&apos;<br/>
 Driver info: driver.version: AndroidDriver</b></a><br />
     <div class="stackTrace" id="exception-0">
               org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:91)<br />
@@ -52,7 +52,7 @@ Driver info: driver.version: AndroidDriver</b></a><br />
               io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:83)<br />
               io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:93)<br />
               io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:72)<br />
-              main.java.com.dbyl.appiumCore.tests.AppWebViewTest.setUp(AppWebViewTest.java:71)<br />
+              main.java.com.dbyl.appiumCore.tests.AppDemo.setUp(AppDemo.java:62)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -60,11 +60,9 @@ Driver info: driver.version: AndroidDriver</b></a><br />
               org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)<br />
               org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)<br />
               org.testng.internal.Invoker.invokeConfigurations(Invoker.java:216)<br />
-              org.testng.internal.Invoker.invokeMethod(Invoker.java:590)<br />
-              org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)<br />
-              org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)<br />
-              org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)<br />
-              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)<br />
+              org.testng.internal.Invoker.invokeConfigurations(Invoker.java:143)<br />
+              org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:169)<br />
+              org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)<br />
               org.testng.TestRunner.privateRun(TestRunner.java:746)<br />
               org.testng.TestRunner.run(TestRunner.java:600)<br />
               org.testng.SuiteRunner.runTest(SuiteRunner.java:366)<br />
@@ -95,9 +93,9 @@ Driver info: driver.version: AndroidDriver</b></a><br />
     
         
 
-        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.AppWebViewTest.driver of an object loaded from local variable &apos;this&apos;</b></a><br />
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from static field main.java.com.dbyl.appiumCore.tests.AppDemo.driver</b></a><br />
     <div class="stackTrace" id="exception-1">
-              main.java.com.dbyl.appiumCore.tests.AppWebViewTest.tearDown(AppWebViewTest.java:144)<br />
+              main.java.com.dbyl.appiumCore.tests.AppDemo.tearDown(AppDemo.java:83)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -136,15 +134,15 @@ Driver info: driver.version: AndroidDriver</b></a><br />
   <table class="resultsTable" width="100%">
     <tr><th colspan="3" class="header skipped">Skipped Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">main.java.com.dbyl.appiumCore.tests.AppWebViewTest</td>
+        <td colspan="3" class="group">main.java.com.dbyl.appiumCore.tests.AppDemo</td>
       </tr>
             
 <tr>
   <td class="method">
-                  webViewTest
+                  DemoTest
       </td>
   <td class="duration">
-    0.002s
+    0.004s
   </td>
   <td class="result">
                                
