@@ -47,6 +47,16 @@ public class AppiumServerUtils {
 		}
 		return service.getUrl();
 	}
+	
+	public URL startAppiumServerNoReset() {
+		AppiumServiceBuilder builder = new AppiumServiceBuilder();
+		service = AppiumDriverLocalService.buildService(builder);
+		service.start();
+		if (service == null || !service.isRunning()) {
+			throw new RuntimeException("An appium server node is not started!");
+		}
+		return service.getUrl();
+	}
 
 	/**
 	 * @author Young

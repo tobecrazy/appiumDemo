@@ -44,7 +44,7 @@ public class dealWebView {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "Android Emulator");
-		capabilities.setCapability("platformVersion", "5.1");
+		capabilities.setCapability("platformVersion", "4.2");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));

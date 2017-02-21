@@ -1,3 +1,3 @@
-2016-12-18 20:23:11.577 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: start Appium Server
-2016-12-18 20:23:11.597 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: connet to Appium server  http://127.0.0.1:4723/wd/hub
-2016-12-18 20:23:55.746 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: quit
+2017-02-16 21:41:23.777 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: start Appium Server
+2017-02-16 21:41:23.802 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: connet to Appium server  http://127.0.0.1:4723/wd/hub
+2017-02-16 21:41:54.031 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.AppWebViewTest: quit

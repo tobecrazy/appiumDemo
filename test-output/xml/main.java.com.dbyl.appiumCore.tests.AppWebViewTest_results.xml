@@ -45,14 +45,14 @@
           </testcase>
             <testcase name="setUp" time="0.000" classname="main.java.com.dbyl.appiumCore.tests.AppWebViewTest">
                 <failure type="org.openqa.selenium.SessionNotCreatedException"
-                  message="Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]
+                  message="Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.2, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
-System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.116&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.2&apos;, java.version: &apos;1.8.0_92&apos;
+System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.108&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_92&apos;
 Driver info: driver.version: AndroidDriver"
               >
-<![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.4, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]
+<![CDATA[org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/webview.apk, appPackage=com.testerhome.webview, appActivity=.MainActivity, noSign=True, platformVersion=4.2, automationName=UIAutomator2, browserName=, unicodeKeyboard=True, platformName=Android, deviceName=Android Emulator, resetKeyboard=True}], required capabilities = Capabilities [{}]
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
-System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.1.116', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.2', java.version: '1.8.0_92'
+System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.1.108', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_92'
 Driver info: driver.version: AndroidDriver
   org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:91)
   org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)

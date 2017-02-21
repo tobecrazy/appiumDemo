@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-3.0.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/java-client-5.0.0-BETA1.jar" sourcepath="libs/java-client-5.0.0-BETA1-sources.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="libs/android.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.4.jar"/>
@@ -22,5 +21,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/java-client-5.0.0-BETA3.jar" sourcepath="libs/java-client-5.0.0-BETA3-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
