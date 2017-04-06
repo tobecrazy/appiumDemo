@@ -84,6 +84,7 @@ public class PickerTest {
 		pickRight1.swipe(SwipeElementDirection.UP, 1000);
 		MobileElement confirmButton = driver.findElementByXPath("//android.widget.Button[contains(@text,'确定')]");
 		confirmButton.click();
+		 
 
 	}
 

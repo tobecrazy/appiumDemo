@@ -3,11 +3,12 @@ package main.java.com.dbyl.appiumCore.tests;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.function.Function;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -52,7 +53,7 @@ public class ToastTest {
 
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.testerhome.webview");
 		capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
-        capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
 		// support Chinese
 		capabilities.setCapability("unicodeKeyboard", "True");
 		capabilities.setCapability("resetKeyboard", "True");
@@ -67,15 +68,19 @@ public class ToastTest {
 	@Test(groups = { "Toast" })
 	public void webViewTest() throws InterruptedException {
 		final WebDriverWait wait = new WebDriverWait(driver, 10);
-	    driver.startActivity("com.testerhome.webview", ".ToastActivity");
+		driver.startActivity("com.testerhome.webview", ".ToastActivity");
 		MobileElement toastButton = driver.findElementById("com.testerhome.webview:id/toast");
 		toastButton.click();
-		Assert.assertNotNull(wait.until(
-				ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@text,'Toast Test')]"))));
- 
+		Assert.assertNotNull(wait.until(new Function<WebDriver, Boolean>() {
+			@Override
+			public Boolean apply(WebDriver t) {
+				return t.findElement(By.xpath(".//*[contains(@text,'Toast Test')]")).isDisplayed();
+			}
+
+		}));
+
 	}
 
- 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		logger.info("quit");

@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -99,7 +100,7 @@ public class AppWebViewTest {
 		String status = (String) jse.executeScript("var status=document.readyState;return status");
 		Assert.assertTrue(status.contains("complete"));
 
-		WebElement input = wait.until(new ExpectedCondition<WebElement>() {
+		WebElement input = wait.until(new Function<WebDriver, WebElement>() {
 			@Override
 			public WebElement apply(WebDriver driver) {
 				return driver.findElement(By.xpath("//input[@id='index-kw']"));
@@ -115,7 +116,7 @@ public class AppWebViewTest {
 		driver.navigate().refresh();
 		// 返回native app context
 		driver.context("NATIVE_APP");
-		 
+
 		MobileElement title = driver.findElementById("android:id/action_bar_title");
 		MobileElement back = driver.findElementById("com.testerhome.webview:id/action_back");
 		back.click();

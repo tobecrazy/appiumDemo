@@ -46,7 +46,7 @@ public class CheckboxTest {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		// simulator version 6.0
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
 		// if no need install don't add this
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
@@ -80,9 +80,44 @@ public class CheckboxTest {
 		// pageLoadTimeout只能用于webview 或者 pure web
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		// 这段代码返回浏览器加载页面状态，complete为加载完成
-		 
- 
 
+	}
+
+	/**
+	 * @author young
+	 * @param element
+	 */
+	public void check(MobileElement element) {
+		if (element.isEnabled() && element.isEnabled()) {
+			element.click();
+		}
+	}
+
+	/**
+	 * @author young
+	 * @param element
+	 */
+	public void uncheck(MobileElement element) {
+		if (!element.isEnabled() && element.isEnabled()) {
+			element.click();
+		}
+	}
+	
+	/**
+	 * @author young
+	 * @param element
+	 * @param isChecked
+	 */
+	public void checkOrUncheckElement(MobileElement element ,boolean isChecked )
+	{
+		if(isChecked)
+		{
+			check(element);
+			
+		}else
+		{
+			uncheck(element);
+		}
 	}
 
 }

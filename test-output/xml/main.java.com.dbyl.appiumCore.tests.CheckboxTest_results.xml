@@ -4,27 +4,25 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="36.707">
+           time="96.489">
   <properties />
-            <testcase name="Demo" time="36.707" classname="main.java.com.dbyl.appiumCore.tests.CheckboxTest">
+            <testcase name="Demo" time="96.489" classname="main.java.com.dbyl.appiumCore.tests.CheckboxTest">
                 <failure type="org.openqa.selenium.WebDriverException"
-                  message="An unknown server-side error occurred while processing the command. Original error: unknown error: Chrome version must be &gt;= 53.0.2785.0
-  (Driver info: chromedriver=2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1),platform=Mac OS X 10.12.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.39 seconds
+                  message="An unknown server-side error occurred while processing the command. Original error: Invalid timeout &apos;page load&apos; (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 55 milliseconds
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.108&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_92&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=.MainActivity, desired={app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, appActivity=.MainActivity, noSign=true, platformVersion=6.0, automationName=Appium, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true}, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
-Session ID: ef21520f-0c5f-436e-92d4-29d64bbbd96e"
+Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=015d4bdf31202013, platform=LINUX, deviceUDID=015d4bdf31202013, appActivity=.MainActivity, desired={app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, appActivity=.MainActivity, noSign=true, platformVersion=5.1, automationName=Appium, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
+Session ID: ef3dd03a-17aa-4436-9579-1dbb9ef21c5c"
               >
-<![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: unknown error: Chrome version must be >= 53.0.2785.0
-  (Driver info: chromedriver=2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1),platform=Mac OS X 10.12.3 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.39 seconds
+<![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Invalid timeout 'page load' (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 55 milliseconds
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
 System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.1.108', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_92'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=emulator-5554, platform=LINUX, deviceUDID=emulator-5554, appActivity=.MainActivity, desired={app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, appActivity=.MainActivity, noSign=true, platformVersion=6.0, automationName=Appium, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true}, platformVersion=6.0, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
-Session ID: ef21520f-0c5f-436e-92d4-29d64bbbd96e
+Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=015d4bdf31202013, platform=LINUX, deviceUDID=015d4bdf31202013, appActivity=.MainActivity, desired={app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, appActivity=.MainActivity, noSign=true, platformVersion=5.1, automationName=Appium, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
+Session ID: ef3dd03a-17aa-4436-9579-1dbb9ef21c5c
   sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
   sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
   sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -35,8 +33,8 @@ Session ID: ef21520f-0c5f-436e-92d4-29d64bbbd96e
   io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
   io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
   io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-  io.appium.java_client.AppiumDriver.context(AppiumDriver.java:339)
-  main.java.com.dbyl.appiumCore.tests.CheckboxTest.Demo(CheckboxTest.java:74)
+  org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteTimeouts.pageLoadTimeout(RemoteWebDriver.java:836)
+  main.java.com.dbyl.appiumCore.tests.CheckboxTest.Demo(CheckboxTest.java:81)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

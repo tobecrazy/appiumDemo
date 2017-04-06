@@ -1,4 +1,0 @@
-2017-02-22 21:52:54.714 DEBUG main.java.com.dbyl.appiumServer.AppLogger 34 debug - main.java.com.dbyl.appiumCore.tests.PickerTest: start Appium Server
-2017-02-22 21:53:28.041 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.PickerTest: NATIVE_APP
-2017-02-22 21:53:28.043 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.PickerTest: WEBVIEW_cn.dbyl.young.checkbox
-2017-02-22 21:53:28.044 INFO  main.java.com.dbyl.appiumServer.AppLogger 26 info - main.java.com.dbyl.appiumCore.tests.PickerTest: swich_to_content WEBVIEW_cn.dbyl.young.checkbox

@@ -4,6 +4,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -23,6 +24,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 public class zhiHu {
 	AppiumLogger logger = new AppiumLogger(JDTest.class);
@@ -111,9 +113,11 @@ public class zhiHu {
 	}
 
 	public boolean isLoginPresent(AndroidDriver driver, int timeout) {
-		boolean isPresent = new AndroidDriverWait(driver, timeout).until(new ExpectedCondition<WebElement>() {
-			public WebElement apply(AndroidDriver d) {
-				return d.findElement(By.id("com.zhihu.android:id/login_btn"));
+		boolean isPresent = new AndroidDriverWait(driver, timeout).until(new Function<WebDriver, WebElement>() {
+
+			@Override
+			public WebElement apply(WebDriver t) {
+				return t.findElement(By.id("com.zhihu.android:id/login_btn"));
 			}
 
 		}).isDisplayed();
@@ -309,11 +313,12 @@ public class zhiHu {
 	 */
 	public boolean isElementPresent(final By by, int timeOut) {
 		try {
-			new AndroidDriverWait(driver, timeOut).until(new ExpectedCondition<WebElement>() {
-				public WebElement apply(AndroidDriver d) {
-					return d.findElement(by);
-				}
+			new AndroidDriverWait(driver, timeOut).until(new Function<WebDriver, WebElement>() {
 
+				@Override
+				public WebElement apply(WebDriver t) {
+					return t.findElement(by);
+				}
 			});
 			return true;
 		} catch (Exception e) {
