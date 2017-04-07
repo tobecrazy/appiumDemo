@@ -1,6 +1,5 @@
 package main.java.com.dbyl.appiumCore.tests;
 
-
 /**
  * @author Young
  */
@@ -39,7 +38,14 @@ public class iOSPageDemo {
 	}
 
 	public void typeInputBox(MobileElement e, String msg) {
-		e.sendKeys(msg);
+		if (e.isDisplayed()) {
+			System.out.print("eeeeeeeeeeeeeeee");
+
+		} else {
+			System.out.print("nnnnnnnnnnnnnnnnn");
+		}
+		// e.sendKeys(msg);
+		e.setValue(msg);
 
 	}
 
