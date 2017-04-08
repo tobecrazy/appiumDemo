@@ -2,6 +2,9 @@ package main.java.com.dbyl.appiumServer;
 
 import java.io.File;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -16,7 +19,7 @@ import io.appium.java_client.service.local.flags.ServerArgument;
 public class AppiumServerUtils {
 	public static AppiumDriverLocalService service;
 	public static AppiumServerUtils appiumServerUtils;
-
+	public String currentFolder=System.getProperty("user.dir");
 	/**
 	 * @author young
 	 * @return
@@ -74,9 +77,17 @@ public class AppiumServerUtils {
 	 * @return
 	 */
 	public URL startServer(String ipAddress, int port) {
+		SimpleDateFormat sf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
+		
+		Calendar cal = Calendar.getInstance();
+		Date date = cal.getTime();
+		String dateStr = sf.format(date);
+		String path = currentFolder+"/logs/"+"appium_default_log_" + dateStr + ".log";
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
 		builder.withIPAddress(ipAddress);
 		builder.usingPort(port);
+		File logFile=new File(path);
+		builder.withLogFile(logFile);
 		service = AppiumDriverLocalService.buildService(builder);
 		service.start();
 		if (service == null || !service.isRunning()) {

@@ -95,6 +95,7 @@ public class iOSTest {
 		Date date = cal.getTime();
 		String dateStr = sf.format(date);
 		String path = this.getClass().getSimpleName() + "_" + dateStr + ".png";
+		logger.debug("----->>>>>>Path is "+path);
 		takeScreenShot((TakesScreenshot) driver, path);
 	}
 

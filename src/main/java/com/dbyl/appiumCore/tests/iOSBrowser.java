@@ -39,7 +39,7 @@ public class iOSBrowser {
 		capabilities.setCapability("browserName", "safari");
 		if (capabilities.getCapability("platformVersion").toString().contains("10")) {
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-			capabilities.setCapability("platformVersion", "10.1");
+			capabilities.setCapability("platformVersion", "10.3");
 			capabilities.setCapability("deviceName", "iPhone SE");
 		} else {
 			capabilities.setCapability("platformVersion", "8.4");
