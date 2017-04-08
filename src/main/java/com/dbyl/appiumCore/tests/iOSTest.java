@@ -25,7 +25,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class iOSTest   {
+public class iOSTest {
 
 	private IOSDriver<MobileElement> driver;
 	private boolean isInstall = true;
@@ -34,7 +34,7 @@ public class iOSTest   {
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1",4723);
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -43,21 +43,20 @@ public class iOSTest   {
 
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-		capabilities.setCapability("platformName", "iOS");
-		capabilities.setCapability("platformVersion", "10.3");
-		capabilities.setCapability("deviceName", "iPhone 7 Plus");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "10.3");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7 Plus");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));
 			File appDir = new File(classpathRoot, "apps");
 			File app = new File(appDir, "TestApp.app");
 			System.out.println("---->" + app.getAbsolutePath());
-			capabilities.setCapability("app", app.getAbsolutePath());
+			capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		}
 
 		// support Chinese
-		capabilities.setCapability("unicodeKeyboard", "True");
-		capabilities.setCapability("resetKeyboard", "True");
+		// capabilities.setCapability("resetKeyboard", "True");
 
 		driver = new IOSDriver<MobileElement>(url, capabilities);
 
@@ -71,12 +70,13 @@ public class iOSTest   {
 
 		// find login userName and password editText
 		iOSPageDemo iOPage = new iOSPageDemo(driver);
+		this.takeScreenShot(driver);
 		iOPage.typeTextField1("12");
+		this.takeScreenShot(driver);
 		iOPage.typeTextField2("65");
 		iOPage.clickCalcButton();
 		this.takeScreenShot(driver);
 		Assert.assertEquals(iOPage.getResult(), "77");
-		this.takeScreenShot(driver);
 	}
 
 	@AfterClass(alwaysRun = true)
@@ -84,6 +84,7 @@ public class iOSTest   {
 		driver.quit();
 		AppiumServerUtils.getInstance().stopServer();
 	}
+
 	/**
 	 * @author young
 	 * @param driver
@@ -93,7 +94,6 @@ public class iOSTest   {
 		Calendar cal = Calendar.getInstance();
 		Date date = cal.getTime();
 		String dateStr = sf.format(date);
-		logger.info(driver.getTitle() + "\n");
 		String path = this.getClass().getSimpleName() + "_" + dateStr + ".png";
 		takeScreenShot((TakesScreenshot) driver, path);
 	}

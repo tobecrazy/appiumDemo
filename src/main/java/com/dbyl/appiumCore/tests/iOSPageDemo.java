@@ -40,13 +40,12 @@ public class iOSPageDemo {
 	public void typeInputBox(MobileElement e, String msg) {
 		if (e.isDisplayed()) {
 			System.out.print("eeeeeeeeeeeeeeee");
+			e.click();
 
 		} else {
 			System.out.print("nnnnnnnnnnnnnnnnn");
 		}
-		// e.sendKeys(msg);
 		e.setValue(msg);
-
 	}
 
 	public void typeTextField1(String msg) {
