@@ -14,6 +14,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import main.java.com.dbyl.appiumCore.pageActions.iOSPageDemo;
 import main.java.com.dbyl.appiumServer.AppiumLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 

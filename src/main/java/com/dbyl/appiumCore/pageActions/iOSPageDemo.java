@@ -1,4 +1,4 @@
-package main.java.com.dbyl.appiumCore.tests;
+package main.java.com.dbyl.appiumCore.pageActions;
 
 /**
  * @author Young
@@ -32,7 +32,7 @@ public class iOSPageDemo {
 	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]")
 	private MobileElement result;
 
-	iOSPageDemo(AppiumDriver<?> driver) {
+	public iOSPageDemo(AppiumDriver<?> driver) {
 		setDriver((IOSDriver<?>) driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}

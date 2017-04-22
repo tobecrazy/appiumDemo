@@ -27,7 +27,7 @@ public class iOSBrowser {
 	public void startAppiumServer() {
 		capabilities.setCapability("platformName", "iOS");
 		//只需要在这里使用data provider控制一下版本，传入不同的版本号
-		capabilities.setCapability("platformVersion", "10.1");
+		capabilities.setCapability("platformVersion", "10.3");
 		AppiumServerUtils.getInstance().stopServer();
 		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723, capabilities);
 
