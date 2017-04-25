@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="11.388">
+           time="10.319">
   <properties />
   
   
-            <testcase name="calc" time="11.388" classname="main.java.com.dbyl.appiumCore.tests.iOSTest" />
+            <testcase name="calc" time="10.319" classname="main.java.com.dbyl.appiumCore.tests.iOSTest" />
       
 </testsuite>
