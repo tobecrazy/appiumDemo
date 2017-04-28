@@ -2,7 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="lib" path="libs/selenium-server-standalone-3.3.1.jar"/>
 	<classpathentry kind="lib" path="libs/android.jar"/>
 	<classpathentry kind="lib" path="libs/commons-lang3-3.4.jar"/>
 	<classpathentry kind="lib" path="libs/robotium-solo-5.5.2.jar"/>
@@ -21,6 +20,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="libs/java-client-5.0.0-BETA7.jar"/>
+	<classpathentry kind="lib" path="libs/java-client-5.0.0-BETA8.jar"/>
+	<classpathentry kind="lib" path="libs/selenium-server-standalone-3.4.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
