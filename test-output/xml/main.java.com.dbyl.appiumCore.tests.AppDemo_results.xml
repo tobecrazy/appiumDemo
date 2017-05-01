@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
-           tests="1"
-           failures="1"
-           errors="0"
-           skipped="0"
-           time="0.039">
-  <properties />
-            <testcase name="DemoTest" time="0.039" classname="main.java.com.dbyl.appiumCore.tests.AppDemo">
-                <failure type="java.lang.NoSuchMethodError"
-                  message="com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;J)V"
-              >
+<testsuite name="Default test" tests="1" failures="1" errors="0"
+	skipped="0" time="0.039">
+	<properties />
+	<testcase name="DemoTest" time="0.039"
+		classname="main.java.com.dbyl.appiumCore.tests.AppDemo">
+		<failure type="java.lang.NoSuchMethodError"
+			message="com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;J)V">
 <![CDATA[java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;J)V
   io.appium.java_client.pagefactory.TimeOutDuration.setTime(TimeOutDuration.java:54)
   io.appium.java_client.pagefactory.TimeOutDuration.setTime(TimeOutDuration.java:59)
@@ -42,10 +38,10 @@
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-  
-  
-  
+	</testcase>
+
+
+
 </testsuite>

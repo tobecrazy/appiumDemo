@@ -1,21 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
-           tests="1"
-           failures="1"
-           errors="0"
-           skipped="0"
-           time="96.489">
-  <properties />
-            <testcase name="Demo" time="96.489" classname="main.java.com.dbyl.appiumCore.tests.CheckboxTest">
-                <failure type="org.openqa.selenium.WebDriverException"
-                  message="An unknown server-side error occurred while processing the command. Original error: Invalid timeout &apos;page load&apos; (WARNING: The server did not provide any stacktrace information)
+<testsuite name="Default test" tests="1" failures="1" errors="0"
+	skipped="0" time="96.489">
+	<properties />
+	<testcase name="Demo" time="96.489"
+		classname="main.java.com.dbyl.appiumCore.tests.CheckboxTest">
+		<failure type="org.openqa.selenium.WebDriverException"
+			message="An unknown server-side error occurred while processing the command. Original error: Invalid timeout &apos;page load&apos; (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 55 milliseconds
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.1.108&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_92&apos;
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities [{app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, networkConnectionEnabled=true, noSign=true, warnings={}, databaseEnabled=false, deviceName=015d4bdf31202013, platform=LINUX, deviceUDID=015d4bdf31202013, appActivity=.MainActivity, desired={app=/Volumes/Transcend/Document/workspace/appiumDemo/apps/checkbox.apk, appPackage=cn.dbyl.young.checkbox, appActivity=.MainActivity, noSign=true, platformVersion=5.1, automationName=Appium, browserName=, unicodeKeyboard=true, platformName=Android, deviceName=Android Emulator, resetKeyboard=true}, platformVersion=5.1.1, webStorageEnabled=false, locationContextEnabled=false, automationName=Appium, takesScreenshot=true, browserName=, javascriptEnabled=true, unicodeKeyboard=true, platformName=Android, resetKeyboard=true}]
-Session ID: ef3dd03a-17aa-4436-9579-1dbb9ef21c5c"
-              >
+Session ID: ef3dd03a-17aa-4436-9579-1dbb9ef21c5c">
 <![CDATA[org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Invalid timeout 'page load' (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 55 milliseconds
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
@@ -61,10 +57,10 @@ Session ID: ef3dd03a-17aa-4436-9579-1dbb9ef21c5c
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-  
-  
-  
+	</testcase>
+
+
+
 </testsuite>

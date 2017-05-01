@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
-           tests="1"
-           failures="1"
-           errors="0"
-           skipped="0"
-           time="2.967">
-  <properties />
-            <testcase name="iOSTest" time="2.967" classname="main.java.com.dbyl.appiumCore.tests.iOSBrowser">
-                <failure type="java.lang.AssertionError"
-                  message="expected [true] but found [false]"
-              >
+<testsuite name="Default test" tests="1" failures="1" errors="0"
+	skipped="0" time="2.967">
+	<properties />
+	<testcase name="iOSTest" time="2.967"
+		classname="main.java.com.dbyl.appiumCore.tests.iOSBrowser">
+		<failure type="java.lang.AssertionError" message="expected [true] but found [false]">
 <![CDATA[java.lang.AssertionError: expected [true] but found [false]
   org.testng.Assert.fail(Assert.java:93)
   org.testng.Assert.failNotEquals(Assert.java:512)
@@ -42,10 +37,10 @@
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-  
-  
-  
+	</testcase>
+
+
+
 </testsuite>

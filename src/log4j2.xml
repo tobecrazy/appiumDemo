@@ -6,13 +6,12 @@
 			<PatternLayout
 				pattern="%date{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
 		</Console>
-		<!-- log 文件保存位置以及文件名 ， append 为true会每次追加写入-->
-		<File name="log" fileName="logs/test.log"
-			append="false">
+		<!-- log 文件保存位置以及文件名 ， append 为true会每次追加写入 -->
+		<File name="log" fileName="logs/test.log" append="false">
 			<PatternLayout
 				pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %-5level %class{36} %L %M - %msg%xEx%n" />
 		</File>
-	 
+
 	</Appenders>
 	<Loggers>
 		<!-- 这个name不能乱取值，是你的工程base包名.log level all -->

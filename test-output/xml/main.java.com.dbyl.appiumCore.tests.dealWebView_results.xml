@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
-           tests="3"
-           failures="2"
-           errors="0"
-           skipped="1"
-           time="0.003">
-  <properties />
-            <testcase name="tearDown" time="0.000" classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
-                <failure type="java.lang.NullPointerException"
-                  message="while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.dealWebView.driver of an object loaded from local variable &apos;this&apos;"
-              >
+<testsuite name="Default test" tests="3" failures="2" errors="0"
+	skipped="1" time="0.003">
+	<properties />
+	<testcase name="tearDown" time="0.000"
+		classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
+		<failure type="java.lang.NullPointerException"
+			message="while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.dealWebView.driver of an object loaded from local variable &apos;this&apos;">
 <![CDATA[java.lang.NullPointerException: while trying to invoke the method io.appium.java_client.android.AndroidDriver.quit() of a null object loaded from field main.java.com.dbyl.appiumCore.tests.dealWebView.driver of an object loaded from local variable 'this'
   main.java.com.dbyl.appiumCore.tests.dealWebView.tearDown(dealWebView.java:126)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -38,16 +34,16 @@
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-            <testcase name="setUp" time="0.000" classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
-                <failure type="org.openqa.selenium.WebDriverException"
-                  message="org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: errno: 61 (Connection refused), error: Connection refused (local port 57618 to address 0:0:0:0:0:0:7f00:1, remote port 4723 to address 127.0.0.1 (localhost))
+	</testcase>
+	<testcase name="setUp" time="0.000"
+		classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
+		<failure type="org.openqa.selenium.WebDriverException"
+			message="org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: errno: 61 (Connection refused), error: Connection refused (local port 57618 to address 0:0:0:0:0:0:7f00:1, remote port 4723 to address 127.0.0.1 (localhost))
 Build info: version: &apos;3.0.1&apos;, revision: &apos;1969d75&apos;, time: &apos;2016-10-18 09:48:19 -0700&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.56.2&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.3&apos;, java.version: &apos;1.8.0_92&apos;
-Driver info: driver.version: AndroidDriver"
-              >
+Driver info: driver.version: AndroidDriver">
 <![CDATA[org.openqa.selenium.WebDriverException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:4723 [/127.0.0.1] failed: errno: 61 (Connection refused), error: Connection refused (local port 57618 to address 0:0:0:0:0:0:7f00:1, remote port 4723 to address 127.0.0.1 (localhost))
 Build info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:48:19 -0700'
 System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.56.2', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.3', java.version: '1.8.0_92'
@@ -206,13 +202,14 @@ Caused by: java.net.ConnectException: errno: 61 (Connection refused), error: Con
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-  
-            <testcase name="loginWithMicroBlog" time="0.0" classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
-          <skipped />
-    </testcase>
-  
-  
+	</testcase>
+
+	<testcase name="loginWithMicroBlog" time="0.0"
+		classname="main.java.com.dbyl.appiumCore.tests.dealWebView">
+		<skipped />
+	</testcase>
+
+
 </testsuite>

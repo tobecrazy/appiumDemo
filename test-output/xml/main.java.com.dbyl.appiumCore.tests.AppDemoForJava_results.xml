@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
-           tests="1"
-           failures="1"
-           errors="0"
-           skipped="0"
-           time="1.129">
-  <properties />
-            <testcase name="Demo" time="1.129" classname="main.java.com.dbyl.appiumCore.tests.AppDemoForJava">
-                <failure type="org.openqa.selenium.remote.UnreachableBrowserException"
-                  message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+<testsuite name="Default test" tests="1" failures="1" errors="0"
+	skipped="0" time="1.129">
+	<properties />
+	<testcase name="Demo" time="1.129"
+		classname="main.java.com.dbyl.appiumCore.tests.AppDemoForJava">
+		<failure type="org.openqa.selenium.remote.UnreachableBrowserException"
+			message="Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
 System info: host: &apos;Youngs-MacBook-Pro.local&apos;, ip: &apos;192.168.60.1&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.1&apos;, java.version: &apos;1.8.0_92&apos;
-Driver info: driver.version: AndroidDriver"
-              >
+Driver info: driver.version: AndroidDriver">
 <![CDATA[org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
 Build info: version: '2.53.1', revision: 'a36b8b1', time: '2016-06-30 17:37:03'
 System info: host: 'Youngs-MacBook-Pro.local', ip: '192.168.60.1', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.1', java.version: '1.8.0_92'
@@ -208,10 +204,10 @@ Caused by: java.net.ConnectException: errno: 61 (Connection refused), error: Con
   org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
   org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
 ]]>
-      </failure>
+		</failure>
 
-          </testcase>
-  
-  
-  
+	</testcase>
+
+
+
 </testsuite>
