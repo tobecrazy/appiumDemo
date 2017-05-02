@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>main.java.com.dbyl.appiumCore</groupId>
-	<artifactId>AppiumDemo</artifactId>
-	<version>1.2.1-SNAPSHOT</version>
+	<groupId> main.java.com.dbyl.appiumCore</groupId>
+	<artifactId>framework</artifactId>
+	<version>1.12</version>
 	<packaging>jar</packaging>
-
-	<name>core</name>
-	<url>http://www.cnblogs.com/tobecrazy</url>
+	<name>framework</name>
+	<description>This is web test framework base on Selenium webdriver</description>
+	<url>http://www.cnblogs.com/tobecrazy/</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -139,6 +139,4 @@
 		</plugins>
 		<finalName>framework</finalName>
 	</build>
-
-	<description>This is app test framework base on appium</description>
 </project>
