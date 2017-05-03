@@ -1,0 +1,434 @@
+2017-05-02 13:23:49:291 - info: [Appium] Welcome to Appium v1.6.4
+2017-05-02 13:23:49:293 - info: [Appium] Non-default server args:
+2017-05-02 13:23:49:295 - info: [Appium]   address: 127.0.0.1
+2017-05-02 13:23:49:295 - info: [Appium]   log: /Volumes/Transcend/Document/workspace/appiumDemo/logs/appium_default_log_2017_05_02_21_23_45.log
+2017-05-02 13:23:49:333 - info: [Appium] Appium REST http interface listener started on 127.0.0.1:4723
+2017-05-02 13:23:49:564 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-02 13:23:49:568 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-02 13:23:49:582 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.4","revision":null}}
+2017-05-02 13:23:49:590 - info: [HTTP] <-- GET /wd/hub/status 200 22 ms - 83 
+2017-05-02 13:23:49:595 - info: [HTTP] --> GET /wd/hub/status {}
+2017-05-02 13:23:49:595 - info: [debug] [MJSONWP] Calling AppiumDriver.getStatus() with args: []
+2017-05-02 13:23:49:611 - info: [debug] [MJSONWP] Responding to client with driver.getStatus() result: {"build":{"version":"1.6.4","revision":null}}
+2017-05-02 13:23:49:614 - info: [HTTP] <-- GET /wd/hub/status 200 18 ms - 83 
+2017-05-02 13:23:50:131 - info: [HTTP] --> POST /wd/hub/session {"capabilities":[{"desiredCapabilities":{"app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3"}},{"requiredCapabilities":{}}],"desiredCapabilities":{"app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3"},"requiredCapabilities":{}}
+2017-05-02 13:23:50:133 - info: [debug] [MJSONWP] Calling AppiumDriver.createSession() with args: [{"app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3"},{},[{"desiredCapabilities":{"app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3"}},{"requiredCapabilities":{}}],null,null]
+2017-05-02 13:23:50:134 - info: [debug] [BaseDriver] Event 'newSessionRequested' logged at 1493731430133 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:137 - info: [Appium] Creating new XCUITestDriver (v2.27.2) session
+2017-05-02 13:23:50:138 - info: [Appium] Capabilities:
+2017-05-02 13:23:50:141 - info: [Appium]   app: '/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app'
+2017-05-02 13:23:50:141 - info: [Appium]   automationName: 'XCUITest'
+2017-05-02 13:23:50:142 - info: [Appium]   platformName: 'iOS'
+2017-05-02 13:23:50:142 - info: [Appium]   deviceName: 'iPhone 7 Plus'
+2017-05-02 13:23:50:143 - info: [Appium]   platformVersion: '10.3'
+2017-05-02 13:23:50:146 - info: [debug] [XCUITest] XCUITestDriver version: 2.27.2
+2017-05-02 13:23:50:200 - info: [BaseDriver] Session created with session id: 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:23:50:296 - info: [debug] [XCUITest] Xcode version set to '8.3.2' (tools v8.3.2.0.1.1492020469)
+2017-05-02 13:23:50:305 - info: [debug] [XCUITest] iOS SDK Version set to '10.3'
+2017-05-02 13:23:50:306 - info: [debug] [BaseDriver] Event 'xcodeDetailsRetrieved' logged at 1493731430305 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:544 - info: [iOSSim] Constructing iOS simulator for Xcode version 8.3.2 with udid '8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1'
+2017-05-02 13:23:50:546 - info: [XCUITest] Determining device to run tests on: udid: '8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1', real device: false
+2017-05-02 13:23:50:549 - info: [BaseDriver] Using local app '/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app'
+2017-05-02 13:23:50:550 - info: [debug] [BaseDriver] Event 'appConfigured' logged at 1493731430549 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:551 - info: [debug] [XCUITest] Checking whether app '/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app' is actually present on file system
+2017-05-02 13:23:50:552 - info: [debug] [XCUITest] App is present
+2017-05-02 13:23:50:556 - info: [debug] [iOS] Getting bundle ID from app '/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app': 'com.Young.TestApp'
+2017-05-02 13:23:50:557 - info: [debug] [BaseDriver] Event 'resetStarted' logged at 1493731430557 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:640 - info: [XCUITest] Not scrubbing third party app in anticipation of uninstall
+2017-05-02 13:23:50:640 - info: [debug] [BaseDriver] Event 'resetComplete' logged at 1493731430640 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:722 - info: [debug] [iOSLog] Starting iOS 10.3 simulator log capture
+2017-05-02 13:23:50:723 - info: [debug] [iOSLog] System log path: /Users/young/Library/Logs/CoreSimulator/8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1/system.log
+2017-05-02 13:23:50:757 - info: [debug] [BaseDriver] Event 'logCaptureStarted' logged at 1493731430757 (21:23:50 GMT+0800 (CST))
+2017-05-02 13:23:50:757 - info: [XCUITest] Setting up simulator
+2017-05-02 13:23:50:759 - info: [debug] [iOS] No reason to set locale
+2017-05-02 13:23:50:763 - info: [debug] [iOS] No iOS / app preferences to set
+2017-05-02 13:23:50:931 - info: [XCUITest] Simulator with udid '8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1' not booted. Booting up now
+2017-05-02 13:23:50:933 - info: [debug] [iOSSim] Killing all iOS Simulators
+2017-05-02 13:23:50:954 - info: [debug] [iOSSim] Simulator is not running. Continuing...
+2017-05-02 13:23:50:967 - info: [iOSSim] Starting simulator with command: open -Fn /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app --args -CurrentDeviceUDID 8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1 -ConnectHardwareKeyboard 0
+2017-05-02 13:24:11:772 - info: [iOSSim] Simulator booted in 20804ms
+2017-05-02 13:24:11:776 - info: [debug] [BaseDriver] Event 'simStarted' logged at 1493731451774 (21:24:11 GMT+0800 (CST))
+2017-05-02 13:24:11:788 - info: [debug] [XCUITest] Reset requested. Removing app with id 'com.Young.TestApp' from the device
+2017-05-02 13:24:12:746 - info: [debug] [XCUITest] Installing /Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app on Simulator with UUID '8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1'...
+2017-05-02 13:24:18:633 - info: [debug] [XCUITest] The app has been installed successfully.
+2017-05-02 13:24:18:635 - info: [debug] [BaseDriver] Event 'appInstalled' logged at 1493731458635 (21:24:18 GMT+0800 (CST))
+2017-05-02 13:24:18:638 - info: [debug] [BaseDriver] Event 'wdaStartAttempted' logged at 1493731458638 (21:24:18 GMT+0800 (CST))
+2017-05-02 13:24:18:639 - info: [XCUITest] Using WDA path: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+2017-05-02 13:24:18:639 - info: [XCUITest] Using WDA agent: '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj'
+2017-05-02 13:24:18:643 - info: [XCUITest] Launching WebDriverAgent on the device
+2017-05-02 13:24:18:651 - info: [debug] [XCUITest] Carthage found: '/usr/local/bin/carthage'
+2017-05-02 13:24:18:653 - info: [debug] [XCUITest] Killing hanging processes
+2017-05-02 13:24:18:813 - info: [debug] [XCUITest] Beginning test with command 'xcodebuild build-for-testing test-without-building -project /usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj -scheme WebDriverAgentRunner -destination id=8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1 -configuration Debug IPHONEOS_DEPLOYMENT_TARGET=10.3' in directory '/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent'
+2017-05-02 13:24:18:814 - info: [debug] [XCUITest] Output from xcodebuild will not be logged
+2017-05-02 13:24:20:600 - info: [debug] [XCUITest] Waiting up to 60000ms for WebDriverAgent to start
+2017-05-02 13:24:20:603 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:21:195 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:21:710 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:22:217 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:22:722 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:23:077 - info: [debug] [XCUITest] Log file for xcodebuild test: /Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Logs/Test/164443F5-EF0A-4899-93A4-A25FE73D8C55/Session-WebDriverAgentRunner-2017-05-02_212423-5eWd6A.log
+2017-05-02 13:24:23:230 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:23:746 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:24:251 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:24:759 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:25:270 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:25:776 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:26:281 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:26:793 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:27:300 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:27:810 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:28:322 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:28:829 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:29:337 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:29:849 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:30:381 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:30:906 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:31:423 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:31:941 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:32:459 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:32:979 - info: [debug] [JSONWP Proxy] Proxying [GET /status] to [GET http://localhost:8100/status] with no body
+2017-05-02 13:24:32:996 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"state\" : \"success\",\n    \"os\" : {\n      \"name\" : \"iOS\",\n      \"version\" : \"10.3\"\n    },\n    \"ios\" : {\n      \"simulatorVersion\" : \"10.3\",\n      \"ip\" : \"192.168.1.100\"\n    },\n    \"build\" : {\n      \"time\" : \"Apr 22 2017 22:53:42\"\n    }\n  },\n  \"sessionId\" : \"274839B4-AD56-4F0A-A182-A0467FB2352B\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:32:997 - info: [debug] [XCUITest] WebDriverAgent running on ip '192.168.1.100'
+2017-05-02 13:24:32:998 - info: [debug] [XCUITest] WebDriverAgent successfully started after 14181ms
+2017-05-02 13:24:33:003 - info: [debug] [BaseDriver] Event 'wdaSessionAttempted' logged at 1493731473003 (21:24:33 GMT+0800 (CST))
+2017-05-02 13:24:33:004 - info: [debug] [XCUITest] Sending createSession command to WDA
+2017-05-02 13:24:33:006 - info: [debug] [JSONWP Proxy] Proxying [POST /session] to [POST http://localhost:8100/session] with body: {"desiredCapabilities":{"bundleId":"com.Young.TestApp","arguments":[],"environment":{},"shouldWaitForQuiescence":true,"shouldUseTestManagerForVisibilityDetection":false,"maxTypingFrequency":60,"shouldUseSingletonTestManager":true}}
+2017-05-02 13:24:35:757 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","capabilities":{"device":"iphone","browserName":"TestApp","sdkVersion":"10.3","CFBundleIdentifier":"com.Young.TestApp"}},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:35:758 - info: [debug] [BaseDriver] Event 'wdaSessionStarted' logged at 1493731475758 (21:24:35 GMT+0800 (CST))
+2017-05-02 13:24:35:762 - info: [debug] [XCUITest] Found WDA derived data folder: '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy'
+2017-05-02 13:24:35:764 - info: [XCUITest] Setting '555' permissions to '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Logs/Test/Attachments' folder
+2017-05-02 13:24:35:767 - info: [debug] [XCUITest] Found WDA derived data folder: '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-dlybkyvndaroszbgmnpomwqnaajk'
+2017-05-02 13:24:35:769 - info: [XCUITest] Setting '555' permissions to '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-dlybkyvndaroszbgmnpomwqnaajk/Logs/Test/Attachments' folder
+2017-05-02 13:24:35:772 - info: [debug] [BaseDriver] Event 'wdaPermsAdjusted' logged at 1493731475772 (21:24:35 GMT+0800 (CST))
+2017-05-02 13:24:35:773 - info: [debug] [BaseDriver] Event 'wdaStarted' logged at 1493731475773 (21:24:35 GMT+0800 (CST))
+2017-05-02 13:24:35:774 - info: [debug] [XCUITest] Setting initial orientation to 'PORTRAIT'
+2017-05-02 13:24:35:776 - info: [debug] [JSONWP Proxy] Proxying [POST /orientation] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/orientation] with body: {"orientation":"PORTRAIT"}
+2017-05-02 13:24:35:972 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:35:973 - info: [debug] [BaseDriver] Event 'orientationSet' logged at 1493731475973 (21:24:35 GMT+0800 (CST))
+2017-05-02 13:24:35:974 - info: [Appium] New XCUITestDriver session created successfully, session 295d0744-e59e-4f97-a701-18cd937d0089 added to master session list
+2017-05-02 13:24:35:977 - info: [debug] [BaseDriver] Event 'newSessionStarted' logged at 1493731475977 (21:24:35 GMT+0800 (CST))
+2017-05-02 13:24:35:978 - info: [debug] [MJSONWP] Responding to client with driver.createSession() result: {"webStorageEnabled":false,"locationContextEnabled":false,"browserName":"","platform":"MAC","javascriptEnabled":true,"databaseEnabled":false,"takesScreenshot":true,"networkConnectionEnabled":false,"app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3","udid":"8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1"}
+2017-05-02 13:24:35:981 - info: [HTTP] <-- POST /wd/hub/session 200 45847 ms - 492 
+2017-05-02 13:24:36:052 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 {}
+2017-05-02 13:24:36:054 - info: [debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:055 - info: [debug] [XCUITest] Executing command 'getSession'
+2017-05-02 13:24:36:076 - info: [debug] [JSONWP Proxy] Proxying [GET /] to [GET http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242] with no body
+2017-05-02 13:24:36:148 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n    \"capabilities\" : {\n      \"device\" : \"iphone\",\n      \"browserName\" : \"TestApp\",\n      \"sdkVersion\" : \"10.3\",\n      \"CFBundleIdentifier\" : \"com.Young.TestApp\"\n    }\n  },\n  \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:36:149 - info: [XCUITest] Merging WDA caps over Appium caps for session detail response
+2017-05-02 13:24:36:150 - info: [debug] [MJSONWP] Responding to client with driver.getSession() result: {"udid":"8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1","app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3","device":"iphone","browserName":"TestApp","sdkVersion":"10.3","CFBundleIdentifier":"com.Young.TestApp"}
+2017-05-02 13:24:36:154 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 200 99 ms - 399 
+2017-05-02 13:24:36:163 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 {}
+2017-05-02 13:24:36:164 - info: [debug] [MJSONWP] Calling AppiumDriver.getSession() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:164 - info: [debug] [XCUITest] Executing command 'getSession'
+2017-05-02 13:24:36:170 - info: [debug] [JSONWP Proxy] Proxying [GET /] to [GET http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242] with no body
+2017-05-02 13:24:36:234 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n    \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n    \"capabilities\" : {\n      \"device\" : \"iphone\",\n      \"browserName\" : \"TestApp\",\n      \"sdkVersion\" : \"10.3\",\n      \"CFBundleIdentifier\" : \"com.Young.TestApp\"\n    }\n  },\n  \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:36:235 - info: [XCUITest] Merging WDA caps over Appium caps for session detail response
+2017-05-02 13:24:36:236 - info: [debug] [MJSONWP] Responding to client with driver.getSession() result: {"udid":"8212ABBC-A1F9-43E9-878E-2CF7A0AEDEE1","app":"/Volumes/Transcend/Document/workspace/appiumDemo/apps/TestApp.app","automationName":"XCUITest","platformName":"iOS","deviceName":"iPhone 7 Plus","platformVersion":"10.3","device":"iphone","browserName":"TestApp","sdkVersion":"10.3","CFBundleIdentifier":"com.Young.TestApp"}
+2017-05-02 13:24:36:238 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 200 74 ms - 399 
+2017-05-02 13:24:36:249 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":60000}
+2017-05-02 13:24:36:250 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",60000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:250 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:36:255 - info: [debug] [BaseDriver] Set implicit wait to 60000ms
+2017-05-02 13:24:36:257 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:36:259 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 9 ms - 76 
+2017-05-02 13:24:36:516 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot {}
+2017-05-02 13:24:36:517 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:517 - info: [debug] [XCUITest] Executing command 'getScreenshot'
+2017-05-02 13:24:36:778 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABNoAAAigCAYAAADpkk+ZAAAEDWlDQ1BJQ0MgUHJvZmlsZQAAOI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9oU9FUHwx6psUxL+3gCAo9Q/bPrQvlQol2tQgKD60+INQ6Ium65k7M5lpurHeZe58853vnnvuuWfvBei5qliWkRQBFpquLRcy4nOHj4g9K5CEh6AXBqFXUR0rXalMAjZPC3e1W99Dwntf2dXd/p+tt0YdFSBxH2Kz5qgLiI8B8KdVy3YBevqRHz/qWh72Yui3MUDEL3q44WPXw3M+fo1pZuQs4tOIBVVTaoiXEI/MxfhGDPsxsNZfoE1q66ro5aJim3XdoLFw72H+n23BaIXzbcOnz5mfPoTvYVz7KzUl5+FRxEuqkp9G/Ajia219thzg25abkRE/BpDc3pqvphHvRFys2weqvp+krbWKIX7nhDbzLOItiM8358pTwdirqpPFnMF2xLc1WvLyOwTAibpbmvHHcvttU57y5+XqNZrLe3lE/Pq8eUj2fXKfOe3pfOjzhJYtB/yll5SDFcSDiH+hRkH25+L+sdxKEAMZahrlSX8ukqMOWy/jXW2m6M9LDBc31B9LFuv6gVKg/0Szi3KAr1kGq1GMjU/aLbnq6/lRxc4XfJ98hTargX++DbMJBSiYMIe9Ck1YAxFkKEAG3xbYaKmDDgYyFK0UGYpfoWYXG+fAPPI6tJnNwb7ClP7IyF+D+bjOtCpkhz6CFrIa/I6sFtNl8auFXGMTP34sNwI/JhkgEtmDz14ySfaRcTIBInmKPE32kxyyE2Tv+thKbEVePDfW/byMM1Kmm0XdObS7oGD/MypMXFPXrCwOtoYjyyn7BV29/MZfsVzpLDdRtuIZnbpXzvlf+ev8MvYr/Gqk4H/kV/G3csdazLuyTMPsbFhzd1UabQbjFvDRmcWJxR3zcfHkVw9GfpbJmeev9F08WW8u...
+2017-05-02 13:24:36:785 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot 200 268 ms - 268266 
+2017-05-02 13:24:36:837 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:36:838 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:838 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:36:841 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:36:843 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:36:845 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 7 ms - 76 
+2017-05-02 13:24:36:851 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:36:853 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:854 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:36:858 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:36:860 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 7 ms - 84 
+2017-05-02 13:24:36:864 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:36:865 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:36:866 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:36:869 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:36:871 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:36:872 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:37:212 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"857FEB85-1420-4D44-BFA5-A3658444BB9A","type":"XCUIElementTypeTextField","label":"TextField1"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:37:215 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"857FEB85-1420-4D44-BFA5-A3658444BB9A","type":"XCUIElementTypeTextField","label":"TextField1"}
+2017-05-02 13:24:37:217 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 352 ms - 177 
+2017-05-02 13:24:37:221 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:37:222 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:37:223 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:37:227 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:37:229 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:37:231 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 8 ms - 76 
+2017-05-02 13:24:37:235 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/857FEB85-1420-4D44-BFA5-A3658444BB9A/displayed {}
+2017-05-02 13:24:37:236 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:37:237 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:37:241 - info: [debug] [JSONWP Proxy] Proxying [GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/857FEB85-1420-4D44-BFA5-A3658444BB9A/displayed] to [GET http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/857FEB85-1420-4D44-BFA5-A3658444BB9A/displayed] with body: {}
+2017-05-02 13:24:37:449 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : true,\n  \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:37:451 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:37:452 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/857FEB85-1420-4D44-BFA5-A3658444BB9A/displayed 200 217 ms - 76 
+2017-05-02 13:24:37:456 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:37:457 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:37:457 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:37:459 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:37:460 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:37:461 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 4 ms - 76 
+2017-05-02 13:24:37:465 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:37:465 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:37:466 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:37:469 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:37:470 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 5 ms - 84 
+2017-05-02 13:24:37:474 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:37:475 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:37:475 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:37:478 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:37:478 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:37:479 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:37:744 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"3777296B-E56A-43C3-93AA-23C20794B15E","type":"XCUIElementTypeTextField","label":"TextField1"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:37:746 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"3777296B-E56A-43C3-93AA-23C20794B15E","type":"XCUIElementTypeTextField","label":"TextField1"}
+2017-05-02 13:24:37:747 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 272 ms - 177 
+2017-05-02 13:24:37:751 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:37:751 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:37:752 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:37:754 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:37:755 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:37:758 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 5 ms - 76 
+2017-05-02 13:24:37:760 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/3777296B-E56A-43C3-93AA-23C20794B15E/click {"id":"3777296B-E56A-43C3-93AA-23C20794B15E"}
+2017-05-02 13:24:37:761 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:37:761 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:37:765 - info: [debug] [JSONWP Proxy] Proxying [POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/3777296B-E56A-43C3-93AA-23C20794B15E/click] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/3777296B-E56A-43C3-93AA-23C20794B15E/click] with body: {"id":"3777296B-E56A-43C3-93AA-23C20794B15E"}
+2017-05-02 13:24:38:329 - info: [debug] [JSONWP Proxy] Got response with status 200: {"status":0,"id":"3777296B-E56A-43C3-93AA-23C20794B15E","value":"","sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242"}
+2017-05-02 13:24:38:329 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:38:330 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/3777296B-E56A-43C3-93AA-23C20794B15E/click 200 570 ms - 118 
+2017-05-02 13:24:38:337 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:38:338 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:38:338 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:38:342 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:38:346 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:38:347 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 10 ms - 76 
+2017-05-02 13:24:38:351 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:38:351 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:38:352 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:38:357 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:38:358 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 6 ms - 84 
+2017-05-02 13:24:38:362 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:38:362 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:38:363 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:38:365 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:38:365 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:38:366 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"}
+2017-05-02 13:24:39:776 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"F0EF84C1-B189-452D-8DAA-8EA134B07009","type":"XCUIElementTypeTextField","label":"TextField1"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:39:777 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"F0EF84C1-B189-452D-8DAA-8EA134B07009","type":"XCUIElementTypeTextField","label":"TextField1"}
+2017-05-02 13:24:39:778 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 1415 ms - 177 
+2017-05-02 13:24:39:783 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:39:784 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:39:784 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:39:787 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:39:788 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:39:790 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 6 ms - 76 
+2017-05-02 13:24:39:795 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/appium/element/F0EF84C1-B189-452D-8DAA-8EA134B07009/value {"id":"F0EF84C1-B189-452D-8DAA-8EA134B07009","value":"12"}
+2017-05-02 13:24:39:797 - info: [debug] [MJSONWP] Calling AppiumDriver.setValueImmediate() with args: ["12","F0EF84C1-B189-452D-8DAA-8EA134B07009","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:39:797 - info: [debug] [XCUITest] Executing command 'setValueImmediate'
+2017-05-02 13:24:39:801 - info: [XCUITest] There is currently no way to bypass typing using XCUITest. Setting value through keyboard
+2017-05-02 13:24:39:803 - info: [debug] [JSONWP Proxy] Proxying [POST /element/F0EF84C1-B189-452D-8DAA-8EA134B07009/value] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/F0EF84C1-B189-452D-8DAA-8EA134B07009/value] with body: {"value":["1","2"]}
+2017-05-02 13:24:40:733 - info: [debug] [JSONWP Proxy] Got response with status 200: {"status":0,"id":"F0EF84C1-B189-452D-8DAA-8EA134B07009","value":"","sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242"}
+2017-05-02 13:24:40:734 - info: [debug] [MJSONWP] Responding to client with driver.setValueImmediate() result: null
+2017-05-02 13:24:40:735 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/appium/element/F0EF84C1-B189-452D-8DAA-8EA134B07009/value 200 940 ms - 76 
+2017-05-02 13:24:40:739 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot {}
+2017-05-02 13:24:40:739 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:40:739 - info: [debug] [XCUITest] Executing command 'getScreenshot'
+2017-05-02 13:24:40:994 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: ""
+2017-05-02 13:24:40:996 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot 200 257 ms - 74 
+2017-05-02 13:24:41:003 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:41:004 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:004 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:41:006 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:41:007 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:41:008 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 5 ms - 76 
+2017-05-02 13:24:41:013 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:41:013 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:014 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:41:018 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:41:019 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 6 ms - 84 
+2017-05-02 13:24:41:023 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:41:024 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:024 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:41:027 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:41:027 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:41:029 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:41:582 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"E5206943-6B23-44F9-9F9C-E488D7E4E404","type":"XCUIElementTypeTextField","label":"TextField2"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:41:583 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"E5206943-6B23-44F9-9F9C-E488D7E4E404","type":"XCUIElementTypeTextField","label":"TextField2"}
+2017-05-02 13:24:41:584 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 560 ms - 177 
+2017-05-02 13:24:41:588 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:41:589 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:589 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:41:591 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:41:594 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:41:595 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 6 ms - 76 
+2017-05-02 13:24:41:600 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/E5206943-6B23-44F9-9F9C-E488D7E4E404/displayed {}
+2017-05-02 13:24:41:600 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:41:603 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:41:606 - info: [debug] [JSONWP Proxy] Proxying [GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/E5206943-6B23-44F9-9F9C-E488D7E4E404/displayed] to [GET http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/E5206943-6B23-44F9-9F9C-E488D7E4E404/displayed] with body: {}
+2017-05-02 13:24:41:884 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : true,\n  \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:41:885 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:41:885 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/E5206943-6B23-44F9-9F9C-E488D7E4E404/displayed 200 286 ms - 76 
+2017-05-02 13:24:41:890 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:41:892 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:893 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:41:896 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:41:896 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:41:898 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 7 ms - 76 
+2017-05-02 13:24:41:902 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:41:902 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:903 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:41:906 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:41:907 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 5 ms - 84 
+2017-05-02 13:24:41:911 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:41:911 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:41:911 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:41:914 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:41:914 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:41:915 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:42:453 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"84B3030E-077A-43E2-AF58-1068163380FA","type":"XCUIElementTypeTextField","label":"TextField2"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:42:454 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"84B3030E-077A-43E2-AF58-1068163380FA","type":"XCUIElementTypeTextField","label":"TextField2"}
+2017-05-02 13:24:42:456 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 544 ms - 177 
+2017-05-02 13:24:42:460 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:42:461 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:42:462 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:42:466 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:42:466 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:42:468 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 8 ms - 76 
+2017-05-02 13:24:42:471 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/84B3030E-077A-43E2-AF58-1068163380FA/click {"id":"84B3030E-077A-43E2-AF58-1068163380FA"}
+2017-05-02 13:24:42:472 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:42:472 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:42:474 - info: [debug] [JSONWP Proxy] Proxying [POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/84B3030E-077A-43E2-AF58-1068163380FA/click] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/84B3030E-077A-43E2-AF58-1068163380FA/click] with body: {"id":"84B3030E-077A-43E2-AF58-1068163380FA"}
+2017-05-02 13:24:43:220 - info: [debug] [JSONWP Proxy] Got response with status 200: {"status":0,"id":"84B3030E-077A-43E2-AF58-1068163380FA","value":"","sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242"}
+2017-05-02 13:24:43:220 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:43:221 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/84B3030E-077A-43E2-AF58-1068163380FA/click 200 750 ms - 118 
+2017-05-02 13:24:43:228 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:43:229 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:43:230 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:43:233 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:43:233 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:43:234 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 6 ms - 76 
+2017-05-02 13:24:43:238 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:43:239 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:43:239 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:43:243 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:43:244 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 5 ms - 84 
+2017-05-02 13:24:43:248 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:43:249 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:43:250 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:43:253 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:43:253 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:43:256 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"}
+2017-05-02 13:24:43:778 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"412B745F-D7EB-4B3D-8AD8-809122627A0D","type":"XCUIElementTypeTextField","label":"TextField2"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:43:779 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"412B745F-D7EB-4B3D-8AD8-809122627A0D","type":"XCUIElementTypeTextField","label":"TextField2"}
+2017-05-02 13:24:43:780 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 531 ms - 177 
+2017-05-02 13:24:43:784 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:43:784 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:43:785 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:43:786 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:43:787 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:43:788 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 3 ms - 76 
+2017-05-02 13:24:43:791 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/appium/element/412B745F-D7EB-4B3D-8AD8-809122627A0D/value {"id":"412B745F-D7EB-4B3D-8AD8-809122627A0D","value":"65"}
+2017-05-02 13:24:43:792 - info: [debug] [MJSONWP] Calling AppiumDriver.setValueImmediate() with args: ["65","412B745F-D7EB-4B3D-8AD8-809122627A0D","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:43:793 - info: [debug] [XCUITest] Executing command 'setValueImmediate'
+2017-05-02 13:24:43:795 - info: [XCUITest] There is currently no way to bypass typing using XCUITest. Setting value through keyboard
+2017-05-02 13:24:43:796 - info: [debug] [JSONWP Proxy] Proxying [POST /element/412B745F-D7EB-4B3D-8AD8-809122627A0D/value] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/412B745F-D7EB-4B3D-8AD8-809122627A0D/value] with body: {"value":["6","5"]}
+2017-05-02 13:24:44:601 - info: [debug] [JSONWP Proxy] Got response with status 200: {"status":0,"id":"412B745F-D7EB-4B3D-8AD8-809122627A0D","value":"","sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242"}
+2017-05-02 13:24:44:602 - info: [debug] [MJSONWP] Responding to client with driver.setValueImmediate() result: null
+2017-05-02 13:24:44:603 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/appium/element/412B745F-D7EB-4B3D-8AD8-809122627A0D/value 200 811 ms - 76 
+2017-05-02 13:24:44:606 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:44:607 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:44:607 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:44:609 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:44:610 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:44:611 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 4 ms - 76 
+2017-05-02 13:24:44:614 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:44:615 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:44:616 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:44:619 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:44:620 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 5 ms - 84 
+2017-05-02 13:24:44:626 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]"}
+2017-05-02 13:24:44:626 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:44:627 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:44:633 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:44:633 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:44:635 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]"}
+2017-05-02 13:24:45:155 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8","type":"XCUIElementTypeButton","label":"Compute Sum"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:45:156 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8","type":"XCUIElementTypeButton","label":"Compute Sum"}
+2017-05-02 13:24:45:157 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 531 ms - 175 
+2017-05-02 13:24:45:161 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:45:161 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:45:162 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:45:164 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:45:165 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:45:166 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 4 ms - 76 
+2017-05-02 13:24:45:169 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8/click {"id":"235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8"}
+2017-05-02 13:24:45:170 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:45:170 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:45:172 - info: [debug] [JSONWP Proxy] Proxying [POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8/click] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8/click] with body: {"id":"235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8"}
+2017-05-02 13:24:45:900 - info: [debug] [JSONWP Proxy] Got response with status 200: {"status":0,"id":"235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8","value":"","sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242"}
+2017-05-02 13:24:45:900 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:45:901 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/235F2A7C-86E9-42ED-AC99-6E83EEC7F1D8/click 200 731 ms - 118 
+2017-05-02 13:24:45:908 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot {}
+2017-05-02 13:24:45:909 - info: [debug] [MJSONWP] Calling AppiumDriver.getScreenshot() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:45:909 - info: [debug] [XCUITest] Executing command 'getScreenshot'
+2017-05-02 13:24:46:144 - info: [debug] [MJSONWP] Responding to client with driver.getScreenshot() result: "iVBORw0KGgoAAAANSUhEUgAABNoAAAigCAYAAADpkk+ZAAAEDWlDQ1BJQ0MgUHJvZmlsZQAAOI2NVV1oHFUUPrtzZyMkzlNsNIV0qD8NJQ2TVjShtLp/3d02bpZJNtoi6GT27s6Yyc44M7v9oU9FUHwx6psUxL+3gCAo9Q/bPrQvlQol2tQgKD60+INQ6Ium65k7M5lpurHeZe58853vnnvuuWfvBei5qliWkRQBFpquLRcy4nOHj4g9K5CEh6AXBqFXUR0rXalMAjZPC3e1W99Dwntf2dXd/p+tt0YdFSBxH2Kz5qgLiI8B8KdVy3YBevqRHz/qWh72Yui3MUDEL3q44WPXw3M+fo1pZuQs4tOIBVVTaoiXEI/MxfhGDPsxsNZfoE1q66ro5aJim3XdoLFw72H+n23BaIXzbcOnz5mfPoTvYVz7KzUl5+FRxEuqkp9G/Ajia219thzg25abkRE/BpDc3pqvphHvRFys2weqvp+krbWKIX7nhDbzLOItiM8358pTwdirqpPFnMF2xLc1WvLyOwTAibpbmvHHcvttU57y5+XqNZrLe3lE/Pq8eUj2fXKfOe3pfOjzhJYtB/yll5SDFcSDiH+hRkH25+L+sdxKEAMZahrlSX8ukqMOWy/jXW2m6M9LDBc31B9LFuv6gVKg/0Szi3KAr1kGq1GMjU/aLbnq6/lRxc4XfJ98hTargX++DbMJBSiYMIe9Ck1YAxFkKEAG3xbYaKmDDgYyFK0UGYpfoWYXG+fAPPI6tJnNwb7ClP7IyF+D+bjOtCpkhz6CFrIa/I6sFtNl8auFXGMTP34sNwI/JhkgEtmDz14ySfaRcTIBInmKPE32kxyyE2Tv+thKbEVePDfW/byMM1Kmm0XdObS7oGD/MypMXFPXrCwOtoYjyyn7BV29/MZfsVzpLDdRtuIZnbpXzvlf+ev8MvYr/Gqk4H/kV/G3csdazLuyTMPsbFhzd1UabQbjFvDRmcWJxR3zcfHkVw9GfpbJmeev9F08WW8u...
+2017-05-02 13:24:46:148 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/screenshot 200 239 ms - 392922 
+2017-05-02 13:24:46:172 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":0}
+2017-05-02 13:24:46:173 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",0,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:46:173 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:46:176 - info: [debug] [BaseDriver] Set implicit wait to 0ms
+2017-05-02 13:24:46:177 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:46:177 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 5 ms - 76 
+2017-05-02 13:24:46:181 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context {}
+2017-05-02 13:24:46:181 - info: [debug] [MJSONWP] Calling AppiumDriver.getCurrentContext() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:46:182 - info: [debug] [XCUITest] Executing command 'getCurrentContext'
+2017-05-02 13:24:46:190 - info: [debug] [MJSONWP] Responding to client with driver.getCurrentContext() result: "NATIVE_APP"
+2017-05-02 13:24:46:191 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/context 200 10 ms - 84 
+2017-05-02 13:24:46:195 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]"}
+2017-05-02 13:24:46:198 - info: [debug] [MJSONWP] Calling AppiumDriver.findElement() with args: ["xpath","//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]","295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:46:200 - info: [debug] [XCUITest] Executing command 'findElement'
+2017-05-02 13:24:46:205 - info: [debug] [BaseDriver] Valid locator strategies for this request: xpath, id, name, class name, -ios predicate string, -ios class chain, accessibility id
+2017-05-02 13:24:46:206 - info: [debug] [BaseDriver] Waiting up to 0 ms for condition
+2017-05-02 13:24:46:208 - info: [debug] [JSONWP Proxy] Proxying [POST /element] to [POST http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element] with body: {"using":"xpath","value":"//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]"}
+2017-05-02 13:24:46:710 - info: [debug] [JSONWP Proxy] Got response with status 200: {"value":{"ELEMENT":"CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0","type":"XCUIElementTypeStaticText","label":"77"},"sessionId":"A0B90ECB-47D8-4A34-9283-E11DAE00C242","status":0}
+2017-05-02 13:24:46:711 - info: [debug] [MJSONWP] Responding to client with driver.findElement() result: {"ELEMENT":"CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0","type":"XCUIElementTypeStaticText","label":"77"}
+2017-05-02 13:24:46:712 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element 200 516 ms - 170 
+2017-05-02 13:24:46:716 - info: [HTTP] --> POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts {"type":"implicit","ms":1000}
+2017-05-02 13:24:46:716 - info: [debug] [MJSONWP] Calling AppiumDriver.timeouts() with args: ["implicit",1000,"295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:46:717 - info: [debug] [XCUITest] Executing command 'timeouts'
+2017-05-02 13:24:46:718 - info: [debug] [BaseDriver] Set implicit wait to 1000ms
+2017-05-02 13:24:46:719 - info: [debug] [MJSONWP] Responding to client with driver.timeouts() result: null
+2017-05-02 13:24:46:720 - info: [HTTP] <-- POST /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/timeouts 200 4 ms - 76 
+2017-05-02 13:24:46:723 - info: [HTTP] --> GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0/attribute/value {}
+2017-05-02 13:24:46:724 - info: [MJSONWP] Driver proxy active, passing request on via HTTP proxy
+2017-05-02 13:24:46:724 - info: [debug] [XCUITest] Executing command 'proxyReqRes'
+2017-05-02 13:24:46:726 - info: [debug] [JSONWP Proxy] Proxying [GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0/attribute/value] to [GET http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242/element/CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0/attribute/value] with body: {}
+2017-05-02 13:24:46:937 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : \"77\",\n  \"sessionId\" : \"A0B90ECB-47D8-4A34-9283-E11DAE00C242\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:46:938 - info: [JSONWP Proxy] Replacing sessionId A0B90ECB-47D8-4A34-9283-E11DAE00C242 with 295d0744-e59e-4f97-a701-18cd937d0089
+2017-05-02 13:24:46:939 - info: [HTTP] <-- GET /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089/element/CB06796F-8ED9-4129-BEC7-09D5BBD5AAD0/attribute/value 200 215 ms - 76 
+2017-05-02 13:24:46:944 - info: [HTTP] --> DELETE /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 {}
+2017-05-02 13:24:46:945 - info: [debug] [MJSONWP] Calling AppiumDriver.deleteSession() with args: ["295d0744-e59e-4f97-a701-18cd937d0089"]
+2017-05-02 13:24:46:945 - info: [debug] [BaseDriver] Event 'quitSessionRequested' logged at 1493731486945 (21:24:46 GMT+0800 (CST))
+2017-05-02 13:24:46:947 - info: [debug] [JSONWP Proxy] Proxying [DELETE /session/295d0744-e59e-4f97-a701-18cd937d0089] to [DELETE http://localhost:8100/session/A0B90ECB-47D8-4A34-9283-E11DAE00C242] with no body
+2017-05-02 13:24:47:450 - info: [debug] [JSONWP Proxy] Got response with status 200: "{\n  \"value\" : {\n\n  },\n  \"sessionId\" : \"3ABEB0E8-13E0-4BB1-9A2A-C0EF19BD8777\",\n  \"status\" : 0\n}"
+2017-05-02 13:24:47:451 - info: [XCUITest] Shutting down sub-processes
+2017-05-02 13:24:47:452 - info: [XCUITest] Shutting down xcodebuild process (pid 9672)
+2017-05-02 13:24:47:516 - info: [XCUITest] xcodebuild exited with code 'null' and signal 'SIGTERM'
+2017-05-02 13:24:47:520 - info: [debug] [XCUITest] Found WDA derived data folder: '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy'
+2017-05-02 13:24:47:529 - info: [XCUITest] Setting '755' permissions to '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-brdadhpuduowllgivnnvuygpwhzy/Logs/Test/Attachments' folder
+2017-05-02 13:24:47:533 - info: [debug] [XCUITest] Found WDA derived data folder: '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-dlybkyvndaroszbgmnpomwqnaajk'
+2017-05-02 13:24:47:535 - info: [XCUITest] Setting '755' permissions to '/Users/young/Library/Developer/Xcode/DerivedData/WebDriverAgent-dlybkyvndaroszbgmnpomwqnaajk/Logs/Test/Attachments' folder
+2017-05-02 13:24:47:537 - info: [debug] [XCUITest] Not clearing log files. Use `clearSystemFiles` capability to turn on.
+2017-05-02 13:24:47:538 - info: [debug] [iOSLog] Stopping iOS log capture
+2017-05-02 13:24:47:541 - info: [Appium] Removing session 295d0744-e59e-4f97-a701-18cd937d0089 from our master session list
+2017-05-02 13:24:47:544 - info: [debug] [BaseDriver] Event 'quitSessionFinished' logged at 1493731487544 (21:24:47 GMT+0800 (CST))
+2017-05-02 13:24:47:544 - info: [debug] [MJSONWP] Received response: null
+2017-05-02 13:24:47:545 - info: [debug] [MJSONWP] But deleting session, so not returning
+2017-05-02 13:24:47:545 - info: [debug] [MJSONWP] Responding to client with driver.deleteSession() result: null
+2017-05-02 13:24:47:548 - info: [HTTP] <-- DELETE /wd/hub/session/295d0744-e59e-4f97-a701-18cd937d0089 200 602 ms - 76 

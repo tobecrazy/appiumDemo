@@ -4,19 +4,19 @@
            failures="2"
            errors="0"
            skipped="1"
-           time="0.687">
+           time="0.496">
   <properties />
-            <testcase name="startAppiumServer" time="0.064" classname="main.java.com.dbyl.appiumCore.tests.AppDemo">
-                <failure type="java.lang.NoSuchMethodError"
-                  message="com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;I)V"
+            <testcase name="setUp" time="0.451" classname="main.java.com.dbyl.appiumCore.tests.PureWebDriver">
+                <failure type="java.lang.NullPointerException"
+                  message="(null)"
               >
-<![CDATA[java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;I)V
-  org.openqa.selenium.remote.service.DriverService$Builder.usingPort(DriverService.java:269)
-  io.appium.java_client.service.local.AppiumServiceBuilder.usingPort(AppiumServiceBuilder.java:455)
-  io.appium.java_client.service.local.AppiumServiceBuilder.<init>(AppiumServiceBuilder.java:95)
-  io.appium.java_client.service.local.AppiumDriverLocalService.buildDefaultService(AppiumDriverLocalService.java:72)
-  main.java.com.dbyl.appiumServer.AppiumServerUtils.startAppiumServerByDefault(AppiumServerUtils.java:46)
-  main.java.com.dbyl.appiumCore.tests.AppDemo.startAppiumServer(AppDemo.java:34)
+<![CDATA[java.lang.NullPointerException
+  com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
+  io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:68)
+  io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:82)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:111)
+  io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:73)
+  main.java.com.dbyl.appiumCore.tests.PureWebDriver.setUp(PureWebDriver.java:47)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -24,9 +24,11 @@
   org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
   org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:523)
   org.testng.internal.Invoker.invokeConfigurations(Invoker.java:224)
-  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:146)
-  org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:166)
-  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
   org.testng.TestRunner.privateRun(TestRunner.java:744)
   org.testng.TestRunner.run(TestRunner.java:602)
   org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
@@ -46,17 +48,16 @@
       </failure>
 
           </testcase>
-            <testcase name="setUp" time="0.622" classname="main.java.com.dbyl.appiumCore.tests.AppDemo">
-                <failure type="java.lang.NullPointerException"
-                  message="(null)"
+            <testcase name="startAppiumServer" time="0.045" classname="main.java.com.dbyl.appiumCore.tests.PureWebDriver">
+                <failure type="java.lang.NoSuchMethodError"
+                  message="com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;I)V"
               >
-<![CDATA[java.lang.NullPointerException
-  com.google.common.base.Preconditions.checkNotNull(Preconditions.java:192)
-  io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:68)
-  io.appium.java_client.remote.AppiumCommandExecutor.<init>(AppiumCommandExecutor.java:82)
-  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:111)
-  io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:73)
-  main.java.com.dbyl.appiumCore.tests.AppDemo.setUp(AppDemo.java:62)
+<![CDATA[java.lang.NoSuchMethodError: com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;I)V
+  org.openqa.selenium.remote.service.DriverService$Builder.usingPort(DriverService.java:269)
+  io.appium.java_client.service.local.AppiumServiceBuilder.usingPort(AppiumServiceBuilder.java:455)
+  io.appium.java_client.service.local.AppiumServiceBuilder.<init>(AppiumServiceBuilder.java:95)
+  main.java.com.dbyl.appiumServer.AppiumServerUtils.startServer(AppiumServerUtils.java:86)
+  main.java.com.dbyl.appiumCore.tests.PureWebDriver.startAppiumServer(PureWebDriver.java:36)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,7 +88,7 @@
 
           </testcase>
   
-            <testcase name="DemoTest" time="0.0" classname="main.java.com.dbyl.appiumCore.tests.AppDemo">
+            <testcase name="webDriver" time="0.0" classname="main.java.com.dbyl.appiumCore.tests.PureWebDriver">
           <skipped />
     </testcase>
   

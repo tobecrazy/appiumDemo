@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.017">
+  <properties />
+  
+  
+            <testcase name="TestFactory" time="0.017" classname="main.java.com.dbyl.appiumCore.tests.designPattern.Day1.customer.TestFactoryPattern" />
+      
+</testsuite>
