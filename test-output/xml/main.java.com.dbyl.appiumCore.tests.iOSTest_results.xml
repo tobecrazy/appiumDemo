@@ -4,9 +4,9 @@
            failures="3"
            errors="0"
            skipped="1"
-           time="0.376">
+           time="0.756">
   <properties />
-            <testcase name="setUp" time="0.345" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
+            <testcase name="setUp" time="0.712" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
                 <failure type="java.lang.NullPointerException"
                   message="(null)"
               >
@@ -48,7 +48,7 @@
       </failure>
 
           </testcase>
-            <testcase name="tearDown" time="0.001" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
+            <testcase name="tearDown" time="0.000" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
                 <failure type="java.lang.NullPointerException"
                   message="(null)"
               >
@@ -83,7 +83,7 @@
       </failure>
 
           </testcase>
-            <testcase name="beforeClass" time="0.029" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
+            <testcase name="beforeClass" time="0.044" classname="main.java.com.dbyl.appiumCore.tests.iOSTest">
                 <failure type="java.lang.NoSuchMethodError"
                   message="com.google.common.base.Preconditions.checkArgument(ZLjava/lang/String;I)V"
               >
