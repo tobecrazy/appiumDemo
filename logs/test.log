@@ -1,0 +1,12 @@
+2017-06-17 14:38:38.797 DEBUG main.java.com.dbyl.appiumServer.AppiumLogger 40 debug - main.java.com.dbyl.appiumCore.tests.iOSTest: ----->>>>>>Path is iOSTest_2017_06_17_14_38_38.png
+2017-06-17 14:38:38.808 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: /Volumes/Transcend/Document/workspace/appiumDemo
+2017-06-17 14:38:38.974 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: save snapshot path is:/Volumes/Transcend/Document/workspace/appiumDemoiOSTest_2017_06_17_14_38_38.png
+2017-06-17 14:38:38.987 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: screen shot finished
+2017-06-17 14:38:43.985 DEBUG main.java.com.dbyl.appiumServer.AppiumLogger 40 debug - main.java.com.dbyl.appiumCore.tests.iOSTest: ----->>>>>>Path is iOSTest_2017_06_17_14_38_43.png
+2017-06-17 14:38:43.986 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: /Volumes/Transcend/Document/workspace/appiumDemo
+2017-06-17 14:38:44.189 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: save snapshot path is:/Volumes/Transcend/Document/workspace/appiumDemoiOSTest_2017_06_17_14_38_43.png
+2017-06-17 14:38:44.191 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: screen shot finished
+2017-06-17 14:38:52.621 DEBUG main.java.com.dbyl.appiumServer.AppiumLogger 40 debug - main.java.com.dbyl.appiumCore.tests.iOSTest: ----->>>>>>Path is iOSTest_2017_06_17_14_38_52.png
+2017-06-17 14:38:52.625 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: /Volumes/Transcend/Document/workspace/appiumDemo
+2017-06-17 14:38:52.822 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: save snapshot path is:/Volumes/Transcend/Document/workspace/appiumDemoiOSTest_2017_06_17_14_38_52.png
+2017-06-17 14:38:52.825 INFO  main.java.com.dbyl.appiumServer.AppiumLogger 31 info - main.java.com.dbyl.appiumCore.tests.iOSTest: screen shot finished
