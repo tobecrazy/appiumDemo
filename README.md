@@ -6,7 +6,7 @@ Use Log4j & Maven & TestNG
 
 Use Appium java-client 5.0.0
 
-Use Appium server 1.6.4
+Use Appium server 1.6.5
 
 Use Maven
 
@@ -18,4 +18,6 @@ Use Selenium standalone server jar 3.4.0
 git clone https://github.com/tobecrazy/Demo.git
 mvn test 也可以直接使用jenkins，触发mvn test
 使用interface 处理不同版本的页面， 使用java反射机制实现页面跳转 使用java 注解实现不同类反射初始化 使用单例模式实现初始化唯一driver对象 已废弃Ant
+
+最近在玩王者农药，许久没更新。已经戒掉农药！
 
