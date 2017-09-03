@@ -18,6 +18,7 @@ import main.java.com.dbyl.appiumCore.page.AppDemoPage;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
@@ -30,9 +31,9 @@ public class AppDemo {
 	public URL url;
 
 	@BeforeClass(alwaysRun = true)
-	public void startAppiumServer() {
+	public void startAppiumServer() throws MalformedURLException {
 		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
-		
+
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
@@ -65,7 +66,7 @@ public class AppDemo {
 
 	@Test(groups = { "webView" })
 	public void DemoTest() throws InterruptedException {
-		String version =(String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
+		String version = (String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
 		System.out.println(version);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
@@ -73,8 +74,8 @@ public class AppDemo {
 		PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), appdemo);
 		Assert.assertEquals(appdemo.getText(), "appiumDemo");
 		appdemo.clickButton();
-		Thread.sleep(3000);
-		Assert.assertNotEquals(appdemo.getText(), "You just click the button");
+		Thread.sleep(5000);
+		Assert.assertEquals(appdemo.getText(), "You just click the button");
 
 	}
 

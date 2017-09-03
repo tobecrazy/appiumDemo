@@ -35,13 +35,7 @@
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
-			<version>21.0</version>
-			<exclusions>
-				<exclusion>
-					<groupId>com.google.collections</groupId>
-					<artifactId>google-collections</artifactId>
-				</exclusion>
-			</exclusions>
+			<version>23.0</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -79,14 +73,13 @@
 			<version>2.8.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
+			<artifactId>selenium-server</artifactId>
 			<version>3.5.3</version>
-			<!-- <exclusions> <exclusion> <groupId>org.springframework</groupId> <artifactId>spring-beans</artifactId> 
-				</exclusion> </exclusions> -->
 		</dependency>
+
 
 
 		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
