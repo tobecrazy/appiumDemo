@@ -1,4 +1,5 @@
 package main.java.com.dbyl.appiumCore.tests;
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -10,9 +11,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.MobileDriver;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,63 +23,24 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class slideToUnlock {
-	private MobileDriver driver;
-
-	/**
-	 * 
-	 * @author Young
-	 * @throws IOException
-	 */
-	// @BeforeClass(alwaysRun = true)
-	// public void startRecord() throws IOException {
-	//
-	// Process p = Runtime
-	// .getRuntime()
-	// .exec("cmd.exe /C \"C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd\"");
-	// final InputStream is1 = p.getInputStream();
-	// new Thread(new Runnable() {
-	// public void run() {
-	// BufferedReader br = new BufferedReader(new InputStreamReader(
-	// is1));
-	// try {
-	// while (br.readLine() != null)
-	// ;
-	// } catch (Exception e) {
-	// e.printStackTrace();
-	// }
-	// }
-	// }).start(); // �����������߳������p.getInputStream()�Ļ�����
-	// InputStream is2 = p.getErrorStream();
-	// BufferedReader br2 = new BufferedReader(new InputStreamReader(is2));
-	// StringBuilder buf = new StringBuilder(); // ������������
-	// String line = null;
-	// while ((line = br2.readLine()) != null)
-	// buf.append(line); //
-	// System.out.println("������Ϊ��" + buf);
-	// // Runtime rt = Runtime.getRuntime();
-	// // // this code for record the screen of your device
-	// //
-	// rt.exec("cmd.exe /C \"C:\\Program Files (x86)\\Appium\\node_modules\\.bin\\appium.cmd\"");
-	// // rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
-	//
-	// }
+	private AppiumDriver<WebElement> driver;
+	URL url = null;
 
 	@BeforeMethod(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
-
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "Android Emulator");
-		capabilities.setCapability("platformVersion", "5.1");
+		capabilities.setCapability("platformVersion", "4.4");
 		// if no need install don't add this
 		capabilities.setCapability("appPackage", "cmb.pb");
 		// no need sign
 		capabilities.setCapability("noSign", "True");
 		capabilities.setCapability("appActivity", ".ui.PBInitActivity");
-		driver = new AndroidDriver<WebElement>(new URL(
-				"http://127.0.0.1:4723/wd/hub"), capabilities);
+		driver = new AndroidDriver<WebElement>(url, capabilities);
 
 	}
 
@@ -87,49 +50,32 @@ public class slideToUnlock {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		// swipe to right
 		System.out.println(driver.getPageSource());
-		// swipeToRight(driver, 2000);
 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.findElement(By.id("cmb.pb:id/item_funcIcon")).click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-		List<WebElement> pic = driver
-				.findElements(By
-						.xpath("//android.widget.FrameLayout/android.widget.ImageView"));
+		List<WebElement> pic = driver.findElementsByXPath("//android.widget.FrameLayout/android.widget.ImageView");
 		for (int i = 0; i < pic.size(); i++) {
 			System.out.println(pic.size());
 			pic.get(i).click();
 		}
 
 		final TouchAction touchAction = new TouchAction(driver);
-		touchAction
-				.press(pic.get(0).getLocation().getX(),
-						pic.get(0).getLocation().getY())
-				.waitAction( )
-				.moveTo(pic.get(1).getLocation().getX()
-						- pic.get(0).getLocation().getX(),
-						pic.get(1).getLocation().getY()
-								- pic.get(0).getLocation().getY())
-				.moveTo(pic.get(2).getLocation().getX()
-						- pic.get(1).getLocation().getX(),
-						pic.get(2).getLocation().getY()
-								- pic.get(1).getLocation().getY())
-				.moveTo(pic.get(4).getLocation().getX()
-						- pic.get(2).getLocation().getX(),
-						pic.get(4).getLocation().getY()
-								- pic.get(2).getLocation().getY())
-				.moveTo(pic.get(6).getLocation().getX()
-						- pic.get(4).getLocation().getX(),
-						pic.get(6).getLocation().getY()
-								- pic.get(4).getLocation().getY())
-				.moveTo(pic.get(7).getLocation().getX()
-						- pic.get(6).getLocation().getX(),
-						pic.get(7).getLocation().getY()
-								- pic.get(6).getLocation().getY())
-				.moveTo(pic.get(8).getLocation().getX()
-						- pic.get(7).getLocation().getX(),
-						pic.get(8).getLocation().getY()
-								- pic.get(7).getLocation().getY()).release();
+		touchAction.press(pic.get(0).getLocation().getX(), pic.get(0).getLocation().getY()).waitAction()
+				.moveTo(pic.get(1).getLocation().getX() - pic.get(0).getLocation().getX(),
+						pic.get(1).getLocation().getY() - pic.get(0).getLocation().getY())
+				.moveTo(pic.get(2).getLocation().getX() - pic.get(1).getLocation().getX(),
+						pic.get(2).getLocation().getY() - pic.get(1).getLocation().getY())
+				.moveTo(pic.get(4).getLocation().getX() - pic.get(2).getLocation().getX(),
+						pic.get(4).getLocation().getY() - pic.get(2).getLocation().getY())
+				.moveTo(pic.get(6).getLocation().getX() - pic.get(4).getLocation().getX(),
+						pic.get(6).getLocation().getY() - pic.get(4).getLocation().getY())
+				.moveTo(pic.get(7).getLocation().getX() - pic.get(6).getLocation().getX(),
+						pic.get(7).getLocation().getY() - pic.get(6).getLocation().getY())
+				.moveTo(pic.get(8).getLocation().getX() - pic.get(7).getLocation().getX(),
+						pic.get(8).getLocation().getY() - pic.get(7).getLocation().getY())
+				.release();
 		touchAction.perform();
 		/*
 		 * final TouchAction touchAction = new TouchAction(driver);
@@ -138,8 +84,7 @@ public class slideToUnlock {
 		 * .moveTo(pic.get(7)).moveTo(pic.get(8)).release();
 		 * touchAction.perform();
 		 */
-		String username = driver.findElement(By.id("cmb.pb:id/gTvMenuTitle"))
-				.getText();
+		String username = driver.findElement(By.id("cmb.pb:id/gTvMenuTitle")).getText();
 		System.out.println(username);
 	}
 
@@ -165,23 +110,21 @@ public class slideToUnlock {
 		// Now you can do whatever you need to do with it, for example copy
 		// somewhere
 		try {
-			System.out.println("save snapshot path is:" + currentPath + "/"
-					+ filename);
-			FileUtils
-					.copyFile(scrFile, new File(currentPath + "\\" + filename));
+			System.out.println("save snapshot path is:" + currentPath + "/" + filename);
+			FileUtils.copyFile(scrFile, new File(currentPath + "\\" + filename));
 		} catch (IOException e) {
 			System.out.println("Can't save screenshot");
 			e.printStackTrace();
 		} finally {
-			System.out.println("screen shot finished, it's in " + currentPath
-					+ " folder");
+			System.out.println("screen shot finished, it's in " + currentPath + " folder");
 		}
 	}
 
-	public void swipeToRight(MobileDriver driver, int during) {
+	public void swipeToRight(AppiumDriver<?> driver, int during) {
 		int width = driver.manage().window().getSize().width;
 		int height = driver.manage().window().getSize().height;
-//		driver.swipe(width / 4, height / 2, width * 5 / 6, height / 2, during);
+		// driver.swipe(width / 4, height / 2, width * 5 / 6, height / 2,
+		// during);
 		// wait for page loading
 	}
 

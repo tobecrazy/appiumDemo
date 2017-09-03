@@ -9,10 +9,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import org.openqa.selenium.remote.RemoteWebElement;
-
 import io.appium.java_client.MobileElement;
- 
+
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AutomationName;
@@ -41,7 +39,7 @@ public class PureWebDriver {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "015d4bdf31202013");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
 		driver = new AndroidDriver<WebElement>(url, capabilities);
 	}
 
@@ -51,7 +49,7 @@ public class PureWebDriver {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		MobileElement tmall = (MobileElement) driver.findElementByXPath("//div[@id='a6636-1']");
-	 
+
 		HashMap<String, Integer> tapObject = new HashMap<String, Integer>();
 		tapObject.put("x", 120);
 		tapObject.put("y", 120);
@@ -68,7 +66,7 @@ public class PureWebDriver {
 
 		TouchAction action = new TouchAction(driver);
 
-		action.press(tmall).waitAction( ).perform();
+		action.press(tmall).waitAction().perform();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
 		List<WebElement> elements = driver.findElementsByXPath("//ul/li/a[@class='card-item card-style-chn']");
