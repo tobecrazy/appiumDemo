@@ -56,7 +56,8 @@ public class unlockerTest {
 
 		MobileElement button = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"设置手势密码\")");
 		// tap 
-		button.tap(1, 1000);
+		button.click();
+ 
 		// get all the items of gesture locker
 		List<MobileElement> items = driver.findElementsByClassName("android.widget.ImageView");
 		for (MobileElement item : items) {
@@ -68,15 +69,15 @@ public class unlockerTest {
 
 		// create a Z from 0->1->2->4->6->7->8
 		TouchAction touches1 = new TouchAction(driver);
-		touches1.press(items.get(0)).waitAction(1000).moveTo(items.get(1)).waitAction(1000).moveTo(items.get(2))
-				.waitAction(1000).moveTo(items.get(4)).moveTo(items.get(6)).waitAction(1000).moveTo(items.get(7))
-				.waitAction(1000).moveTo(items.get(8)).release();
+		touches1.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
+				.waitAction().moveTo(items.get(4)).moveTo(items.get(6)).waitAction().moveTo(items.get(7))
+				.waitAction().moveTo(items.get(8)).release();
 		touches1.perform();
 		Thread.sleep(2000);
 		//create 0->1->2
 		TouchAction touches2 = new TouchAction(driver);
-		touches2.press(items.get(0)).waitAction(1000).moveTo(items.get(1)).waitAction(1000).moveTo(items.get(2))
-				.waitAction(1000).moveTo(items.get(4)).release();
+		touches2.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
+				.waitAction().moveTo(items.get(4)).release();
 		touches2.perform();
 		MobileElement alert =driver.findElementById("com.AppiumGirls.locker:id/text_tip");
 		Assert.assertTrue(alert.getText().contains("与上一次绘制不一致，请重新绘制"));

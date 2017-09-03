@@ -105,7 +105,7 @@ public class slideToUnlock {
 		touchAction
 				.press(pic.get(0).getLocation().getX(),
 						pic.get(0).getLocation().getY())
-				.waitAction(1500)
+				.waitAction( )
 				.moveTo(pic.get(1).getLocation().getX()
 						- pic.get(0).getLocation().getX(),
 						pic.get(1).getLocation().getY()

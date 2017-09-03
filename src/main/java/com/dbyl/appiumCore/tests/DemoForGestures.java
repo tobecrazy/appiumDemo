@@ -68,18 +68,6 @@ public class DemoForGestures
         int height = driver.manage().window().getSize().height;
         Thread.sleep(15000);
 
-        // swipe to right
-        driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, 300);
-        // swipe to left
-        driver.swipe(width * 3 / 4, height / 2, width / 4, height / 2, 300);
-
-        Thread.sleep(5000);
-        driver.pinch(width / 4, height / 4);
-        Thread.sleep(5000);
-        driver.zoom(width / 4, height / 4);
-        Thread.sleep(5000);
-        // tap
-        driver.tap(2, width / 2, height / 2, 1000);
 
     }
 

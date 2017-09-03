@@ -17,6 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.Activity;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
@@ -68,7 +69,8 @@ public class ToastTest {
 	@Test(groups = { "Toast" })
 	public void webViewTest() throws InterruptedException {
 		final WebDriverWait wait = new WebDriverWait(driver, 10);
-		driver.startActivity("com.testerhome.webview", ".ToastActivity");
+		Activity activity = new Activity("com.testerhome.webview", ".ToastActivity");
+		driver.startActivity(activity);
 		MobileElement toastButton = driver.findElementById("com.testerhome.webview:id/toast");
 		toastButton.click();
 		Assert.assertNotNull(wait.until(new Function<WebDriver, Boolean>() {

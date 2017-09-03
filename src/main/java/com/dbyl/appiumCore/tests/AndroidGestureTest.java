@@ -15,10 +15,8 @@ package main.java.com.dbyl.appiumCore.tests;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.MultiTouchAction;
-import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
@@ -95,50 +93,16 @@ public class AndroidGestureTest {
 
 	@Test
 	public void TapSingleFingerTest() throws InterruptedException {
-		Thread.sleep(2500);
-		driver.tap(1, 200, 300, 1000);
+		 
 	}
 
 	@Test
 	public void elementGestureTest() {
 		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 		MobileElement e = driver.findElement(MobileBy.AccessibilityId("App"));
-		e.tap(1, 1500);
-		System.out.println("tap");
-		MobileElement e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.zoom();
-		System.out.println("zoom");
-		e2.swipe(SwipeElementDirection.RIGHT, 1000);
-		System.out.println("RIGHT");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.RIGHT, 1, 2, 1000);
-		System.out.println("RIGHT Left border + 10 Right border - 20");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.LEFT, 1000);
-		System.out.println("LEFT");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.LEFT, 1, 2, 1000);
-		System.out.println("LEFT Right border - 10 Left border + 20");
-
-		driver.pressKeyCode(AndroidKeyCode.BACK);
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.DOWN, 1000);
-		System.out.println("DOWN");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.DOWN, 1, 2, 1000);
-		System.out.println("DOWN Top - 10 Bottom + 20");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.UP, 1000);
-		System.out.println("UP");
-
-		e2 = driver.findElementByClassName("android.widget.TextView");
-		e2.swipe(SwipeElementDirection.UP, 1, 2, 1000);
-		System.out.println("UP Bottom + 10 Top - 20");
+		e.click();
+		 
+		 
 
 	}
 

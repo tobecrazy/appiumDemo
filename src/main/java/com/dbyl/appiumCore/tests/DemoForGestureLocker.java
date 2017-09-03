@@ -9,7 +9,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
@@ -69,8 +68,8 @@ public class DemoForGestureLocker
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
         MobileElement button = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"设置手势密码\")");
-        button.swipe(SwipeElementDirection.DOWN, 1000);
-        button.tap(1, 1000);
+        button.click();
+       
         // get all the items of gesture locker
         List<MobileElement> items = driver.findElementsByClassName("android.widget.ImageView");
 
@@ -84,13 +83,13 @@ public class DemoForGestureLocker
 
         // create a Z from 0->1->2->4->6->7->8
         TouchAction touches = new TouchAction(driver);
-        touches.press(items.get(0)).waitAction(1000).moveTo(items.get(1)).waitAction(1000).moveTo(items.get(2))
-                .waitAction(1000).moveTo(items.get(4)).moveTo(items.get(6)).waitAction(1000).moveTo(items.get(7))
-                .waitAction(1000).moveTo(items.get(8)).release();
+		touches.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
+                .waitAction().moveTo(items.get(4)).moveTo(items.get(6)).waitAction().moveTo(items.get(7))
+                .waitAction().moveTo(items.get(8)).release();
         touches.perform();
-        Thread.sleep(1000);
-        touches.press(items.get(0)).waitAction(1000).moveTo(items.get(1)).waitAction(1000).moveTo(items.get(2))
-                .waitAction(1000).moveTo(items.get(4)).release();
+        
+        touches.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
+                .waitAction().moveTo(items.get(4)).release();
         touches.perform();
         Assert.assertTrue(driver.findElementByName("与上一次绘制不一致，请重新绘制").isDisplayed());
 

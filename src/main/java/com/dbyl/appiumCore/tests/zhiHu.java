@@ -165,7 +165,7 @@ public class zhiHu {
 	public void swipeToUp(AndroidDriver driver, int during) {
 		int width = driver.manage().window().getSize().width;
 		int height = driver.manage().window().getSize().height;
-		driver.swipe(width / 2, height * 3 / 4, width / 2, height / 4, during);
+	 
 		// wait for page loading
 	}
 
@@ -178,8 +178,7 @@ public class zhiHu {
 	 */
 	public void swipeToDown(AndroidDriver driver, int during) {
 		int width = driver.manage().window().getSize().width;
-		int height = driver.manage().window().getSize().height;
-		driver.swipe(width / 2, height / 4, width / 2, height * 3 / 4, during);
+	 
 		// wait for page loading
 	}
 
@@ -193,7 +192,7 @@ public class zhiHu {
 	public void swipeToLeft(AndroidDriver driver, int during) {
 		int width = driver.manage().window().getSize().width;
 		int height = driver.manage().window().getSize().height;
-		driver.swipe(width * 3 / 4, height / 2, width / 4, height / 2, during);
+	 
 		// wait for page loading
 	}
 
@@ -207,7 +206,7 @@ public class zhiHu {
 	public void swipeToRight(AndroidDriver driver, int during) {
 		int width = driver.manage().window().getSize().width;
 		int height = driver.manage().window().getSize().height;
-		driver.swipe(width / 4, height / 2, width * 3 / 4, height / 2, during);
+ 
 		// wait for page loading
 	}
 
@@ -218,11 +217,11 @@ public class zhiHu {
 		// find keyword ��ҳ and verify it is display
 		Assert.assertTrue(driver.findElement(By.name("首页")).isDisplayed());
 
-		driver.swipe(100, 400, 100, 200, 500);
+	 
 		WebElement myButton = driver.findElement(By.className("android.widget.ImageButton"));
 		myButton.click();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.swipe(700, 500, 100, 500, 10);
+ 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		List<MobileElement> textViews = driver.findElementsByClassName("android.widget.TextView");
 		textViews.get(0).click();

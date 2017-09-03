@@ -15,7 +15,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.SwipeElementDirection;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
@@ -67,21 +66,18 @@ public class PickerTest {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		MobileElement clickNextPage = driver.findElementById("com.testerhome.webview:id/next_page");
 		clickNextPage.click();
-		driver.tap(1, 350, 900, 1000);
-		// 方法一
-		// driver.swipe(300, 1000, 300, 900, 1000);
-		// driver.swipe(450, 1000, 450, 900, 1000);
+	 
+	 
 
 		// 方法二
 		MobileElement pickLeft1 = driver.findElementByAndroidUIAutomator(
 				"new UiSelector().className(\"android.widget.TextView\").text(\"09\").index(1)");
-		pickLeft1.swipe(SwipeElementDirection.UP, 1000);
+		 
 		MobileElement pickLeft2 = driver.findElementByAndroidUIAutomator(
 				"new UiSelector().className(\"android.widget.TextView\").text(\"10\").index(2)");
-		pickLeft2.swipe(SwipeElementDirection.UP, 1000);
+		 
 		MobileElement pickRight1 = driver.findElementByAndroidUIAutomator(
-				"new UiSelector().className(\"android.widget.TextView\").text(\"00\").index(1)");
-		pickRight1.swipe(SwipeElementDirection.UP, 1000);
+				"new UiSelector().className(\"android.widget.TextView\").text(\"00\").index(1)"); 
 		MobileElement confirmButton = driver.findElementByXPath("//android.widget.Button[contains(@text,'确定')]");
 		confirmButton.click();
 		 

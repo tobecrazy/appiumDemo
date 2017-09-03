@@ -57,7 +57,7 @@ public class AppDemoForJava {
 	
 
 		MobileElement button = driver.findElementByXPath("//android.widget.Button[@text='button']");
-		driver.zoom(button);
+		driver.closeApp();
 		button.click();
 		text = driver.findElementById("cn.dbyl.appiumdemo:id/text1");
 		Assert.assertEquals(text.getText(), "You just click the button");
