@@ -66,12 +66,20 @@ public class DemoForGestures {
 		width = driver.manage().window().getSize().width;
 		height = driver.manage().window().getSize().height;
 		Thread.sleep(5000);
-		swipeToRight();
-		swipeToLeft();
-		swipeToUp();
-		swipeToDown();
+		zoom();
+//		swipeToRight();
+//		swipeToLeft();
+//		swipeToUp();
+//		swipeToDown();
 		System.out.println(driver.currentActivity());
 
+	}
+
+	private void zoom() {
+		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2)).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
+				.moveTo(-width / 4, height / 4).waitAction(Duration.ofSeconds(2)).release();
+		swipe.perform();
+		
 	}
 
 	/**
