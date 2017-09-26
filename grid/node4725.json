@@ -1,5 +1,5 @@
 {
-	"capabilities": {
+	"capabilities":[{
 		"browserName": "Android simulator",
 		"version": "6.0",
 		"maxInstances": 1,
