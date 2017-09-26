@@ -24,12 +24,12 @@ public class iOSBrowser {
 	DesiredCapabilities capabilities = new DesiredCapabilities();
 
 	@BeforeClass(alwaysRun = true)
-	public void startAppiumServer() {
+	public void startAppiumServer() throws MalformedURLException {
 		capabilities.setCapability("platformName", "iOS");
 		//只需要在这里使用data provider控制一下版本，传入不同的版本号
-		capabilities.setCapability("platformVersion", "10.3");
+		capabilities.setCapability("platformVersion", "11.0");
 		AppiumServerUtils.getInstance().stopServer();
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723, capabilities);
+		url =AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723, capabilities);//new URL("http://127.0.0.1:4723/wd/hub");// 
 
 	}
 
@@ -37,9 +37,9 @@ public class iOSBrowser {
 	public void setUpDriver() throws MalformedURLException {
 
 		capabilities.setCapability("browserName", "safari");
-		if (capabilities.getCapability("platformVersion").toString().contains("10")) {
+		if (capabilities.getCapability("platformVersion").toString().contains("11")) {
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-			capabilities.setCapability("platformVersion", "10.3");
+			capabilities.setCapability("platformVersion", "11.0");
 			capabilities.setCapability("deviceName", "iPhone SE");
 		} else {
 			capabilities.setCapability("platformVersion", "8.4");
