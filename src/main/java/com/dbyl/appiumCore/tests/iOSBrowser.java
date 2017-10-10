@@ -26,10 +26,13 @@ public class iOSBrowser {
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
 		capabilities.setCapability("platformName", "iOS");
-		//只需要在这里使用data provider控制一下版本，传入不同的版本号
+		// 只需要在这里使用data provider控制一下版本，传入不同的版本号
 		capabilities.setCapability("platformVersion", "11.0");
-		AppiumServerUtils.getInstance().stopServer();
-		url =AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723, capabilities);//new URL("http://127.0.0.1:4723/wd/hub");// 
+		// AppiumServerUtils.getInstance().stopServer();
+//		url = new URL("http://localhost:4444/wd/hub");
+		url = new URL("http://localhost:4726");
+		// AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723,
+		// capabilities);
 
 	}
 

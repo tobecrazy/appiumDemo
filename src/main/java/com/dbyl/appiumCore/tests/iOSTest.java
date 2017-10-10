@@ -35,7 +35,8 @@ public class iOSTest {
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		url = new URL("http://localhost:4444/wd/hub");
+		// url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -96,7 +97,7 @@ public class iOSTest {
 		Date date = cal.getTime();
 		String dateStr = sf.format(date);
 		String path = this.getClass().getSimpleName() + "_" + dateStr + ".png";
-		logger.debug("----->>>>>>Path is "+path);
+		logger.debug("----->>>>>>Path is " + path);
 		takeScreenShot((TakesScreenshot) driver, path);
 	}
 
