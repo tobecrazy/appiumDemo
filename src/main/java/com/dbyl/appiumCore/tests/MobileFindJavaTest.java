@@ -6,18 +6,17 @@ import io.appium.java_client.android.AndroidDriver;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.net.URL;
-
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class MobileFindJavaTest {
 
 	private AndroidDriver<MobileElement> driver;
 	private static URL url;
 
-	@Before
+	@BeforeClass
 	public void setUp() throws Exception {
 		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 		final DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -35,7 +34,7 @@ public class MobileFindJavaTest {
 		// driver.scrollTo("Sound");
 	}
 
-	@After
+	@AfterClass
 	public void tearDown() throws Exception {
 		driver.quit();
 	}

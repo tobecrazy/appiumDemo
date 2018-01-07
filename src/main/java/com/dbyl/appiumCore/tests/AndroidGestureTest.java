@@ -23,6 +23,7 @@ import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -31,8 +32,6 @@ import java.io.File;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 /**
  * Test Mobile Driver features
@@ -78,17 +77,17 @@ public class AndroidGestureTest {
 		driver.findElement(MobileBy.AndroidUIAutomator("description(\"Drag and Drop\")")).click();
 		WebElement actionBarTitle = driver.findElement(MobileBy.AndroidUIAutomator("text(\"Views/Drag and Drop\")"));
 
-		assertEquals("Wrong title.", "Views/Drag and Drop", actionBarTitle.getText());
+		Assert.assertEquals("Wrong title.", "Views/Drag and Drop", actionBarTitle.getText());
 		WebElement dragDot1 = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_1"));
 		WebElement dragDot3 = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_3"));
 
 		WebElement dragText = driver.findElement(By.id("io.appium.android.apis:id/drag_text"));
-		assertEquals("Drag text not empty", "", dragText.getText());
+		Assert.assertEquals("Drag text not empty", "", dragText.getText());
 
 		TouchAction dragNDrop = new TouchAction(driver).longPress(dragDot1).moveTo(dragDot3).release();
 		dragNDrop.perform();
 
-		assertNotEquals("Drag text empty", "", dragText.getText());
+		Assert.assertNotEquals("Drag text empty", "", dragText.getText());
 	}
 
 	@Test

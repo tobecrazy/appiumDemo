@@ -5,15 +5,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
-
-import org.junit.AfterClass;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -32,7 +30,7 @@ public class HybridDemo
         AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
     }
 
-    @Before
+    @BeforeClass
     public void setUp() throws Exception
     {
         // set up appium
