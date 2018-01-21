@@ -14,7 +14,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
-import main.java.com.dbyl.appiumServer.AppiumLogger;
+import main.java.com.dbyl.appiumServer.AppLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class JDTest {
-	AppiumLogger logger = new AppiumLogger(JDTest.class);
+	AppLogger logger = new AppLogger(JDTest.class);
 	private AndroidDriver<MobileElement> driver;
 	boolean isInstall = true;
 	private URL url;
