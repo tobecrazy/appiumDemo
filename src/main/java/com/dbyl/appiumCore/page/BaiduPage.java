@@ -9,13 +9,28 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BaiduPage.
+ */
 public class BaiduPage {
+	
+	/** The driver. */
 	AppiumDriver<?> driver;
+	
+	/** The input box. */
 	@FindBy(xpath = "//input[@id='index-kw']")
 	MobileElement inputBox;
+	
+	/** The search button. */
 	@FindBy(id = "index-bn")
 	MobileElement searchButton;
 
+	/**
+	 * Instantiates a new baidu page.
+	 *
+	 * @param driver the driver
+	 */
 	public BaiduPage(AppiumDriver<?> driver) {
 		super();
 		this.driver = driver;
@@ -28,8 +43,10 @@ public class BaiduPage {
 	}
 
 	/**
+	 * Open.
+	 *
 	 * @author young
-	 * @param url
+	 * @param url the url
 	 */
 	public void open(String url) {
 		if (driver instanceof AndroidDriver) {
@@ -41,14 +58,18 @@ public class BaiduPage {
 	}
 
 	/**
+	 * Type input box.
+	 *
 	 * @author young
-	 * @param keyword
+	 * @param keyword the keyword
 	 */
 	public void typeInputBox(String keyword) {
 		inputBox.sendKeys(keyword);
 	}
 
 	/**
+	 * Click on search button.
+	 *
 	 * @author young
 	 */
 	public void clickOnSearchButton() {
@@ -56,16 +77,20 @@ public class BaiduPage {
 	}
 
 	/**
+	 * Wait for page load.
+	 *
 	 * @author young
-	 * @param timeout
+	 * @param timeout the timeout
 	 */
 	public void waitForPageLoad(int timeout) {
 		driver.manage().timeouts().pageLoadTimeout(timeout, TimeUnit.SECONDS);
 	}
 
 	/**
+	 * Gets the title.
+	 *
 	 * @author young
-	 * @return
+	 * @return the title
 	 */
 	public String getTitle() {
 		return driver.getTitle();
