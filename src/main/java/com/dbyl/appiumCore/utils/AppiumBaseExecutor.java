@@ -1,8 +1,13 @@
 package main.java.com.dbyl.appiumCore.utils;
 
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.AppiumFluentWait;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.functions.ExpectedCondition;
 
 /**
  * This class is for executor appium command.

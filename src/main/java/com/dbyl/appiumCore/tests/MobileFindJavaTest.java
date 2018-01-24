@@ -30,8 +30,8 @@ public class MobileFindJavaTest {
 	public void apiDemo() throws Exception {
 		// scrollTo() and scrollToExact() became deprecated. They are going to
 		// be removed in the next release.
-		// driver.scrollTo("about phone");
-		// driver.scrollTo("Sound");
+		driver.openNotifications();
+ 
 	}
 
 	@AfterClass

@@ -1,7 +1,12 @@
 package main.java.com.dbyl.appiumCore.tests;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -9,6 +14,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.functions.ExpectedCondition;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -55,7 +61,8 @@ public class TianQiTest {
 		capabilities.setCapability("resetKeyboard", "True");
 		// no need sign
 		capabilities.setCapability("noSign", "True");
-		capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY, "cn.dbyl.young.tianqi.activity.MainActivity");
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY,
+				"cn.dbyl.young.tianqi.activity.MainActivity");
 		// capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY,
 		// ".MainActivity");
 
@@ -66,10 +73,23 @@ public class TianQiTest {
 	@Test(groups = { "tianQi" })
 	public void TianQi() throws InterruptedException {
 		String version = (String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
-		MobileElement tab=driver.findElementById("cn.dbyl.young.tianqi:id/tab_personal");
+		MobileElement tab = driver.findElementById("cn.dbyl.young.tianqi:id/tab_personal");
 		tab.click();
 		MobileElement tv1 = driver.findElementByAccessibilityId("TextView 1_AppCompatTextView");
-		Assert.assertEquals( tv1.getText(),"TextView 1");
+		Wait<AndroidDriver<MobileElement>> wait = new FluentWait<AndroidDriver<MobileElement>>(driver)
+				.withTimeout(60, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS)
+				.ignoring(NoSuchElementException.class);
+		By by = new By.ById("");
+		Boolean e = wait.until(new ExpectedCondition<Boolean>() {
+
+			@Override
+			public Boolean apply(WebDriver input) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+		});
+
+		Assert.assertEquals(tv1.getText(), "TextView 1");
 		tv1.click();
 	}
 
