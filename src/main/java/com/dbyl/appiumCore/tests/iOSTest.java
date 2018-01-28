@@ -15,7 +15,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.pageActions.iOSPageDemo;
-import main.java.com.dbyl.appiumServer.AppiumLogger;
+import main.java.com.dbyl.appiumServer.AppLogger;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -31,7 +31,7 @@ public class iOSTest {
 	private IOSDriver<MobileElement> driver;
 	private boolean isInstall = true;
 	private URL url;
-	AppiumLogger logger = new AppiumLogger(iOSTest.class);
+	AppLogger logger = new AppLogger(iOSTest.class);
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
@@ -46,8 +46,8 @@ public class iOSTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.0");
-		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 7 Plus");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.2");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone SE");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));

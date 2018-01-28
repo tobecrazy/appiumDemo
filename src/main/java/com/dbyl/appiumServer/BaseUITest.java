@@ -15,24 +15,48 @@ import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumDriver;
 import main.java.com.dbyl.appiumCore.utils.AppiumBaseExecutor;
 
+/**
+ * The Class BaseUITest.
+ */
 public class BaseUITest extends AppiumBaseExecutor {
-	AppiumLogger logger = new AppiumLogger(BaseUITest.class);
+	
+	/** The logger. */
+	AppLogger logger = new AppLogger(BaseUITest.class);
 
+	/**
+	 * Instantiates a new base UI test.
+	 *
+	 * @param driver the driver
+	 */
 	public BaseUITest(AppiumDriver<WebElement> driver) {
 		super(driver);
 	}
 
+	/**
+	 * Start.
+	 *
+	 * @throws InterruptedException the interrupted exception
+	 * @throws ExecuteException the execute exception
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public void start() throws InterruptedException, ExecuteException, IOException {
 		AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
+	/**
+	 * Stop.
+	 *
+	 * @throws InterruptedException the interrupted exception
+	 */
 	public void stop() throws InterruptedException {
 		AppiumServerUtils.getInstance().stopServer();
 	}
 
 	/**
+	 * Take screen shot.
+	 *
 	 * @author young
-	 * @param driver
+	 * @param driver the driver
 	 */
 	public void takeScreenShot(AppiumDriver<?> driver) {
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
@@ -45,9 +69,11 @@ public class BaseUITest extends AppiumBaseExecutor {
 	}
 
 	/**
+	 * Take screen shot.
+	 *
 	 * @author Young
-	 * @param drivername
-	 * @param path
+	 * @param drivername the drivername
+	 * @param path the path
 	 */
 	public void takeScreenShot(TakesScreenshot drivername, String path) {
 		// this method will take screen shot ,require two parameters ,one is
