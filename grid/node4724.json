@@ -1,7 +1,7 @@
 {
 	"capabilities":[{
 		"browserName": "Android 5",
-		"version": "6.0",
+		"version": "7.1.1",
 		"maxInstances": 1,
 		"platform": "MAC"
 	}],

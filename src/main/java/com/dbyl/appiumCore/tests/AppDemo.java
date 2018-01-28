@@ -32,7 +32,8 @@ public class AppDemo {
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
-		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		url= new URL("http://127.0.0.1:4444/wd/hub");
 
 	}
 
@@ -44,7 +45,7 @@ public class AppDemo {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 		// if no need install don't add this
 
 		File classpathRoot = new File(System.getProperty("user.dir"));

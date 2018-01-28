@@ -50,7 +50,7 @@ public class ToastOCR {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 		// if no need install don't add this
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
@@ -105,7 +105,6 @@ public class ToastOCR {
 			logger.info("screen shot finished, it's in " + currentPath + "/screenshot/" + " folder");
 		}
 	}
-	
 
 	/**
 	 * @author young
@@ -121,6 +120,7 @@ public class ToastOCR {
 		logger.info(out);
 		return readTXT(currentPath + "/screenshot/" + output + ".txt");
 	}
+
 	/**
 	 * @author young
 	 * @param path
@@ -162,7 +162,5 @@ public class ToastOCR {
 		driver.quit();
 		AppiumServerUtils.getInstance().stopServer();
 	}
-
-	
 
 }

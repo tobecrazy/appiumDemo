@@ -1,7 +1,7 @@
 {
 	"capabilities":[{
 		"browserName": "iPhone SE",
-		"version": "11.0",
+		"version": "11.2",
 		"maxInstances": 1,
 		"platform": "MAC"
 	}],

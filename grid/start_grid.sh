@@ -1,8 +1,10 @@
 #!/bin/bash -w
-echo  "java -jar selenium-server-standalone-3.5.3.jar -role hub"
+export JAVA_HOME="/Users/local/sapjvm_8"
+echo "export JAVA_HOME=\"/Users/local/sapjvm_8\""
+echo  "java -jar selenium-server.jar -role hub"
 ps -ef |grep -w selenium|grep -v grep|awk  '{print $2}'|xargs kill -9 
-echo "java -jar $PWD/selenium-server-standalone-3.5.3.jar -role hub -port 4444  "
-java -jar $PWD/selenium-server-standalone-3.5.3.jar -role hub -port 4444  &1 > $PWD/../logs/hub.log 
+echo "java -jar $PWD/selenium-server.jar -role hub -port 4444  "
+java -jar $PWD/selenium-server.jar -role hub -port 4444  &1 > $PWD/../logs/hub.log 
 echo "sleep 20 "
 sleep 20
 echo "sleep 20 done "
