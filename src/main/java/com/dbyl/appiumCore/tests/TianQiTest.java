@@ -35,8 +35,8 @@ public class TianQiTest {
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
-//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
-		url= new URL("http://127.0.0.1:4444/wd/hub");
+		// url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		url = new URL("http://127.0.0.1:4444/wd/hub");
 
 	}
 
@@ -77,27 +77,29 @@ public class TianQiTest {
 		MobileElement tab = driver.findElementById("cn.dbyl.young.tianqi:id/tab_personal");
 		tab.click();
 		MobileElement tv1 = driver.findElementByAccessibilityId("TextView 1_AppCompatTextView");
-		Wait<AndroidDriver<MobileElement>> wait = new FluentWait<AndroidDriver<MobileElement>>(driver)
-				.withTimeout(60, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS)
-				.ignoring(NoSuchElementException.class);
-		By by = new By.ById("");
-		Boolean e = wait.until(new ExpectedCondition<Boolean>() {
-
-			@Override
-			public Boolean apply(WebDriver input) {
-				// TODO Auto-generated method stub
-				return null;
-			}
-		});
+		// Wait<AndroidDriver<MobileElement>> wait = new
+		// FluentWait<AndroidDriver<MobileElement>>(driver)
+		// .withTimeout(60, TimeUnit.SECONDS).pollingEvery(2, TimeUnit.SECONDS)
+		// .ignoring(NoSuchElementException.class);
+		// By by = new By.ById("");
+		// Boolean e = wait.until(new ExpectedCondition<Boolean>() {
+		//
+		// @Override
+		// public Boolean apply(WebDriver input) {
+		// // TODO Auto-generated method stub
+		// return null;
+		// }
+		// });
 
 		Assert.assertEquals(tv1.getText(), "TextView 1");
 		tv1.click();
+		
 	}
 
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-		AppiumServerUtils.getInstance().stopServer();
+//		AppiumServerUtils.getInstance().stopServer();
 	}
 
 }
