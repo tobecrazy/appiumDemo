@@ -1,5 +1,5 @@
 {
-	"capabilities": {
+	"capabilities": [{
 		"browserName": "iPhone SE",
 		"version": "11.0",
 		"maxInstances": 1,

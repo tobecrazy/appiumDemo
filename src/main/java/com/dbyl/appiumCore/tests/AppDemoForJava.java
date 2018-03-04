@@ -13,6 +13,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.io.File;
 import java.net.URL;
+import java.util.HashMap;
 
 /**
  * @since 2016-10-17
@@ -54,7 +55,9 @@ public class AppDemoForJava {
 
 		MobileElement text = driver.findElementById("cn.dbyl.appiumdemo:id/text1");
 		Assert.assertEquals(text.getText(), "appiumDemo");
-	
+		HashMap<String, Integer> keycode = new HashMap<String, Integer>();
+		keycode.put("keycode", 82);
+		driver.executeScript("mobile: keyevent", keycode);
 
 		MobileElement button = driver.findElementByXPath("//android.widget.Button[@text='button']");
 		driver.closeApp();
