@@ -3,7 +3,6 @@ package main.java.com.dbyl.appiumCore.tests;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
@@ -35,8 +34,8 @@ public class TianQiTest {
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
-//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
-		url= new URL("http://127.0.0.1:4444/wd/hub");
+		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		// url = new URL("http://127.0.0.1:4444/wd/hub");
 
 	}
 
@@ -45,7 +44,7 @@ public class TianQiTest {
 		// set up appium
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.APPIUM);
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
+		// capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
