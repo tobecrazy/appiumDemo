@@ -83,7 +83,7 @@ public class AppDemo {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-		AppiumServerUtils.getInstance().stopServer();
+//		AppiumServerUtils.getInstance().stopServer();
 	}
 
 }

@@ -16,6 +16,7 @@ import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
@@ -46,7 +47,7 @@ public class CheckboxTest {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		// simulator version 6.0
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 		// if no need install don't add this
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
@@ -74,6 +75,7 @@ public class CheckboxTest {
 				driver.context(context);
 			}
 		}
+	
 		logger.info(driver.getContext());
 		// 隐式等待，针对全局设置
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

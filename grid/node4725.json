@@ -1,6 +1,6 @@
 {
 	"capabilities":[{
-		"browserName": "Android simulator",
+		"browserName": "Android simulator 8.0",
 		"version": "8.0.0",
 		"maxInstances": 1,
 		"platform": "MAC"

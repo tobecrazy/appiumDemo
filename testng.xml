@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite" parallel="tests" thread-count="5">
-	<test verbose="2" name="TestDebug">
+<suite name="Suite" parallel="classes" thread-count="5">
+	<test verbose="2" name="TestDebug" group-by-instances="true">
 		<parameter name="driverName" value="chrome" />
 		<classes>
 			<class name="main.java.com.dbyl.appiumCore.tests.TianQiTest" />
 			<class name="main.java.com.dbyl.appiumCore.tests.iOSTest" />
 			<class name="main.java.com.dbyl.appiumCore.tests.AppDemo" />
-			<class name="main.java.com.dbyl.appiumCore.tests.iOSBrowser" />
-
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

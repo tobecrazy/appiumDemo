@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
 public class JDTest {
 	AppLogger logger = new AppLogger(JDTest.class);
 	private AndroidDriver<MobileElement> driver;
