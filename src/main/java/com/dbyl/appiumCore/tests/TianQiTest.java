@@ -43,7 +43,6 @@ public class TianQiTest {
 		// url = new URL("http://127.0.0.1:4444/wd/hub");
 		url = new URL("http://localhost:4723/wd/hub");
 
-
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
@@ -75,11 +74,10 @@ public class TianQiTest {
 
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
-		
 		Map<String, Object> args = new HashMap<>();
 		args.put("command", "input");
 		args.put("args", Lists.newArrayList("keyevent", "4"));
-		//adb shell input keyevent 66 
+		// adb shell input keyevent 66
 		driver.executeScript("mobile:shell", args);
 		driver.executeScript("mobile:shell", args);
 		driver.executeScript("mobile:shell", args);

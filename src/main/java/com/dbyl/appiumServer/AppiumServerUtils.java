@@ -13,16 +13,27 @@ import io.appium.java_client.service.local.AppiumServiceBuilder;
 import io.appium.java_client.service.local.flags.ServerArgument;
 
 /**
+ * The Class AppiumServerUtils.
+ *
  * @author Young
  * @since 2016-11-09
  */
 public class AppiumServerUtils {
+	
+	/** The service. */
 	public static AppiumDriverLocalService service;
+	
+	/** The appium server utils. */
 	public static AppiumServerUtils appiumServerUtils;
+	
+	/** The current folder. */
 	public String currentFolder=System.getProperty("user.dir");
+	
 	/**
+	 * Gets the single instance of AppiumServerUtils.
+	 *
 	 * @author young
-	 * @return
+	 * @return single instance of AppiumServerUtils
 	 */
 	public static AppiumServerUtils getInstance() {
 		if (appiumServerUtils == null) {
@@ -37,10 +48,10 @@ public class AppiumServerUtils {
 	}
 
 	/**
-	 * This method is for start appium use default host and IP
-	 * 
+	 * This method is for start appium use default host and IP.
+	 *
 	 * @author young
-	 * @return
+	 * @return the url
 	 */
 	public URL startAppiumServerByDefault() {
 		service = AppiumDriverLocalService.buildDefaultService();
@@ -51,6 +62,11 @@ public class AppiumServerUtils {
 		return service.getUrl();
 	}
 	
+	/**
+	 * Start appium server no reset.
+	 *
+	 * @return the url
+	 */
 	public URL startAppiumServerNoReset() {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
 		service = AppiumDriverLocalService.buildService(builder);
@@ -62,6 +78,8 @@ public class AppiumServerUtils {
 	}
 
 	/**
+	 * Stop server.
+	 *
 	 * @author Young
 	 */
 	public void stopServer() {
@@ -71,14 +89,15 @@ public class AppiumServerUtils {
 	}
 
 	/**
+	 * Start server.
+	 *
 	 * @author young
-	 * @param ipAddress
-	 * @param port
-	 * @return
+	 * @param ipAddress the ip address
+	 * @param port the port
+	 * @return the url
 	 */
 	public URL startServer(String ipAddress, int port) {
 		SimpleDateFormat sf = new SimpleDateFormat("yyyy_MM_dd_HH_mm_ss");
-		
 		Calendar cal = Calendar.getInstance();
 		Date date = cal.getTime();
 		String dateStr = sf.format(date);
@@ -88,6 +107,7 @@ public class AppiumServerUtils {
 		builder.usingPort(port);
 		File logFile=new File(path);
 		builder.withLogFile(logFile);
+		builder.withEnvironment(System.getenv());
 		service = AppiumDriverLocalService.buildService(builder);
 		service.start();
 		if (service == null || !service.isRunning()) {
@@ -98,12 +118,14 @@ public class AppiumServerUtils {
 	}
 
 	/**
+	 * Start server.
+	 *
 	 * @author young
-	 * @param ipAddress
-	 * @param port
-	 * @param logFile
-	 * @param arguments
-	 * @return
+	 * @param ipAddress the ip address
+	 * @param port the port
+	 * @param logFile the log file
+	 * @param arguments the arguments
+	 * @return the url
 	 */
 	public URL startServer(String ipAddress, int port, File logFile, ServerArgument... arguments) {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
@@ -123,11 +145,13 @@ public class AppiumServerUtils {
 	}
 
 	/**
+	 * Start server.
+	 *
 	 * @author young
-	 * @param ipAddress
-	 * @param port
-	 * @param capabilities
-	 * @return
+	 * @param ipAddress the ip address
+	 * @param port the port
+	 * @param capabilities the capabilities
+	 * @return the url
 	 */
 	public URL startServer(String ipAddress, int port, DesiredCapabilities capabilities) {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
