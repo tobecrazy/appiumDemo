@@ -11,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.google.common.collect.Lists;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
@@ -23,6 +25,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -72,9 +75,15 @@ public class TianQiTest {
 
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
-		HashMap<String, Integer> keycode = new HashMap<String, Integer>();
-		keycode.put("keycode", 82);
-		driver.executeScript("mobile: keyevent", keycode);
+		
+		Map<String, Object> args = new HashMap<>();
+		args.put("command", "input");
+		args.put("args", Lists.newArrayList("keyevent", "4"));
+		//adb shell input keyevent 66 
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
 
 	}
 
