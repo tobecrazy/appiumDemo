@@ -11,6 +11,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.google.common.collect.Lists;
+
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.functions.ExpectedCondition;
@@ -23,6 +25,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -40,7 +43,6 @@ public class TianQiTest {
 		// url = new URL("http://127.0.0.1:4444/wd/hub");
 		url = new URL("http://localhost:4723/wd/hub");
 
-
 	}
 
 	@BeforeClass(alwaysRun = true, dependsOnMethods = { "startAppiumServer" })
@@ -51,7 +53,7 @@ public class TianQiTest {
 		// capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0.0");
 		// if no need install don't add this
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
@@ -72,9 +74,14 @@ public class TianQiTest {
 
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 
-		HashMap<String, Integer> keycode = new HashMap<String, Integer>();
-		keycode.put("keycode", 82);
-		driver.executeScript("mobile: keyevent", keycode);
+		Map<String, Object> args = new HashMap<>();
+		args.put("command", "input");
+		args.put("args", Lists.newArrayList("keyevent", "4"));
+		// adb shell input keyevent 66
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
+		driver.executeScript("mobile:shell", args);
 
 	}
 
