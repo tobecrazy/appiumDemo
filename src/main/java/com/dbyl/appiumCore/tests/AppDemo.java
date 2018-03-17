@@ -15,6 +15,8 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.page.AppDemoPage;
+import main.java.com.dbyl.appiumCore.utils.BaseTest;
+import main.java.com.dbyl.appiumCore.utils.CaseId;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -26,14 +28,14 @@ import java.util.concurrent.TimeUnit;
  * @since 2015-6
  * @author Young
  */
-public class AppDemo {
+public class AppDemo extends BaseTest {
 	public static AndroidDriver<MobileElement> driver;
 	public URL url;
 
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
-//		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
-		url= new URL("http://127.0.0.1:4444/wd/hub");
+		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		// url= new URL("http://127.0.0.1:4444/wd/hub");
 
 	}
 
@@ -66,6 +68,7 @@ public class AppDemo {
 	}
 
 	@Test(groups = { "webView" })
+	@CaseId(id="1234675")
 	public void DemoTest() throws InterruptedException {
 		String version = (String) driver.getCapabilities().getCapability(MobileCapabilityType.PLATFORM_VERSION);
 		System.out.println(version);
@@ -83,7 +86,7 @@ public class AppDemo {
 	@AfterMethod(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-//		AppiumServerUtils.getInstance().stopServer();
+		// AppiumServerUtils.getInstance().stopServer();
 	}
 
 }

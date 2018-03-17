@@ -1,80 +1,66 @@
 package main.java.com.dbyl.appiumCore.testng;
+
+import java.lang.reflect.Method;
 import java.util.List;
 
 import org.testng.ITestContext;
 import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
-// TODO: Auto-generated Javadoc
+
+import main.java.com.dbyl.appiumCore.utils.CaseId;
 
 /**
- * The listener interface for receiving testng events.
- * The class that is interested in processing a testng
- * event implements this interface, and the object created
- * with that class is registered with a component using the
- * component's <code>addTestngListener<code> method. When
- * the testng event occurs, that object's appropriate
- * method is invoked.
+ * The listener interface for receiving testng events. The class that is
+ * interested in processing a testng event implements this interface, and the
+ * object created with that class is registered with a component using the
+ * component's <code>addTestngListener<code> method. When the testng event
+ * occurs, that object's appropriate method is invoked.
  *
+ * @author Young
+ * @version V1.0
  * @see TestngEvent
  */
 public class TestngListener extends TestListenerAdapter {
 
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#onTestSuccess(org.testng.ITestResult)
-	 */
-	@Override
-	public void onTestSuccess(ITestResult tr) {
-		// TODO Auto-generated method stub
-		super.onTestSuccess(tr);
-	}
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#onTestFailure(org.testng.ITestResult)
 	 */
 	@Override
 	public void onTestFailure(ITestResult tr) {
-		// TODO Auto-generated method stub
+		ITestNGMethod im = tr.getMethod();
+		getCaseID(im);
 		super.onTestFailure(tr);
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#onTestSkipped(org.testng.ITestResult)
 	 */
 	@Override
 	public void onTestSkipped(ITestResult tr) {
-		// TODO Auto-generated method stub
+		ITestNGMethod im = tr.getMethod();
+		getCaseID(im);
 		super.onTestSkipped(tr);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#onTestFailedButWithinSuccessPercentage(org.testng.ITestResult)
-	 */
-	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult tr) {
-		// TODO Auto-generated method stub
-		super.onTestFailedButWithinSuccessPercentage(tr);
-	}
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#onStart(org.testng.ITestContext)
 	 */
 	@Override
 	public void onStart(ITestContext testContext) {
-		// TODO Auto-generated method stub
+		System.out.println("Start Test");
 		super.onStart(testContext);
-		ITestNGMethod[] itm = testContext.getAllTestMethods();
-		for(ITestNGMethod it:itm)
-		{
-			String[] groups = it.getGroups();
-			for(String group:groups)
-			{
-				System.out.print("Start --- "+group);
-			}
-		}
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#onFinish(org.testng.ITestContext)
 	 */
 	@Override
@@ -83,16 +69,9 @@ public class TestngListener extends TestListenerAdapter {
 		super.onFinish(testContext);
 	}
 
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#getFailedButWithinSuccessPercentageTests()
-	 */
-	@Override
-	public List<ITestResult> getFailedButWithinSuccessPercentageTests() {
-		// TODO Auto-generated method stub
-		return super.getFailedButWithinSuccessPercentageTests();
-	}
-
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#getFailedTests()
 	 */
 	@Override
@@ -101,7 +80,9 @@ public class TestngListener extends TestListenerAdapter {
 		return super.getFailedTests();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#getPassedTests()
 	 */
 	@Override
@@ -110,7 +91,9 @@ public class TestngListener extends TestListenerAdapter {
 		return super.getPassedTests();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#getSkippedTests()
 	 */
 	@Override
@@ -119,16 +102,40 @@ public class TestngListener extends TestListenerAdapter {
 		return super.getSkippedTests();
 	}
 
-	/* (non-Javadoc)
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#onTestStart(org.testng.ITestResult)
 	 */
 	@Override
 	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
+		ITestNGMethod im = result.getMethod();
+		getCaseID(im);
 		super.onTestStart(result);
 	}
 
-	/* (non-Javadoc)
+	/**
+	 * Gets the case ID.
+	 *
+	 * @param im
+	 *            the im
+	 * @return the case ID
+	 */
+	private String[] getCaseID(ITestNGMethod im) {
+		Method m = im.getConstructorOrMethod().getMethod();
+		CaseId caseId = m.getAnnotation(CaseId.class);
+		if (null != caseId) {
+			for (String str : caseId.id()) {
+				System.out.println("++++++++++++++++>>>>>>>>>>>>>\n\n\n" + str + "<<<<<<<\n\n");
+			}
+			return caseId.id();
+		}
+		return null;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
 	 * @see org.testng.TestListenerAdapter#getTestContexts()
 	 */
 	@Override
@@ -136,33 +143,5 @@ public class TestngListener extends TestListenerAdapter {
 		// TODO Auto-generated method stub
 		return super.getTestContexts();
 	}
-
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#onConfigurationFailure(org.testng.ITestResult)
-	 */
-	@Override
-	public void onConfigurationFailure(ITestResult itr) {
-		// TODO Auto-generated method stub
-		super.onConfigurationFailure(itr);
-	}
-
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#onConfigurationSkip(org.testng.ITestResult)
-	 */
-	@Override
-	public void onConfigurationSkip(ITestResult itr) {
-		// TODO Auto-generated method stub
-		super.onConfigurationSkip(itr);
-	}
-
-	/* (non-Javadoc)
-	 * @see org.testng.TestListenerAdapter#onConfigurationSuccess(org.testng.ITestResult)
-	 */
-	@Override
-	public void onConfigurationSuccess(ITestResult itr) {
-		// TODO Auto-generated method stub
-		super.onConfigurationSuccess(itr);
-	}
-	
 
 }
