@@ -121,13 +121,17 @@ public class TestngListener extends TestListenerAdapter {
 	 *            the im
 	 * @return the case ID
 	 */
-	private String[] getCaseID(ITestNGMethod im) {
+	private String getCaseID(ITestNGMethod im) {
+		String[] groups = im.getGroups();
+		for (String group : groups) {
+			System.out.println("++++++++++++++++>>>>>>>>>>>>>\n\n\n" + group + "<<<<<<<\n\n");
+		}
 		Method m = im.getConstructorOrMethod().getMethod();
+
 		CaseId caseId = m.getAnnotation(CaseId.class);
 		if (null != caseId) {
-			for (String str : caseId.id()) {
-				System.out.println("++++++++++++++++>>>>>>>>>>>>>\n\n\n" + str + "<<<<<<<\n\n");
-			}
+				System.out.println("++++++++++++++++>>>>>>>>>>>>>\n\n\n" + caseId.id() + "<<<<<<<\n\n");
+		 
 			return caseId.id();
 		}
 		return null;
