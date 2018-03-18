@@ -2,9 +2,9 @@ package main.java.com.dbyl.appiumCore.utils;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
@@ -13,8 +13,7 @@ import java.lang.annotation.Target;
  * @author Young
  * @version V1.0
  */
-@Retention(RetentionPolicy.RUNTIME)
-@Target({ METHOD, TYPE })
+@Retention(RUNTIME) @Target({METHOD, TYPE})
 public @interface CaseId {
 
 	/**
@@ -24,5 +23,5 @@ public @interface CaseId {
 	 *
 	 * @return the string[]
 	 */
-	public String[] id() default {};
+	public String id() default "";
 }
