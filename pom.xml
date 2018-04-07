@@ -14,7 +14,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<appium.version>6.0.0-BETA4</appium.version>
-		<selenium.version>3.10.0</selenium.version>
 		<guice.version>4.1.0</guice.version>
 		<commonlang3.version>3.7</commonlang3.version>
 		<log4j.version>2.10.0</log4j.version>
@@ -83,13 +82,6 @@
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>${gson.version}</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>${selenium.version}</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
