@@ -16,7 +16,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.pageActions.iOSPageDemo;
 import main.java.com.dbyl.appiumServer.AppLogger;
-import main.java.com.dbyl.appiumServer.AppiumServerUtils;
+//import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 
@@ -35,7 +35,8 @@ public class iOSTest {
 
 	@BeforeClass
 	public void beforeClass() throws Exception {
-		url = new URL("http://localhost:4444/wd/hub");
+		// url = new URL("http://localhost:4444/wd/hub");
+		url = new URL("http://localhost:4723/wd/hub");
 		// url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
@@ -46,7 +47,7 @@ public class iOSTest {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.2");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "11.3");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone SE");
 		// if no need install don't add this
 		if (isInstall) {
@@ -64,9 +65,8 @@ public class iOSTest {
 
 	}
 
-	@Test(groups = { "webView" })
+	@Test(groups = { "iOS Demo" })
 	public void calc() {
-
 		// wait for 60s
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
@@ -84,7 +84,7 @@ public class iOSTest {
 	@AfterClass(alwaysRun = true)
 	public void tearDown() throws Exception {
 		driver.quit();
-//		AppiumServerUtils.getInstance().stopServer();
+		// AppiumServerUtils.getInstance().stopServer();
 	}
 
 	/**

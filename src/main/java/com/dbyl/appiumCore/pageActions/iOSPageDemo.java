@@ -20,11 +20,11 @@ public class iOSPageDemo {
 	IOSDriver<?> driver;
 
 	/** The inputbox 1. */
-	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]")
+	@iOSFindBy(accessibility = "IntegerA")
 	private MobileElement inputbox1;
 	
 	/** The inputbox 2. */
-	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]")
+	@iOSFindBy(xpath = "//XCUIElementTypeTextField[@name=\"IntegerB\"]")
 	private MobileElement inputbox2;
 
 	/**
@@ -46,11 +46,11 @@ public class iOSPageDemo {
 	}
 
 	/** The calc button. */
-	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeButton[1]")
+	@iOSFindBy(id = "ComputeSumButton")
 	private MobileElement calcButton;
 	
 	/** The result. */
-	@iOSFindBy(xpath = "//XCUIElementTypeApplication[1]/XCUIElementTypeWindow[1]/XCUIElementTypeOther[1]/XCUIElementTypeStaticText[1]")
+	@iOSFindBy(id= "Answer")
 	private MobileElement result;
 
 	/**
@@ -66,18 +66,18 @@ public class iOSPageDemo {
 	/**
 	 * Type input box.
 	 *
-	 * @param e the e
+	 * @param element the e
 	 * @param msg the msg
 	 */
-	public void typeInputBox(MobileElement e, String msg) {
-		if (e.isDisplayed()) {
+	public void typeInputBox(MobileElement element, String msg) {
+		if (element.isDisplayed()) {
 			System.out.print("eeeeeeeeeeeeeeee");
-			e.click();
+			element.click();
 
 		} else {
 			System.out.print("nnnnnnnnnnnnnnnnn");
 		}
-		e.setValue(msg);
+		element.setValue(msg);
 	}
 
 	/**
