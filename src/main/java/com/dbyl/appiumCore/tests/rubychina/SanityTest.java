@@ -59,6 +59,7 @@ public class SanityTest extends BaseTest {
 	@CaseId(id = "ID1234")
 	public void verifyLaunchTest() {
 		HomePage  homePage =new HomePage(driver);
+		homePage=homePage.tapAllowButton();
 		homePage.tapNaviMenu();
 	}
 }

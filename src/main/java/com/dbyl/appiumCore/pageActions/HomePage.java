@@ -13,6 +13,7 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class HomePage {
 	/** The driver. */
 	IOSDriver<?> driver;
+	
 	@iOSFindBy(xpath="//XCUIElementTypeNavigationBar[@name=\"Topic\"]/XCUIElementTypeButton[1]")
 	IOSElement naviBar;
 	@iOSFindBy(xpath="//XCUIElementTypeOther[@name=\"Topic\"]")
@@ -21,6 +22,10 @@ public class HomePage {
 	IOSElement signIn;
 	@iOSFindBy(id="Sign up")
 	IOSElement signUp;
+	
+	@iOSFindBy(id="Allow")
+	IOSElement allowButton;
+	
 	/**
 	 * Gets the driver.
 	 *
@@ -44,6 +49,15 @@ public class HomePage {
 	{
 		signIn.click();
 		return new SignInPage();
+	}
+	/**
+	 * 
+	 * @return
+	 */
+	public HomePage tapAllowButton()
+	{
+		allowButton.click();
+		return this;
 	}
 	/**
 	 * Sets the driver.
