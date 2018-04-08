@@ -15,6 +15,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.pageActions.iOSPageDemo;
+import main.java.com.dbyl.appiumCore.utils.CaseId;
 import main.java.com.dbyl.appiumServer.AppLogger;
 //import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
@@ -66,6 +67,7 @@ public class iOSTest {
 	}
 
 	@Test(groups = { "iOS Demo" })
+	@CaseId(id="ID1234")
 	public void calc() {
 		// wait for 60s
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
