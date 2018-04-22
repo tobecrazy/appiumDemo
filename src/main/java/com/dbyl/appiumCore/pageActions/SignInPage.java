@@ -87,6 +87,7 @@ public class SignInPage {
 	 *            the name
 	 */
 	public void typeUserName(String name) {
+		userName.click();
 		userName.clear();
 		userName.sendKeys(name);
 	}
@@ -98,8 +99,15 @@ public class SignInPage {
 	 *            the password
 	 */
 	public void typePassword(String password) {
+		passwordTextField.click();
 		passwordTextField.clear();
 		passwordTextField.sendKeys(password);
 	}
 
+	/**
+	 * Click done.
+	 */
+	public void clickDone() {
+		driver.hideKeyboard("Done");
+	}
 }

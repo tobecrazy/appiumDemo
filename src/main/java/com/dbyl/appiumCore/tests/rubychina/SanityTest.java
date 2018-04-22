@@ -65,7 +65,8 @@ public class SanityTest extends BaseTest {
 		homePage.tapNaviMenu();
 		SignInPage signInPage = homePage.naviToSignInPage();
 		Assert.assertTrue(signInPage.isSignInPagePresent());
+		signInPage.typeUserName("UserName");
 		signInPage.typePassword("Test");
-		signInPage.typePassword("Test");
+		signInPage.clickDone();
 	}
 }
