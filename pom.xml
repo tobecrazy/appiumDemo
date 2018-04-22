@@ -3,17 +3,18 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId> com.dbyl</groupId>
 	<artifactId>framework</artifactId>
-	<version>1.12</version>
+	<version>1.13</version>
 	<packaging>jar</packaging>
 	<name>framework</name>
-	<description>This is web test framework base on Appium</description>
+	<description>This is mobile test framework base on Appium</description>
 	<url>http://www.cnblogs.com/tobecrazy/</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<appium.version>6.0.0-BETA4</appium.version>
+		<selenium.version>3.11.0</selenium.version>
+		<appium.version>6.0.0-BETA5</appium.version>
 		<guice.version>4.1.0</guice.version>
 		<commonlang3.version>3.7</commonlang3.version>
 		<log4j.version>2.10.0</log4j.version>
@@ -24,6 +25,7 @@
 		<android.version>4.1.1.4</android.version>
 		<commonexe.version>1.3</commonexe.version>
 		<mavencompile.version>3.6.1</mavencompile.version>
+		<surefire.version>2.21.0</surefire.version>
 	</properties>
 
 	<developers>
@@ -32,10 +34,14 @@
 		</developer>
 	</developers>
 
-
-
 	<dependencies>
-
+	
+	<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>${selenium.version}</version>
+</dependency>
+	
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-exec -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -119,7 +125,6 @@
 			<artifactId>maven-compiler-plugin</artifactId>
 			<version>${mavencompile.version}</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
@@ -127,7 +132,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.6.1</version>
+				<version>${mavencompile.version}</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
@@ -137,7 +142,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20</version>
+				<version>${surefire.version}</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
