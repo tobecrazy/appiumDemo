@@ -6,6 +6,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSFindBy;
+
 /**
  * @author young
  *
@@ -13,19 +14,19 @@ import io.appium.java_client.pagefactory.iOSFindBy;
 public class HomePage {
 	/** The driver. */
 	IOSDriver<?> driver;
-	
-	@iOSFindBy(xpath="//XCUIElementTypeNavigationBar[@name=\"Topic\"]/XCUIElementTypeButton[1]")
+
+	@iOSFindBy(xpath = "//XCUIElementTypeNavigationBar[@name=\"Topic\"]/XCUIElementTypeButton[1]")
 	IOSElement naviBar;
-	@iOSFindBy(xpath="//XCUIElementTypeOther[@name=\"Topic\"]")
+	@iOSFindBy(xpath = "//XCUIElementTypeOther[@name=\"Topic\"]")
 	IOSElement topic;
-	@iOSFindBy(id="Sign in")
+	@iOSFindBy(id = "Sign in")
 	IOSElement signIn;
-	@iOSFindBy(id="Sign up")
+	@iOSFindBy(id = "Sign up")
 	IOSElement signUp;
-	
-	@iOSFindBy(id="Allow")
+
+	@iOSFindBy(id = "Allow")
 	IOSElement allowButton;
-	
+
 	/**
 	 * Gets the driver.
 	 *
@@ -37,28 +38,38 @@ public class HomePage {
 
 	/**
 	 * @author young
+	 * @throws InterruptedException
 	 */
-	public void tapNaviMenu() {
-		naviBar.click();
+	public void tapNaviMenu() throws InterruptedException {
+		try {
+			if (naviBar.isDisplayed()) {
+				naviBar.click();
+			}
+		} catch (Exception e) {
+			Thread.sleep(2000);
+			naviBar.click();
+		}
+
 	}
+
 	/**
 	 * @author young
 	 * @return
 	 */
-	public SignInPage naviToSignInPage()
-	{
+	public SignInPage naviToSignInPage() {
 		signIn.click();
-		return new SignInPage();
+		return new SignInPage(driver);
 	}
+
 	/**
 	 * 
 	 * @return
 	 */
-	public HomePage tapAllowButton()
-	{
+	public HomePage tapAllowButton() {
 		allowButton.click();
 		return this;
 	}
+
 	/**
 	 * Sets the driver.
 	 *

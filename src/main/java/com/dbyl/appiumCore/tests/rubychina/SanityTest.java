@@ -4,6 +4,7 @@ import java.io.File;
 import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import main.java.com.dbyl.appiumCore.pageActions.HomePage;
+import main.java.com.dbyl.appiumCore.pageActions.SignInPage;
 import main.java.com.dbyl.appiumCore.tests.iOSTest;
 import main.java.com.dbyl.appiumCore.utils.BaseTest;
 import main.java.com.dbyl.appiumCore.utils.CaseId;
@@ -57,9 +59,13 @@ public class SanityTest extends BaseTest {
 
 	@Test(groups = { "ruby china" })
 	@CaseId(id = "ID1234")
-	public void verifyLaunchTest() {
-		HomePage  homePage =new HomePage(driver);
-		homePage=homePage.tapAllowButton();
+	public void verifyLaunchTest() throws InterruptedException {
+		HomePage homePage = new HomePage(driver);
+		homePage = homePage.tapAllowButton();
 		homePage.tapNaviMenu();
+		SignInPage signInPage = homePage.naviToSignInPage();
+		Assert.assertTrue(signInPage.isSignInPagePresent());
+		signInPage.typePassword("Test");
+		signInPage.typePassword("Test");
 	}
 }
