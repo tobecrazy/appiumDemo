@@ -18,6 +18,7 @@ import main.java.com.dbyl.appiumCore.pageActions.iOSPageDemo;
 import main.java.com.dbyl.appiumCore.utils.CaseId;
 import main.java.com.dbyl.appiumServer.AppLogger;
 //import main.java.com.dbyl.appiumServer.AppiumServerUtils;
+import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
 
@@ -37,8 +38,8 @@ public class iOSTest {
 	@BeforeClass
 	public void beforeClass() throws Exception {
 		// url = new URL("http://localhost:4444/wd/hub");
-		url = new URL("http://localhost:4723/wd/hub");
-		// url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		// url = new URL("http://localhost:4723/wd/hub");
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -67,7 +68,7 @@ public class iOSTest {
 	}
 
 	@Test(groups = { "iOS Demo" })
-	@CaseId(id="ID1234")
+	@CaseId(id = "ID1234")
 	public void calc() {
 		// wait for 60s
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);

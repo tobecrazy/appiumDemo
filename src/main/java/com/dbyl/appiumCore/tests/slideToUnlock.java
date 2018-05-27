@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.touch.offset.PointOption;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
@@ -62,7 +63,7 @@ public class slideToUnlock {
 			pic.get(i).click();
 		}
 
-		final TouchAction touchAction = new TouchAction(driver);
+		final AndroidTouchAction touchAction = new AndroidTouchAction(driver);
 		touchAction.press(PointOption.point(pic.get(0).getLocation().getX(), pic.get(0).getLocation().getY()))
 				.waitAction()
 				.moveTo(PointOption.point(pic.get(1).getLocation().getX() - pic.get(0).getLocation().getX(),

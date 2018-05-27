@@ -181,7 +181,7 @@ public class UiAutomatorHelper {
 		return abPath;
 	}
 	
-	/**
+	/**s
 	 * 需求：执行cmd命令，且输出信息到控制台
 	 * @param cmd
 	 */

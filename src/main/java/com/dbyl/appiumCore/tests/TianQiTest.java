@@ -39,9 +39,9 @@ public class TianQiTest {
 	@BeforeClass(alwaysRun = true)
 	public void startAppiumServer() throws MalformedURLException {
 
-		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
 		// url = new URL("http://127.0.0.1:4444/wd/hub");
-		url = new URL("http://localhost:4723/wd/hub");
+		// url = new URL("http://localhost:4723/wd/hub");
+		url = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
 
 	}
 

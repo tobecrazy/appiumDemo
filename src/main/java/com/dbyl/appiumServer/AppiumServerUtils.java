@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import io.appium.java_client.service.local.flags.GeneralServerFlag;
 import io.appium.java_client.service.local.flags.ServerArgument;
 
 /**
@@ -107,6 +108,7 @@ public class AppiumServerUtils {
 		builder.usingPort(port);
 		File logFile=new File(path);
 		builder.withLogFile(logFile);
+		builder.withArgument(GeneralServerFlag.RELAXED_SECURITY);
 		builder.withEnvironment(System.getenv());
 		service = AppiumDriverLocalService.buildService(builder);
 		service.start();
@@ -132,6 +134,7 @@ public class AppiumServerUtils {
 		builder.withIPAddress(ipAddress);
 		builder.usingPort(port);
 		builder.withLogFile(logFile);
+		builder.withArgument(GeneralServerFlag.RELAXED_SECURITY);
 		for (ServerArgument argument : arguments) {
 			builder.withArgument(argument);
 		}
@@ -157,6 +160,7 @@ public class AppiumServerUtils {
 		AppiumServiceBuilder builder = new AppiumServiceBuilder();
 		builder.withIPAddress(ipAddress);
 		builder.usingPort(port);
+		builder.withArgument(GeneralServerFlag.RELAXED_SECURITY);
 		if (capabilities != null) {
 			builder.withCapabilities(capabilities);
 		}
