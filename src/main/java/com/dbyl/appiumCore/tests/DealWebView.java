@@ -1,6 +1,7 @@
 package main.java.com.dbyl.appiumCore.tests;
 
 
+
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -12,6 +13,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.remote.AutomationName;
+import io.appium.java_client.remote.MobileCapabilityType;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,51 +23,43 @@ import java.net.URL;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
-public class dealWebView {
+/**
+ * @author young
+ *
+ */
+public class DealWebView {
 	private AndroidDriver<?> driver;
 	private boolean isInstall = false;
 	private String userName="youremail";
 	private String password="yourpassword";
-	/**
-	 * @author Young
-	 * @throws IOException
-	 */
-	public void startRecord() throws IOException {
-		Runtime rt = Runtime.getRuntime();
-		// this code for record the screen of your device
-		rt.exec("cmd.exe /C adb shell screenrecord /sdcard/runCase.mp4");
-
-	}
+ 
 
 	@BeforeClass(alwaysRun = true)
 	public void setUp() throws Exception {
 		// set up appium
-
-		System.out.println(Math.sqrt(-4));
 		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("deviceName", "Android Emulator");
-		capabilities.setCapability("platformVersion", "4.2");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.0");
+		capabilities.setCapability(MobileCapabilityType.APPIUM_VERSION, "1.7.2");
 		// if no need install don't add this
 		if (isInstall) {
 			File classpathRoot = new File(System.getProperty("user.dir"));
 			File appDir = new File(classpathRoot, "apps");
 			File app = new File(appDir, "zhihu.apk");
-			capabilities.setCapability("app", app.getAbsolutePath());
+			capabilities.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 		}
-		capabilities.setCapability("appPackage", "com.zhihu.android");
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE,"com.zhihu.android");
+		capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UIAutomator2");
 		// support Chinese
-		capabilities.setCapability("unicodeKeyboard", "True");
-		capabilities.setCapability("resetKeyboard", "True");
+		capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, "True");
+		capabilities.setCapability(AndroidMobileCapabilityType.RESET_KEYBOARD , "True");
 		// no need sign
-		capabilities.setCapability("noSign", "True");
+		capabilities.setCapability(AndroidMobileCapabilityType.NO_SIGN, "True");
 		//capabilities.setCapability("autoWebview", "True");
-		capabilities.setCapability("appActivity", ".ui.activity.GuideActivity");
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".ui.activity.GuideActivity");
 		driver = new AndroidDriver<WebElement>(new URL(
 				"http://127.0.0.1:4723/wd/hub"), capabilities);
-		startRecord();
-		System.out.println(driver);
 	}
 
 	@Test

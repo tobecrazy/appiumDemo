@@ -13,6 +13,8 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -44,7 +46,7 @@ public class DemoForGestures {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
 		// if no need install don't add this
 
 		File classpathRoot = new File(System.getProperty("user.dir"));
@@ -67,27 +69,32 @@ public class DemoForGestures {
 		height = driver.manage().window().getSize().height;
 		Thread.sleep(5000);
 		zoom();
-//		swipeToRight();
-//		swipeToLeft();
-//		swipeToUp();
-//		swipeToDown();
+		// swipeToRight();
+		// swipeToLeft();
+		// swipeToUp();
+		// swipeToDown();
 		System.out.println(driver.currentActivity());
 
 	}
 
 	private void zoom() {
-		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2)).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
-				.moveTo(-width / 4, height / 4).waitAction(Duration.ofSeconds(2)).release();
+		TouchAction swipe = new TouchAction(driver).press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+				.press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2)))
+				.moveTo(PointOption.point(-width / 4, height / 4))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
 		swipe.perform();
-		
+
 	}
 
 	/**
 	 * @author young
 	 */
 	private void swipeToDown() {
-		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
-				.moveTo(0, height / 4).waitAction(Duration.ofSeconds(2)).release();
+		TouchAction swipe = new TouchAction(driver).press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(0, height / 4))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
 		swipe.perform();
 
 	}
@@ -96,8 +103,9 @@ public class DemoForGestures {
 	 * @author young
 	 */
 	private void swipeToUp() {
-		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
-				.moveTo(0, -height / 4).waitAction(Duration.ofSeconds(2)).release();
+		TouchAction swipe = new TouchAction(driver).press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(0, -height / 4))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
 		swipe.perform();
 
 	}
@@ -106,8 +114,9 @@ public class DemoForGestures {
 	 * @author young
 	 */
 	private void swipeToLeft() {
-		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
-				.moveTo(-width / 4, 0).waitAction(Duration.ofSeconds(2)).release();
+		TouchAction swipe = new TouchAction(driver).press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(-width / 4, 0))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
 		swipe.perform();
 
 	}
@@ -116,8 +125,9 @@ public class DemoForGestures {
 	 * @author young
 	 */
 	private void swipeToRight() {
-		TouchAction swipe = new TouchAction(driver).press(width / 2, height / 2).waitAction(Duration.ofSeconds(2))
-				.moveTo(width / 4, 0).waitAction(Duration.ofSeconds(2)).release();
+		TouchAction swipe = new TouchAction(driver).press(PointOption.point(width / 2, height / 2))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(width / 4, 0))
+				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
 		swipe.perform();
 
 	}

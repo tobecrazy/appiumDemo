@@ -12,6 +12,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
+import io.appium.java_client.touch.offset.PointOption;
 
 import java.io.File;
 
@@ -33,7 +34,7 @@ public class unlockerTest {
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
 		// simulator version 4.4
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
 		// if no need install don't add this
 		File classpathRoot = new File(System.getProperty("user.dir"));
 		File appDir = new File(classpathRoot, "apps");
@@ -55,9 +56,9 @@ public class unlockerTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		MobileElement button = driver.findElementByAndroidUIAutomator("new UiSelector().text(\"设置手势密码\")");
-		// tap 
+		// tap
 		button.click();
- 
+
 		// get all the items of gesture locker
 		List<MobileElement> items = driver.findElementsByClassName("android.widget.ImageView");
 		for (MobileElement item : items) {
@@ -69,17 +70,34 @@ public class unlockerTest {
 
 		// create a Z from 0->1->2->4->6->7->8
 		TouchAction touches1 = new TouchAction(driver);
-		touches1.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
-				.waitAction().moveTo(items.get(4)).moveTo(items.get(6)).waitAction().moveTo(items.get(7))
-				.waitAction().moveTo(items.get(8)).release();
+
+		touches1.press(PointOption.point(items.get(0).getLocation().getX(), items.get(0).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(1).getLocation().getX(), items.get(1).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(2).getLocation().getX(), items.get(2).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(4).getLocation().getX(), items.get(4).getLocation().getY()))
+				.moveTo(PointOption.point(items.get(6).getLocation().getX(), items.get(6).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(7).getLocation().getX(), items.get(7).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(8).getLocation().getX(), items.get(8).getLocation().getY()))
+				.release();
 		touches1.perform();
 		Thread.sleep(2000);
-		//create 0->1->2
+		// create 0->1->2
 		TouchAction touches2 = new TouchAction(driver);
-		touches2.press(items.get(0)).waitAction().moveTo(items.get(1)).waitAction().moveTo(items.get(2))
-				.waitAction().moveTo(items.get(4)).release();
+		touches2.press(PointOption.point(items.get(0).getLocation().getX(), items.get(0).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(1).getLocation().getX(), items.get(1).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(2).getLocation().getX(), items.get(2).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(items.get(4).getLocation().getX(), items.get(4).getLocation().getY()))
+				.release();
 		touches2.perform();
-		MobileElement alert =driver.findElementById("com.AppiumGirls.locker:id/text_tip");
+		MobileElement alert = driver.findElementById("com.AppiumGirls.locker:id/text_tip");
 		Assert.assertTrue(alert.getText().contains("与上一次绘制不一致，请重新绘制"));
 
 	}
