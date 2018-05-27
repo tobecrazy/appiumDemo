@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
 import main.java.com.dbyl.appiumServer.AppiumServerUtils;
 
 import java.io.File;
@@ -34,7 +35,7 @@ public class slideToUnlock {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability("platformName", "Android");
 		capabilities.setCapability("deviceName", "Android Emulator");
-		capabilities.setCapability("platformVersion", "4.4");
+		capabilities.setCapability("platformVersion", "8.0");
 		// if no need install don't add this
 		capabilities.setCapability("appPackage", "cmb.pb");
 		// no need sign
@@ -62,27 +63,27 @@ public class slideToUnlock {
 		}
 
 		final TouchAction touchAction = new TouchAction(driver);
-		touchAction.press(pic.get(0).getLocation().getX(), pic.get(0).getLocation().getY()).waitAction()
-				.moveTo(pic.get(1).getLocation().getX() - pic.get(0).getLocation().getX(),
-						pic.get(1).getLocation().getY() - pic.get(0).getLocation().getY())
-				.moveTo(pic.get(2).getLocation().getX() - pic.get(1).getLocation().getX(),
-						pic.get(2).getLocation().getY() - pic.get(1).getLocation().getY())
-				.moveTo(pic.get(4).getLocation().getX() - pic.get(2).getLocation().getX(),
-						pic.get(4).getLocation().getY() - pic.get(2).getLocation().getY())
-				.moveTo(pic.get(6).getLocation().getX() - pic.get(4).getLocation().getX(),
-						pic.get(6).getLocation().getY() - pic.get(4).getLocation().getY())
-				.moveTo(pic.get(7).getLocation().getX() - pic.get(6).getLocation().getX(),
-						pic.get(7).getLocation().getY() - pic.get(6).getLocation().getY())
-				.moveTo(pic.get(8).getLocation().getX() - pic.get(7).getLocation().getX(),
-						pic.get(8).getLocation().getY() - pic.get(7).getLocation().getY())
+		touchAction.press(PointOption.point(pic.get(0).getLocation().getX(), pic.get(0).getLocation().getY()))
+				.waitAction()
+				.moveTo(PointOption.point(pic.get(1).getLocation().getX() - pic.get(0).getLocation().getX(),
+						pic.get(1).getLocation().getY() - pic.get(0).getLocation().getY()))
+				.moveTo(PointOption.point(pic.get(2).getLocation().getX() - pic.get(1).getLocation().getX(),
+						pic.get(2).getLocation().getY() - pic.get(1).getLocation().getY()))
+				.moveTo(PointOption.point(pic.get(4).getLocation().getX() - pic.get(2).getLocation().getX(),
+						pic.get(4).getLocation().getY() - pic.get(2).getLocation().getY()))
+				.moveTo(PointOption.point(pic.get(6).getLocation().getX() - pic.get(4).getLocation().getX(),
+						pic.get(6).getLocation().getY() - pic.get(4).getLocation().getY()))
+				.moveTo(PointOption.point(pic.get(7).getLocation().getX() - pic.get(6).getLocation().getX(),
+						pic.get(7).getLocation().getY() - pic.get(6).getLocation().getY()))
+				.moveTo(PointOption.point(pic.get(8).getLocation().getX() - pic.get(7).getLocation().getX(),
+						pic.get(8).getLocation().getY() - pic.get(7).getLocation().getY()))
 				.release();
 		touchAction.perform();
 		/*
 		 * final TouchAction touchAction = new TouchAction(driver);
 		 * touchAction.press(pic.get(0)).waitAction(1500).moveTo(pic.get(1))
 		 * .moveTo(pic.get(2)).moveTo(pic.get(4)).moveTo(pic.get(6))
-		 * .moveTo(pic.get(7)).moveTo(pic.get(8)).release();
-		 * touchAction.perform();
+		 * .moveTo(pic.get(7)).moveTo(pic.get(8)).release(); touchAction.perform();
 		 */
 		String username = driver.findElement(By.id("cmb.pb:id/gTvMenuTitle")).getText();
 		System.out.println(username);

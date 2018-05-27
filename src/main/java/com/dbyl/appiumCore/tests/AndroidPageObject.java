@@ -36,7 +36,7 @@ public class AndroidPageObject {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
 		// if no need install don't add this
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 

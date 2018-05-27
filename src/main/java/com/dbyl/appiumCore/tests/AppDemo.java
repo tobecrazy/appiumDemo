@@ -75,7 +75,7 @@ public class AppDemo extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
 		AppDemoPage appdemo = new AppDemoPage(driver);
-		PageFactory.initElements(new AppiumFieldDecorator(driver, 5, TimeUnit.SECONDS), appdemo);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), appdemo);
 		Assert.assertEquals(appdemo.getText(), "appiumDemo");
 		appdemo.clickButton();
 		Thread.sleep(5000);

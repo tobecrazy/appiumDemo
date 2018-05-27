@@ -47,7 +47,7 @@ public class BaiduPageAction {
 	 */
 	public static void search(String keyword) {
 		BaiduPage baiduPage = new BaiduPage(driver);
-		PageFactory.initElements(new AppiumFieldDecorator(driver,60, TimeUnit.SECONDS), baiduPage);
+		PageFactory.initElements(new AppiumFieldDecorator(driver), baiduPage);
 		baiduPage.open(url);
 		baiduPage.waitForPageLoad(60);
 		baiduPage.typeInputBox(keyword);
