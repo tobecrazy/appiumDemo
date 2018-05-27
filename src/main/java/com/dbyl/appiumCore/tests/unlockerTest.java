@@ -7,8 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidTouchAction;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -69,7 +69,7 @@ public class unlockerTest {
 		}
 
 		// create a Z from 0->1->2->4->6->7->8
-		TouchAction touches1 = new TouchAction(driver);
+		 AndroidTouchAction touches1 = new AndroidTouchAction(driver);
 
 		touches1.press(PointOption.point(items.get(0).getLocation().getX(), items.get(0).getLocation().getY()))
 				.waitAction()
@@ -87,7 +87,7 @@ public class unlockerTest {
 		touches1.perform();
 		Thread.sleep(2000);
 		// create 0->1->2
-		TouchAction touches2 = new TouchAction(driver);
+		 AndroidTouchAction touches2 = new AndroidTouchAction(driver);
 		touches2.press(PointOption.point(items.get(0).getLocation().getX(), items.get(0).getLocation().getY()))
 				.waitAction()
 				.moveTo(PointOption.point(items.get(1).getLocation().getX(), items.get(1).getLocation().getY()))

@@ -39,7 +39,7 @@ public class HybridDemo
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "4.4");
+        capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
         // if no need install don't add this
 
         File classpathRoot = new File(System.getProperty("user.dir"));

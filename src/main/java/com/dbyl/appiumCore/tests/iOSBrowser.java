@@ -27,9 +27,9 @@ public class iOSBrowser {
 	public void startAppiumServer() throws MalformedURLException {
 		capabilities.setCapability("platformName", "iOS");
 		// 只需要在这里使用data provider控制一下版本，传入不同的版本号
-		capabilities.setCapability("platformVersion", "11.2");
+		capabilities.setCapability("platformVersion", "11.3");
 		// AppiumServerUtils.getInstance().stopServer();
-		url = new URL("http://localhost:4444/wd/hub");
+		url = new URL("http://localhost:4723/wd/hub");
 //		url = new URL("http://localhost:4726");
 		// AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723,
 		// capabilities);
@@ -42,7 +42,7 @@ public class iOSBrowser {
 		capabilities.setCapability("browserName", "safari");
 		if (capabilities.getCapability("platformVersion").toString().contains("11")) {
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
-			capabilities.setCapability("platformVersion", "11.2");
+			capabilities.setCapability("platformVersion", "11.3");
 			capabilities.setCapability("deviceName", "iPhone 8");
 		} else {
 			capabilities.setCapability("platformVersion", "8.4");
