@@ -40,7 +40,7 @@ public class SFTest {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "6.0");
 
 		// if no need install don't add this
 		if (isInstall) {
@@ -54,21 +54,21 @@ public class SFTest {
 		capabilities.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.successfactors.android");
 		// support Chinese
 		capabilities.setCapability(AndroidMobileCapabilityType.UNICODE_KEYBOARD, "True");
-		capabilities.setCapability("resetKeyboard", "True");
+		capabilities.setCapability(MobileCapabilityType.NO_RESET, "True");
 		// no need sign
-		capabilities.setCapability("noSign", "True");
-		capabilities.setCapability("appWaitActivity",
+		capabilities.setCapability(AndroidMobileCapabilityType.APP_WAIT_ACTIVITY,
 				".common.gui.PasswordActivity,.home.gui.HomeTileActivity,.multiprofile.gui.MultiProfileActivity,.common.gui.activation.CodeActivationActivity,.common.gui.activation.ActivationActivity,.common.gui.LicenseActivity,com.successfactors.android.common.gui.SFActivationActivity,com.successfactors.android.home.gui.SFHomeActivity");
-
-		capabilities.setCapability("intentAction", "android.intent.action.MAIN");
-		capabilities.setCapability("intentCategory", "android.intent.category.LAUNCHER");
-		capabilities.setCapability("intentFlags", "0x10200000");
+		capabilities.setCapability(AndroidMobileCapabilityType.INTENT_ACTION, "android.intent.action.MAIN");
+		capabilities.setCapability(AndroidMobileCapabilityType.INTENT_CATEGORY, "android.intent.category.LAUNCHER");
+		capabilities.setCapability(AndroidMobileCapabilityType.INTENT_FLAGS, "0x10200000");
 		driver = new AndroidDriver<MobileElement>(url, capabilities);
 	}
 
 	@Test(groups = { "SFTest" })
 	public void SFAPPTest() throws InterruptedException {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		MobileElement feedback = driver.findElementByXPath("//android.widget.TextView[@text='FEEDBACK']");
+		feedback.click();
 
 	}
 
