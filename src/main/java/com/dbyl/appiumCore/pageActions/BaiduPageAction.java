@@ -54,6 +54,8 @@ public class BaiduPageAction {
 		baiduPage.clickOnSearchButton();
 		baiduPage.waitForPageLoad(60);
 		Assert.assertTrue(baiduPage.getTitle().contains(keyword));
+		baiduPage.waitForPageLoad(60);
+		baiduPage.scrollDown();
 	}
 	
 

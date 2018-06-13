@@ -18,6 +18,7 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class BaiduPageObjectDemo {
 	AppiumDriver<MobileElement> driver;
@@ -25,9 +26,10 @@ public class BaiduPageObjectDemo {
 	boolean isAndroid = true;
 
 	@BeforeClass(alwaysRun = true)
-	public void startAppiumServer() {
-		AppiumServerUtils.getInstance().stopServer();
-		url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+	public void startAppiumServer() throws MalformedURLException {
+		// AppiumServerUtils.getInstance().stopServer();
+		// url = AppiumServerUtils.getInstance().startAppiumServerByDefault();
+		url = new URL("http://127.0.0.1:4723/wd/hub");
 
 	}
 
@@ -40,14 +42,15 @@ public class BaiduPageObjectDemo {
 			capabilities.setCapability(CapabilityType.BROWSER_NAME, "chrome");
 			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "5.1");
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 			capabilities.setCapability("clearSystemFiles", true);
+			// capabilities.setCapability("recreateChromeDriverSessions", true);
 			driver = new AndroidDriver<MobileElement>(url, capabilities);
 		} else {
 			capabilities.setCapability("browserName", "safari");
 			capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 			capabilities.setCapability("platformName", "iOS");
-			capabilities.setCapability("platformVersion", "10.1");
+			capabilities.setCapability("platformVersion", "11.3");
 			capabilities.setCapability("deviceName", "iPhone SE");
 			driver = new IOSDriver<MobileElement>(url, capabilities);
 		}
@@ -56,6 +59,8 @@ public class BaiduPageObjectDemo {
 
 	@Test
 	public void POTest() {
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		BaiduPageAction.setDriver(driver);
 		BaiduPageAction.search("Appium");
 
