@@ -35,7 +35,8 @@ public class DemoForGestures {
 
 	@BeforeClass
 	public void startAppiumServer() throws IOException, InterruptedException {
-		ServerUrl = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		// ServerUrl = AppiumServerUtils.getInstance().startServer("127.0.0.1", 4723);
+		ServerUrl = new URL("http://127.0.0.1:4723/wd/hub");
 	}
 
 	@BeforeMethod(alwaysRun = true)
@@ -46,7 +47,7 @@ public class DemoForGestures {
 		capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
 		capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
 		capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
-		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.0");
+		capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "7.1.1");
 		// if no need install don't add this
 
 		File classpathRoot = new File(System.getProperty("user.dir"));

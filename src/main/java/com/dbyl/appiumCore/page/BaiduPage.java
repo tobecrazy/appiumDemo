@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.support.FindBy;
 
+import com.google.common.collect.ImmutableMap;
+
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -111,13 +113,13 @@ public class BaiduPage {
 	 * Scroll down.
 	 */
 	public void scrollDown() {
-		// driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
-		int width = driver.manage().window().getSize().width;
-		int height = driver.manage().window().getSize().height;
-		AndroidTouchAction swipe = new AndroidTouchAction(driver).press(PointOption.point(width / 2, height / 2))
-				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(0, height / 4))
-				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
-		swipe.perform();
+		 driver.executeScript("mobile: scroll", ImmutableMap.of("direction", "down"));
+//		int width = driver.manage().window().getSize().width;
+//		int height = driver.manage().window().getSize().height;
+//		AndroidTouchAction swipe = new AndroidTouchAction(driver).press(PointOption.point(width / 2,  4*height/5))
+//				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).moveTo(PointOption.point(width / 2, height/5 ))
+//				.waitAction(WaitOptions.waitOptions(Duration.ofSeconds(2))).release();
+//		swipe.perform();
 	}
 
 }
