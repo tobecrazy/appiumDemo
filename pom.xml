@@ -13,8 +13,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<selenium.version>3.12.0</selenium.version>
-		<appium.version>6.0.0</appium.version>
+		<selenium.version>3.14.0</selenium.version>
+		<appium.version>7.0.0</appium.version>
 		<guice.version>4.1.0</guice.version>
 		<commonlang3.version>3.7</commonlang3.version>
 		<log4j.version>2.10.0</log4j.version>
